@@ -1,0 +1,16 @@
+{
+  "name": "our-local-life",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "firebase:serve": "firebase emulators:start --only hosting",
+    "firebase:deploy": "firebase deploy --only hosting"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}
