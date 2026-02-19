@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Our Local Life</title>
+    <meta
+      name="description"
+      content="Our Local Life is a community-owned media platform elevating the way we live, work, and connect."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#111111" />
+    <link rel="canonical" href="https://ourlocallife.com/about" />
+    <link
+      rel="icon"
+      href="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/cropped-4.webp"
+    />
+
+    <meta property="og:site_name" content="Our Local Life" />
+    <meta property="og:title" content="About | Our Local Life" />
+    <meta
+      property="og:description"
+      content="Ethical media for the mind, body, and soul. Meet the people behind Our Local Life."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ourlocallife.com/about" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2000&auto=format&fit=crop"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About | Our Local Life" />
+    <meta
+      name="twitter:description"
+      content="Ethical media for the mind, body, and soul. Meet the people behind Our Local Life."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2000&auto=format&fit=crop"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "oll-dark": "#111111",
+              "oll-white": "#FFFFFF",
+              "oll-sand": "#DED9D5",
+              "oll-sand-light": "#F2F0EE",
+              "oll-gray-text": "#333333",
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', "serif"],
+              sans: ['"Inter"', "sans-serif"],
+            },
+            letterSpacing: {
+              widest: ".2em",
+            },
+            boxShadow: {
+              pill: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.5)",
+              float:
+                "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+            },
+            transitionProperty: {
+              colors: "background-color, border-color, color, fill, stroke",
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body
+    class="font-sans antialiased selection:bg-oll-sand selection:text-oll-dark bg-white dark:bg-oll-dark text-oll-dark dark:text-white transition-colors duration-500"
+    id="page-body"
+  >
+    <nav
+      class="md:hidden fixed top-0 left-0 w-full z-50 bg-white/95 dark:bg-oll-dark/95 backdrop-blur-md border-b border-oll-dark/10 dark:border-white/10 text-oll-dark dark:text-white transition-colors duration-500"
+      id="mobile-nav"
+    >
+      <div class="flex items-center justify-between px-6 h-16">
+        <img
+          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/5-1.png"
+          alt="OLL Icon"
+          class="h-8 w-auto dark:invert"
+        />
+        <div class="flex items-center gap-4">
+          <label class="theme-switch">
+            <input
+              type="checkbox"
+              class="theme-toggle-input"
+              onchange="toggleTheme(this)"
+            />
+            <span class="slider"></span>
+          </label>
+          <button id="mobile-toggle" class="p-2 focus:outline-none">
+            <svg
+              id="icon-hamburger"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              id="icon-close"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="bg-white dark:bg-oll-dark mx-4 mt-2 rounded-2xl shadow-2xl border border-oll-dark/10 dark:border-white/10 absolute left-0 right-0 text-oll-dark dark:text-white"
+      >
+        <div class="flex flex-col space-y-2 p-4">
+          <a
+            href="index.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium">Home</span>
+          </a>
+          <a
+            href="about.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z"
+                />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium">About</span>
+          </a>
+          <a
+            href="curated-stories.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium">Stories</span>
+          </a>
+          <a
+            href="featured-entrepreneur.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="12" cy="12" r="10" stroke-width="1.5" />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium">Spotlight</span>
+          </a>
+          <a
+            href="pages/podcast/index.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+                />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium"
+              >Podcast</span
+            >
+          </a>
+          <div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
+          <button
+            onclick="toggleSubscribe()"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors w-full text-left"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium"
+              >Join The Movement</span
+            >
+          </button>
+</div>
+      </div>
+    </nav>
+
+    <nav
+      id="sidebar"
+      class="hidden md:flex fixed top-4 left-4 bottom-4 w-16 bg-white/90 dark:bg-oll-dark/90 backdrop-blur-md z-50 flex-col shadow-float rounded-2xl overflow-hidden group border border-oll-dark/10 dark:border-white/20 text-oll-dark dark:text-white transition-colors duration-300"
+    >
+      <div
+        class="h-20 flex items-center justify-center border-b border-oll-dark/5 dark:border-white/10 px-2 relative"
+      >
+        <button
+          id="menu-toggle"
+          class="p-2 hover:bg-gray-100 dark:hover:bg-white/10 rounded-full transition-colors z-20"
+        >
+          <svg
+            id="icon-contracted"
+            class="w-5 h-5 block"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <svg
+            id="icon-expanded"
+            class="w-5 h-5 hidden"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="py-4 flex justify-center items-center h-20 relative">
+        <img
+          id="logo-expanded"
+          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/cropped-4.webp"
+          alt="OLL Full Logo"
+          class="w-32 h-auto absolute opacity-0 pointer-events-none transition-opacity duration-300 transform scale-90 dark:invert"
+        />
+      </div>
+      <div class="flex-1 flex flex-col space-y-3 px-2 mt-2 overflow-y-auto">
+        <a
+          href="index.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >Home</span
+          >
+        </a>
+        <a
+          href="about.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z"
+              />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >About</span
+          >
+        </a>
+        <a
+          href="curated-stories.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+              />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >Stories</span
+          >
+        </a>
+        <a
+          href="featured-entrepreneur.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="12" cy="12" r="10" stroke-width="1.5" />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >Spotlight</span
+          >
+        </a>
+        <a
+          href="pages/podcast/index.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+              />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >Podcast</span
+          >
+        </a>
+        <div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
+        <button
+          onclick="toggleSubscribe()"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item w-full"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
+            </svg>
+          </div>
+          <span
+            class="nav-label ml-3 text-xs uppercase tracking-widest font-medium whitespace-nowrap"
+            >Join The Movement</span
+          >
+        </button>
+<div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
+        <div class="px-2 flex justify-center pt-2">
+          <label class="theme-switch">
+            <input
+              type="checkbox"
+              class="theme-toggle-input"
+              onchange="toggleTheme(this)"
+            />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main-content" class="md:ml-24 pt-0">
+      <header
+        class="relative min-h-[70vh] w-full overflow-hidden flex items-center bg-oll-dark text-white"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=2000&auto=format&fit=crop"
+            class="w-full h-full object-cover"
+            alt="Forest canopy"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80"
+          ></div>
+        </div>
+        <div class="relative z-10 max-w-5xl px-6 mx-auto text-center py-24">
+          <span
+            class="block text-xs md:text-sm tracking-[0.4em] uppercase mb-6 text-oll-sand font-medium"
+            >Welcome to Our Local Life</span
+          >
+          <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
+            Where Great Minds Meet,<br />
+            <span class="italic font-light">and Local Life Grows.</span>
+          </h1>
+          <p class="text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed text-white/90">
+            Ethical media for the mind, body, and soul. Community-owned. Purpose-led.
+          </p>
+        </div>
+      </header>
+
+      <section
+        id="new-media"
+        class="py-24 bg-white dark:bg-oll-dark text-oll-dark dark:text-white border-b border-oll-dark/10 dark:border-white/10"
+      >
+        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-xs uppercase tracking-[0.3em] text-oll-gray-text/70 mb-4">
+              A New Kind of Local Media
+            </p>
+            <h2 class="font-serif text-4xl md:text-5xl mb-6">
+              Real stories. Local leaders. Powerful practices.
+            </h2>
+            <p class="text-base md:text-lg leading-relaxed opacity-80 mb-6">
+              In a world full of noise, division, and influencer obsession, we believe
+              something better is possible. Our Local Life is a community-owned media
+              platform featuring real stories, local leaders, and powerful practices
+              that elevate the way we live, work, and connect.
+            </p>
+            <p class="text-base md:text-lg leading-relaxed opacity-80">
+              We spotlight entrepreneurs, wellness practitioners, and creatives who
+              embody integrity, innovation, and heart. From regenerative soil scientists
+              to somatic bodyworkers, we bring you voices grounded in purpose—not algorithms.
+            </p>
+          </div>
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2000&auto=format&fit=crop"
+              class="w-full h-[420px] object-cover rounded-[28px] shadow-float"
+              alt="People gathering"
+            />
+            <div
+              class="absolute -bottom-6 -left-6 bg-oll-sand text-oll-dark px-6 py-4 rounded-2xl shadow-pill text-xs uppercase tracking-widest"
+            >
+              Community Owned
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contributors"
+        class="py-24 bg-oll-sand-light dark:bg-[#1a1a1a] text-oll-dark dark:text-white"
+      >
+        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-12">
+          <div>
+            <p class="text-xs uppercase tracking-[0.3em] opacity-70 mb-4">
+              Meet the People. Learn the Path.
+            </p>
+            <h2 class="font-serif text-4xl md:text-5xl mb-6">
+              Good people, doing their best at what they’re good at.
+            </h2>
+            <p class="text-base md:text-lg leading-relaxed opacity-80 mb-6">
+              Our contributors are ethical entrepreneurs, healers, educators, and builders
+              who share interviews, tools, and practices from the fields of business, health,
+              healing, and human potential. Every article you read fuels a shared ecosystem
+              of wisdom and impact.
+            </p>
+            <p class="text-base md:text-lg leading-relaxed opacity-80">
+              Explore our featured stories from:
+            </p>
+            <div class="mt-6 space-y-3 text-sm uppercase tracking-widest">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-oll-dark dark:bg-white"></span>
+                Somatic healers and fascia experts
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-oll-dark dark:bg-white"></span>
+                Conscious entrepreneurs and impact investors
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-oll-dark dark:bg-white"></span>
+                Breathwork guides and heart-centered teachers
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-oll-dark dark:bg-white"></span>
+                Regenerative farmers and wellness architects
+              </div>
+            </div>
+          </div>
+          <div class="grid gap-6">
+            <div class="bg-white/80 dark:bg-oll-dark/80 border border-oll-dark/10 dark:border-white/10 rounded-[28px] p-8 shadow-float">
+              <p class="text-xs uppercase tracking-widest opacity-60 mb-4">Contributor Code</p>
+              <p class="font-serif text-2xl leading-snug">
+                “Good people, doing their best at what they’re good at.”
+              </p>
+            </div>
+            <div class="bg-white/80 dark:bg-oll-dark/80 border border-oll-dark/10 dark:border-white/10 rounded-[28px] p-8">
+              <img
+                src="https://images.unsplash.com/photo-1488998427799-e3362cec87c3?q=80&w=2000&auto=format&fit=crop"
+                class="w-full h-56 object-cover rounded-2xl mb-6"
+                alt="Workshop notes"
+              />
+              <p class="text-sm uppercase tracking-widest opacity-60">
+                Tools, interviews, and practices
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="level-up"
+        class="py-24 bg-white dark:bg-oll-dark text-oll-dark dark:text-white border-b border-oll-dark/10 dark:border-white/10"
+      >
+        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <p class="text-xs uppercase tracking-[0.3em] opacity-60">Want to Level Up?</p>
+            <h2 class="font-serif text-4xl md:text-5xl">
+              A free 6-week course to realign your energy, mind, and body.
+            </h2>
+            <p class="text-base md:text-lg leading-relaxed opacity-80">
+              You don’t need more hustle. You need more harmony. We’ve created a guided
+              course built to help you reset, recalibrate, and reconnect.
+            </p>
+            <div class="space-y-4 text-sm uppercase tracking-widest">
+              <div class="flex items-start gap-3">
+                <span class="text-oll-dark dark:text-white">✔</span>
+                Unlock peak performance with fascia release, hydration protocols, and vagus nerve resets
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-oll-dark dark:text-white">✔</span>
+                Repattern your nervous system through breathwork, stillness, and nutrition
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-oll-dark dark:text-white">✔</span>
+                Apply these tools to relationships, business, and personal breakthroughs
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="bg-oll-sand text-oll-dark rounded-[30px] p-10 shadow-float">
+              <h3 class="font-serif text-3xl mb-4">Two Ways to Start:</h3>
+              <div class="space-y-6">
+                <a
+                  href="index.html#featured"
+                  class="flex items-center justify-between border-b border-oll-dark/20 pb-4 hover:opacity-80 transition-opacity"
+                >
+                  <div>
+                    <p class="text-xs uppercase tracking-widest opacity-70 mb-2">
+                      Read Real Stories
+                    </p>
+                    <p class="text-base">Explore interviews with ethical entrepreneurs and inspiring creators.</p>
+                  </div>
+                  <span class="text-2xl">👉</span>
+                </a>
+                <a
+                  href="#level-up"
+                  class="flex items-center justify-between hover:opacity-80 transition-opacity"
+                >
+                  <div>
+                    <p class="text-xs uppercase tracking-widest opacity-70 mb-2">
+                      Join the Free Course
+                    </p>
+                    <p class="text-base">6 weeks of content from experts in Mind, Body, and Soul.</p>
+                  </div>
+                  <span class="text-2xl">🎓</span>
+                </a>
+              </div>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2000&auto=format&fit=crop"
+              class="absolute -bottom-10 -left-10 hidden lg:block w-40 h-40 rounded-full object-cover border-4 border-white dark:border-oll-dark shadow-float"
+              alt="Meditation"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="impact"
+        class="py-24 bg-oll-dark text-white"
+      >
+        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
+          <div class="space-y-6">
+            <p class="text-xs uppercase tracking-[0.3em] text-oll-sand">Local Voices. Global Impact.</p>
+            <h2 class="font-serif text-4xl md:text-5xl">
+              Ethical media, built for and by the people.
+            </h2>
+            <p class="text-base md:text-lg leading-relaxed text-white/80">
+              This isn’t about content—it’s about community. Contributors earn revenue
+              based on engagement. The more their stories uplift and educate, the more
+              they benefit.
+            </p>
+            <p class="font-serif text-2xl italic text-oll-sand">
+              “Find your circle. Connect intellectually. Build together.”
+            </p>
+          </div>
+          <div class="grid gap-6">
+            <img
+              src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2000&auto=format&fit=crop"
+              class="w-full h-72 object-cover rounded-[30px] shadow-float"
+              alt="Community gathering"
+            />
+            <div class="grid grid-cols-2 gap-4">
+              <img
+                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop"
+                class="w-full h-40 object-cover rounded-2xl"
+                alt="Portrait"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000&auto=format&fit=crop"
+                class="w-full h-40 object-cover rounded-2xl"
+                alt="Creative workspace"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="network"
+        class="py-24 bg-white dark:bg-oll-dark text-oll-dark dark:text-white border-b border-oll-dark/10 dark:border-white/10"
+      >
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] opacity-60 mb-4">
+                Want to Be Featured or Join Our Network?
+              </p>
+              <h2 class="font-serif text-4xl md:text-5xl mb-6">
+                We want to hear from you.
+              </h2>
+              <p class="text-base md:text-lg leading-relaxed opacity-80">
+                Whether you’re a local business owner, practitioner, or someone with a story to
+                share—we’re building the next chapter together.
+              </p>
+            </div>
+            <div class="space-y-4">
+              <a
+                href="#network"
+                class="block border border-oll-dark/20 dark:border-white/20 rounded-2xl px-6 py-5 uppercase tracking-widest text-xs font-semibold hover:bg-oll-sand dark:hover:bg-white/10"
+              >
+                📩 Contact Us to be interviewed
+              </a>
+              <a
+                href="#contributors"
+                class="block border border-oll-dark/20 dark:border-white/20 rounded-2xl px-6 py-5 uppercase tracking-widest text-xs font-semibold hover:bg-oll-sand dark:hover:bg-white/10"
+              >
+                🌱 Apply to Contribute to Our Local Life
+              </a>
+              <a
+                href="pages/podcast/index.html"
+                class="block border border-oll-dark/20 dark:border-white/20 rounded-2xl px-6 py-5 uppercase tracking-widest text-xs font-semibold hover:bg-oll-sand dark:hover:bg-white/10"
+              >
+                🎙️ Launch a Podcast or Event with us
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="follow"
+        class="py-24 bg-oll-sand-light dark:bg-[#1a1a1a] text-oll-dark dark:text-white"
+      >
+        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <p class="text-xs uppercase tracking-[0.3em] opacity-60">Follow the Vibe</p>
+            <h2 class="font-serif text-4xl md:text-5xl">
+              Local rhythms, global reach.
+            </h2>
+            <div class="space-y-4 text-sm uppercase tracking-widest">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-oll-dark dark:bg-white"></span>
+                Weekly podcast drops
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-oll-dark dark:bg-white"></span>
+                Monthly meditations & live events
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-oll-dark dark:bg-white"></span>
+                Business education & AI mentorship
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-oll-dark dark:bg-white"></span>
+                Featured retreats, wellness spaces, and conscious travel
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=2000&auto=format&fit=crop"
+              class="w-full h-[420px] object-cover rounded-[30px] shadow-float"
+              alt="Breathwork session"
+            />
+            <div
+              class="absolute -top-6 -right-6 bg-white dark:bg-oll-dark text-oll-dark dark:text-white px-6 py-4 rounded-2xl shadow-pill text-xs uppercase tracking-widest"
+            >
+              Mind • Body • Soul
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="py-24 bg-oll-sand-light dark:bg-[#151515] text-oll-dark dark:text-white"
+      >
+        <div class="max-w-5xl mx-auto px-6">
+          <div
+            class="text-center space-y-6 bg-white dark:bg-oll-dark border border-oll-dark/10 dark:border-white/10 rounded-[32px] shadow-float px-6 md:px-12 py-12 md:py-16"
+          >
+            <p class="text-xs uppercase tracking-[0.4em] text-oll-gray-text/70 dark:text-white/60">
+              Our Local Life
+            </p>
+            <h2 class="font-serif text-4xl md:text-6xl">Ethical Media for the Mind, Body, and Soul.</h2>
+            <p class="text-base md:text-lg opacity-70 max-w-2xl mx-auto">
+              A community-owned platform built on integrity, innovation, and heart.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer
+        class="pt-24 pb-12 border-t border-oll-dark/10 dark:border-white/10 bg-white dark:bg-oll-dark text-oll-dark dark:text-white"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="font-serif text-6xl md:text-9xl tracking-tighter opacity-10">
+              OUR LOCAL LIFE
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-sm">
+            <div>
+              <h5 class="font-bold mb-4 uppercase tracking-widest text-xs opacity-60">
+                Explore
+              </h5>
+              <ul class="space-y-2 opacity-60">
+                <li><a href="index.html#mbs" class="hover:opacity-100">Mind</a></li>
+                <li><a href="index.html#mbs" class="hover:opacity-100">Body</a></li>
+                <li><a href="index.html#mbs" class="hover:opacity-100">Soul</a></li>
+                <li><a href="#" class="hover:opacity-100">Shop</a></li>
+              </ul>
+            </div>
+            <div>
+              <h5 class="font-bold mb-4 uppercase tracking-widest text-xs opacity-60">
+                Company
+              </h5>
+              <ul class="space-y-2 opacity-60">
+                <li><a href="about.html" class="hover:opacity-100">About Us</a></li>
+                <li><a href="#" class="hover:opacity-100">Careers</a></li>
+                <li><a href="contact.html" class="hover:opacity-100">Contact</a></li>
+                <li><a href="press-kit.html" class="hover:opacity-100">Press Kit</a></li>
+              </ul>
+            </div>
+            <div class="md:col-span-2">
+              <h5 class="font-bold mb-4 uppercase tracking-widest text-xs opacity-60">
+                Newsletter
+              </h5>
+              <p class="opacity-60 mb-4">
+                Join our community of discerning readers. Weekly curation of mind, body, and soul.
+              </p>
+              <button
+                onclick="toggleSubscribe()"
+                class="uppercase text-xs font-bold tracking-widest border-b border-current pb-1"
+              >
+                Subscribe Now
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="mt-16 flex justify-between items-center text-xs opacity-40 uppercase tracking-widest"
+          >
+            <p>&copy; 2025 Our Local Life Magazine</p>
+            <div class="flex space-x-6 items-center">
+              <a
+                href="https://instagram.com/ourlocallife"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Our Local Life on Instagram"
+                class="hover:opacity-100 transition-opacity"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://facebook.com/ourlocallife"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Our Local Life on Facebook"
+                class="hover:opacity-100 transition-opacity"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://linkedin.com/company/ourlocallife"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Our Local Life on LinkedIn"
+                class="hover:opacity-100 transition-opacity"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <div
+      id="subscribe-modal"
+      class="modal hidden-modal fixed inset-0 z-[60] flex items-center justify-center"
+    >
+      <div
+        class="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        onclick="toggleSubscribe()"
+      ></div>
+      <div
+        class="relative bg-white dark:bg-oll-dark p-12 max-w-lg w-full text-center shadow-2xl border border-oll-sand text-oll-dark dark:text-white"
+      >
+        <button
+          onclick="toggleSubscribe()"
+          class="absolute top-4 right-4 text-gray-400 hover:text-black dark:hover:text-white"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+        <h3 class="font-serif text-3xl mb-2">Join Our Community</h3>
+        <p class="text-sm opacity-60 mb-8">
+          Receive our weekly curation of slow living, culinary arts, and local stories.
+        </p>
+        <form class="space-y-4">
+          <input
+            type="text"
+            name="firstName"
+            autocomplete="given-name"
+            placeholder="First Name"
+            aria-label="First name"
+            class="w-full border-b border-gray-300 dark:border-white/20 p-2 focus:outline-none focus:border-oll-dark dark:focus:border-white bg-transparent text-sm"
+          />
+          <input
+            type="email"
+            name="email"
+            autocomplete="email"
+            placeholder="Email Address"
+            aria-label="Email address"
+            class="w-full border-b border-gray-300 dark:border-white/20 p-2 focus:outline-none focus:border-oll-dark dark:focus:border-white bg-transparent text-sm"
+          />
+          <button
+            type="submit"
+            class="w-full bg-oll-dark dark:bg-white text-white dark:text-oll-dark py-3 uppercase tracking-widest text-xs font-bold mt-6 transition-colors"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+<div
+        class="relative w-full max-w-2xl mx-4 bg-white dark:bg-oll-dark shadow-2xl rounded-full flex items-center p-2 border border-gray-100 dark:border-white/20 transform transition-all duration-300 scale-100 pointer-events-auto"
+      >
+        <div class="pl-4 text-gray-400">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            ></path>
+          </svg>
+        </div>
+        <input
+          type="text"
+          placeholder="Search stories, recipes, places..."
+          class="w-full h-12 px-4 text-lg bg-transparent focus:outline-none text-oll-dark dark:text-white placeholder-gray-400 font-serif"
+        />
+</div>
+    </div>
+
+    <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>

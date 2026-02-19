@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FOCUS Course Content | Our Local Life</title>
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "oll-dark": "#111111",
+              "oll-white": "#FFFFFF",
+              "oll-sand": "#DED9D5",
+              "oll-sand-light": "#F2F0EE",
+              "oll-gray-text": "#333333",
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', "serif"],
+              sans: ['"Inter"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <style>
+      /* Constrain to letter content area (8.5in - 1in margin = 7.5in) so PDF has no horizontal leak */
+      #pdf-content {
+        max-width: 7.5in;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1rem 1.25rem 1.5rem;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+      }
+      #pdf-content * { box-sizing: border-box; }
+      /* Letter-size print: one section per page start, no blank pages, no content leak */
+      @media print {
+        @page { size: letter; margin: 0.75in; }
+        body {
+          background: #fff !important;
+          print-color-adjust: exact;
+          -webkit-print-color-adjust: exact;
+        }
+        .no-print { display: none !important; }
+        main { max-width: none !important; padding: 0 !important; }
+        #pdf-content {
+          max-width: none !important;
+          width: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          box-shadow: none !important;
+          border-radius: 0 !important;
+          background: #fff !important;
+        }
+        .pdf-title-block {
+          padding-bottom: 0.5in;
+          margin-bottom: 0;
+          border-bottom: 2px solid #111;
+          page-break-after: avoid;
+        }
+        .pdf-section {
+          page-break-before: always;
+          padding-top: 0.25in;
+        }
+        .pdf-section:first-of-type { page-break-before: auto; padding-top: 0; }
+        .pdf-section-card {
+          page-break-inside: auto;
+          margin-bottom: 0.5rem;
+        }
+        .pdf-section-title { page-break-after: avoid; }
+        .pdf-practice-box { page-break-inside: avoid; }
+        .pdf-practice-box h4 { page-break-after: avoid; }
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased bg-oll-sand-light dark:bg-oll-dark text-oll-dark dark:text-white transition-colors duration-500">
+    <header class="no-print sticky top-0 z-40 bg-white/95 dark:bg-oll-dark/95 backdrop-blur-md border-b border-oll-dark/10 dark:border-white/10">
+      <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+        <a href="focus-course.html" class="text-sm uppercase tracking-widest opacity-70 hover:opacity-100">← Course overview</a>
+        <button
+          id="download-pdf-btn"
+          type="button"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-oll-dark dark:bg-white text-white dark:text-oll-dark text-xs font-bold uppercase tracking-widest hover:opacity-90 transition-opacity"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          Download PDF
+        </button>
+      </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <div id="pdf-content" class="bg-white rounded-3xl shadow-lg dark:shadow-none">
+        <!-- Title block (no image: avoids blank PDF pages) -->
+        <div class="pdf-title-block">
+          <h1 class="font-serif text-3xl md:text-4xl text-oll-dark mb-1">FOCUS on Peak Performance</h1>
+          <p class="text-xs uppercase tracking-[0.25em] text-oll-gray-text">Free the Body, Free the Mind — Full course content</p>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Week 1: Smile, Laughing & Neuroplasticity -->
+          <section id="week-1-smile-neuroplasticity" class="pdf-section">
+            <div class="pdf-section-card border border-oll-sand">
+              <div class="pdf-section-title">
+                <svg class="pdf-section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="32" height="32"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <h2 class="font-serif text-2xl text-oll-dark m-0">Week 1: Smile, Laughing &amp; Neuroplasticity</h2>
+              </div>
+              <div>
+                <p class="text-oll-gray-text leading-relaxed mb-4">
+                  Repatterning through the face and body. How we learn, why we repeat patterns, and how to connect intention to your neural networks. The face and breath are among the fastest levers we have to shift state: a genuine smile and laughter activate the vagus nerve, reduce cortisol, and signal safety to the brain. Neuroplasticity is the brain’s ability to rewire itself; by deliberately practicing smile and laugh, we strengthen pathways toward positivity, openness, and peak performance.
+                </p>
+                <p class="text-oll-gray-text leading-relaxed mb-4">
+                  Why this works: Smiling (even when not “felt”) engages facial muscles that send feedback to the brain, shifting mood. Laughter deepens breath, massages the diaphragm, and releases tension. Together they support the gut–brain and heart–brain axes you’ll explore in later weeks. This week establishes the habit of using the body to lead the mind.
+                </p>
+                <div class="pdf-practice-of-week">
+                  <h3 class="font-serif text-xl text-oll-dark mt-6 mb-2">Practice of the Week — Tabata-Style Smile &amp; Laugh</h3>
+                  <div class="pdf-practice-box p-5">
+                    <p class="text-sm text-oll-gray-text mb-3"><strong>Format:</strong> 20 seconds on, 10 seconds rest, 8 rounds (about 4 minutes total).</p>
+                    <p class="text-sm text-oll-gray-text mb-2"><strong>Rounds 1–4:</strong> Genuine smile. Relax the jaw, lift the corners of the mouth, allow the eyes to soften. Feel the shift in your face and breath. If you can, connect to something that naturally makes you smile.</p>
+                    <p class="text-sm text-oll-gray-text"><strong>Rounds 5–8:</strong> Laugh. Out loud if possible—even forced laughter triggers physiological benefits. Let the belly move, the breath deepen. Notice the release in the chest and shoulders. You will feel: nervous system calming; breath deepening; mental grip loosening; a sense of lightness and readiness for the rest of the course.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 1: Fascia, Hips, Spine -->
+          <section id="fascia-hips-spine" class="pdf-section">
+            <div class="pdf-section-card border border-oll-sand">
+              <div class="pdf-section-title">
+                <svg class="pdf-section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="32" height="32"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                <h2 class="font-serif text-2xl text-oll-dark m-0">Fascia, Hips, and Spine</h2>
+              </div>
+              <div>
+                <p class="text-oll-gray-text leading-relaxed mb-4">
+                  Your body is a living machine. It ties what cannot be seen to what cannot be unseen. Every thought, emotion, and belief within us shows up outside. One of these ways is through the body. Welcome as we embark on a journey to learn more about how our mind and body are connected in a constant dance. It is what I consider to be one of the greatest feedback mechanisms we have available. The only problem is that it never came with an instruction manual. My goal is to help decode what our bodies are already telling us and lead our minds to greater focus.
+                </p>
+                <p class="text-oll-gray-text leading-relaxed mb-4">
+                  This week we are covering the hips, fascia, and spine in regards to our thoughts and emotions. This week teaches us how to release the physical patterns that create mental noise, emotional heaviness, and a loss of focus. This week teaches us together how to return to clarity, confidence, and self-Love by shifting our physiology.
+                </p>
+                <p class="text-oll-gray-text leading-relaxed mb-6">
+                  So today we start with the three structures that hold the most emotional weight and the most potential for change: the fascia, the hips, and the spine. Thank you, and let us begin, together.
+                </p>
+
+                <h3 class="font-serif text-xl text-oll-dark mt-8 mb-2">Fascia: The Emotional Memory Tissue</h3>
+                <p class="text-oll-gray-text leading-relaxed mb-4">
+                  Fascia is the thin, web-like connective tissue that covers and links every muscle, organ, and nerve. It forms one continuous network from your feet to your skull. The fascia interact with blood vessels, nerves, bones, muscles, and more. Supplemental reading: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5871034/" target="_blank" rel="noopener" class="text-oll-dark underline">pmc.ncbi.nlm.nih.gov/articles/PMC5871034</a>
+                </p>
+                <p class="text-oll-gray-text leading-relaxed mb-2">Fascia is: Electrically conductive; Emotionally responsive; Full of sensory neurons; Able to respond to the now moment by tightening or softening through experiences.</p>
+                <p class="text-oll-gray-text leading-relaxed mb-4">When your fascia is tight and stressed, your brain responds with stressed thoughts. When your fascia is soft and relaxed, your brain responds in a safe and relaxed manner.</p>
+                <div class="pdf-keep-together grid sm:grid-cols-2 gap-4 mb-6">
+                  <div class="p-4 rounded-xl bg-red-50 border border-red-100">
+                    <p class="font-semibold text-oll-dark text-sm mb-2">When fascia is tight:</p>
+                    <ul class="text-sm text-oll-gray-text space-y-1 list-disc pl-4">
+                      <li>Amygdala can trigger fight-or-flight</li>
+                      <li>Breath shortens and becomes shallow</li>
+                      <li>HRV decreases, stress</li>
+                      <li>Thoughts negative, fast, reactive</li>
+                    </ul>
+                  </div>
+                  <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-100">
+                    <p class="font-semibold text-oll-dark text-sm mb-2">When fascia softens:</p>
+                    <ul class="text-sm text-oll-gray-text space-y-1 list-disc pl-4">
+                      <li>Amygdala calms</li>
+                      <li>Breath lengthens and deepens</li>
+                      <li>HRV increases, vagus activates</li>
+                      <li>Thoughts become proactive</li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="text-oll-gray-text leading-relaxed mb-6">Fascia becomes the bridge we can use between thoughts, emotions, and bodily structure.</p>
+
+                <h3 class="font-serif text-xl text-oll-dark mt-8 mb-2">Hips — Shifting Out of Survival</h3>
+                <p class="text-oll-gray-text leading-relaxed mb-4">
+                  Your hips, especially your psoas, are the physical root of your fight-or-flight system. The psoas connects: Spine, Diaphragm, Pelvis, Femur, Vagus nerve. When the fascia surrounding this muscle becomes stiff or tight, this can trigger a sense of stress within the brain. We can gain similar benefits as noted in the Fascia section when we increase the mobility and strength of our hips.
+                </p>
+
+                <h3 class="font-serif text-xl text-oll-dark mt-8 mb-2">The Spine: Carrier of Energy</h3>
+                <p class="text-oll-gray-text leading-relaxed mb-4">
+                  Your spine carries: Ascending sensory signals, Descending motor commands, Cerebrospinal fluid which helps the body align with the Heart, Posture-driven hormone signals. When the spine compresses: cortisol rises, breath compresses, self-worth decreases. When the spine lengthens or moves fluidly: dopamine increases, confidence rises, PFC becomes more active, thinking becomes clearer.
+                </p>
+
+                <h3 class="font-serif text-xl text-oll-dark mt-8 mb-2">Peak Performance</h3>
+                <p class="text-oll-gray-text leading-relaxed mb-4">
+                  Peak performance requires all parts of the body and mind in alignment. By working with our fascia, hips, and spine we see: Oxygenated prefrontal cortex; Effortless attention; Task endurance increases; Emotional reactivity reductions; Easier entry into flow state; Discipline becomes self-Love.
+                </p>
+
+                <div class="pdf-practice-of-week pdf-practice-of-week-push">
+                  <h3 class="font-serif text-xl text-oll-dark mt-8 mb-2">Practice of the Week</h3>
+                  <div class="pdf-practice-box p-5 space-y-5">
+                    <div>
+                      <h4 class="font-semibold text-oll-dark mb-2">Hip Fascia Release</h4>
+                      <p class="text-sm text-oll-gray-text">90 seconds each side. Sit or lie down. Place a small ball (e.g. lacrosse ball) under your glute or outer hip. 5-5-5-5 box breathing. Visualize fascia releasing. You will feel: thoughts slow; compassion increase; focus improve.</p>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-oll-dark mb-2">Cat-Cow Flow</h4>
+                      <p class="text-sm text-oll-gray-text">Alternate cat and cow for 2 minutes. 5-5-5-5 breathing. Inhale: lift chest, lengthen spine. Exhale: round back, sternum up. You will feel: mental clarity; emotional heaviness lifting; cerebrospinal fluid flow increases.</p>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-oll-dark mb-2">Psoas Decompression — Constructive Rest 8 Min</h4>
+                      <p class="text-sm text-oll-gray-text">Lie on your back, knees bent, feet flat. 5-5-5-5 breathing. Arms in T, palms up. Let spine soften to the floor. You will feel: Present; insula active; parasympathetic nervous system online.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 2: Gut and Vagus -->
+          <section id="gut-vagus" class="pdf-section">
+            <div class="pdf-section-card border border-oll-sand">
+              <div class="pdf-section-title">
+                <svg class="pdf-section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="32" height="32"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                <h2 class="font-serif text-2xl text-oll-dark m-0">The Gut and Vagus</h2>
+              </div>
+              <div>
+                <p class="text-oll-gray-text leading-relaxed mb-4">
+                  “I trusted my gut.” We intrinsically know that our gut is linked to our confidence. The gut is often labeled the “Second Brain.” Your gut: produces about 90% of serotonin; about 50% of dopamine; holds roughly 100 million neurons (enteric nervous system); and sends about 90% of its signals upward to the brain via the vagus nerve. The gut–brain axis is a two-way highway: when your gut is in disarray, it becomes harder to be grateful, feel whole, or feel motivated. When the gut is calm and well-supported, the brain receives signals of safety and resource.
+                </p>
+                <p class="text-oll-gray-text leading-relaxed mb-4">The vagus nerve connects brainstem, throat, heart, lungs, gut, and pelvis. When we signal to the vagus that it is safe to be creative and to expand—through breath, posture, and the practices below—we support high-performance states. <strong>Peak Performance:</strong> Improved decision-making; faster reaction time; enhanced creativity; connection to the Now moment.</p>
+                <div class="pdf-practice-of-week">
+                  <h3 class="font-serif text-xl text-oll-dark mt-6 mb-2">Practice of the Week</h3>
+                  <div class="pdf-practice-box p-5 space-y-4">
+                    <div>
+                      <h4 class="font-semibold text-oll-dark mb-2">Gut expansion via Glute Bridge</h4>
+                      <p class="text-sm text-oll-gray-text">3 minutes. Hold a glute bridge with 5-5-5-5 breathing. Press through the heels, keep the neck and belly soft. Optionally place a hand on the belly to strengthen the mind–gut connection. You will feel: belly and front body opening; vagal tone increasing; a sense of grounding and readiness to act.</p>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-oll-dark mb-2">Vagal Nerve Twist</h4>
+                      <p class="text-sm text-oll-gray-text">Turn your head left and look as far left as comfortable; hold about 30 seconds. Repeat on the right. You will feel: an immediate shift in nervous system state; release of tension in the neck and throat; calmer, clearer mind.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 3: Hydration -->
+          <section id="hydration" class="pdf-section">
+            <div class="pdf-section-card border border-oll-sand">
+              <div class="pdf-section-title">
+                <svg class="pdf-section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="32" height="32"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                <h2 class="font-serif text-2xl text-oll-dark m-0">Hydration and Cell Salts</h2>
+              </div>
+              <div>
+                <p class="text-oll-gray-text leading-relaxed mb-4">
+                  The body is an energetic body. It uses water and cellular salts to distribute energy and maintain charge. A hydrated, well-mineralized brain is a focused brain, a hopeful brain, a creative brain. Neurons communicate using electrical charge. Key electrolytes: sodium helps fire the signal; potassium helps reset; magnesium supports ATP and calm; calcium is involved in neurotransmitter release; chloride supports GABA and inhibition. When these are out of sequence or low: brain fog, anxiety, procrastination, and fatigue are common. When the system is properly charged: dopamine signaling improves, memory sharpens, and you can sustain focus and mood.
+                </p>
+                <div class="pdf-practice-of-week">
+                  <h3 class="font-serif text-xl text-oll-dark mt-6 mb-2">Practice of the Week</h3>
+                  <div class="pdf-practice-box p-5">
+                    <p class="text-sm text-oll-gray-text mb-2"><strong>Morning rehydration:</strong> 16 oz water with a pinch of sea salt or mineral drops. Use 5-5-5-5 breathing between sips to support absorption and calm.</p>
+                    <p class="text-sm text-oll-gray-text mb-2"><strong>Deep Neck Wave:</strong> Gently bring the back of the head toward the shoulder blades; then the space between the eyebrows toward the heart. This supports vagal tone and fluid flow.</p>
+                    <p class="text-sm text-oll-gray-text">Use Celtic Sea Salt or similar mineral-rich salt and spring or filtered water upon waking and at wind down. If appropriate for you, sweat daily for one week and replenish with minerals and water. You will feel: clearer head; more stable energy; better focus and mood.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 4: Heart-Brain -->
+          <section id="heart-brain" class="pdf-section">
+            <div class="pdf-section-card border border-oll-sand">
+              <div class="pdf-section-title">
+                <svg class="pdf-section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="32" height="32"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                <h2 class="font-serif text-2xl text-oll-dark m-0">Heart-Brain Coherence</h2>
+              </div>
+              <div>
+                <p class="text-oll-gray-text leading-relaxed mb-4">
+                  When the heart and brain agree into coherence, decisions become effortless. Your heart leads, your brain follows. The heart sends more signals to the brain than the brain sends to the heart. To break loops and regain focus, we use a Peak Performance toolset. Each tool works by changing the signal the heart sends to the brain, so the brain can respond from clarity instead of reactivity.
+                </p>
+                <h3 class="font-serif text-xl text-oll-dark mt-6 mb-2">The Peak Performance Toolset</h3>
+                <ul class="text-oll-gray-text leading-relaxed mb-2 space-y-2 list-disc pl-5">
+                  <li><strong>Breath</strong> — Slows heart rate and smooths rhythm; the brain reads this as safety and shifts out of fight-or-flight.</li>
+                  <li><strong>Posture</strong> — An open chest and aligned spine reduce compression on the heart and vessels; the heart’s signal becomes more coherent.</li>
+                  <li><strong>Movement</strong> — Rhythmic movement (walking, flow) entrains heart rate and improves HRV; the brain receives a steadier signal.</li>
+                  <li><strong>Hydration</strong> — Supports blood volume and electrolyte balance; the heart and nervous system function optimally.</li>
+                  <li><strong>Nature</strong> — Natural light, air, and green space lower stress hormones; the heart–brain axis shifts toward rest-and-digest.</li>
+                  <li><strong>Change of sensory input</strong> — New sounds, sights, or touch interrupt the loop and give the heart a chance to reset its rhythm.</li>
+                  <li><strong>Gratitude</strong> — Focus on appreciation shifts attention to the heart region and often deepens breath; coherence increases.</li>
+                </ul>
+                <p class="text-oll-gray-text leading-relaxed mb-4">Together these tools help you create an Aligned Signal: the heart and brain in sync, so that trust in your decisions and clarity become the default.</p>
+                <div class="pdf-practice-of-week">
+                  <h3 class="font-serif text-xl text-oll-dark mt-6 mb-2">Practice — Aligned Signal Exercise</h3>
+                  <div class="pdf-practice-box p-5">
+                    <p class="text-sm text-oll-gray-text">Align the spine. Place your hands near your Heart. Soften muscles and fascia head to toe. Slow inhales and exhales. Focus on hands and Heart. 1 min. You will feel: body respond; loops dissolve; trust in your decisions.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 5: Breath -->
+          <section id="breath-diaphragm" class="pdf-section">
+            <div class="pdf-section-card border border-oll-sand">
+              <div class="pdf-section-title">
+                <svg class="pdf-section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="32" height="32"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.514 0-1.02.05-1.527.145m-3.985.965l-.027-.01M9 6l2 3"/></svg>
+                <h2 class="font-serif text-2xl text-oll-dark m-0">Breath, Diaphragm, and Capacity</h2>
+              </div>
+              <div>
+                <p class="text-oll-gray-text leading-relaxed mb-4">
+                  “Your breath is constantly determining how much Life you can hold, how much Life you can let go, and how much Life you can let back in.” The brain depends on oxygen delivery, CO2 tolerance, diaphragmatic movement, and rib cage mobility. When the brain is under-breath or over-stressed, it gets tired: focus drops, reactivity rises, and peak performance slips. The diaphragm acts as a regulator between high-capacity and low-capacity nervous system states.
+                </p>
+                <p class="text-oll-gray-text leading-relaxed mb-2"><strong>Low capacity</strong> (shallow breath, tight diaphragm): Brain fog; anxiety; quick fatigue; difficulty sustaining attention; body feels “on” and guarded.</p>
+                <p class="text-oll-gray-text leading-relaxed mb-4"><strong>High capacity</strong> (full breath, mobile diaphragm): Clear thinking; calm alertness; endurance; easier flow state; body feels open and ready. Peak performance comes from increasing capacity rather than pushing intensity.</p>
+                <div class="pdf-practice-of-week">
+                  <h3 class="font-serif text-xl text-oll-dark mt-6 mb-2">Practice of the Week</h3>
+                  <div class="pdf-practice-box p-5 space-y-4">
+                    <div>
+                      <h4 class="font-semibold text-oll-dark mb-2">Diaphragm Expansion</h4>
+                      <p class="text-sm text-oll-gray-text">Lie down, one hand on chest, one on core. 5-5-5-5 breathing. Let the ribcage expand sideways and the core rise on the inhale. You will feel: breath deepening; nervous system calming; more room for focus and clarity.</p>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-oll-dark mb-2">CO2 Tolerance Building</h4>
+                      <p class="text-sm text-oll-gray-text">Inhale and exhale deeply and slowly. At the end of each exhale, pause until you feel a clear demand to inhale—then inhale. Builds CO2 tolerance and resets the breathing rhythm. You will feel: less breath hunger; steadier mind; increased capacity under load.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 6: Becoming More You -->
+          <section id="becoming-more-you" class="pdf-section">
+            <div class="pdf-section-card border border-oll-sand">
+              <div class="pdf-section-title">
+                <svg class="pdf-section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="32" height="32"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                <h2 class="font-serif text-2xl text-oll-dark m-0">Becoming More You</h2>
+              </div>
+              <div>
+                <p class="text-oll-gray-text leading-relaxed mb-4">
+                  “Effortless growth happens when body, mind, beliefs, actions, emotions, and thoughts all align.” States that resist change: Urgency, Stress, Emotional contraction, Overthinking. States that allow change: Calm but alert, Emotionally open, Physically relaxed, Present. You change by introducing new signals while the system is receptive. Signals under your control: Sensations, Images, Emotional tones, Posture and movement, Internal phrases.
+                </p>
+                <div class="pdf-practice-of-week">
+                  <h3 class="font-serif text-xl text-oll-dark mt-6 mb-2">Practice — Stillness</h3>
+                  <div class="pdf-practice-box p-5">
+                    <p class="text-sm text-oll-gray-text">Sit spine straight, hips open, shoulders broad. 5-5-5-5 breathing. Each exhale, allow one muscle to fully relax from head to toes. Each inhale, find gratitude and desired flow state. This puts together everything from six weeks. Let this course serve as a way to know ourselves more and to give that gift to others.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 7: Massage Therapy -->
+          <section id="massage-therapy" class="pdf-section">
+            <div class="pdf-section-card border border-oll-sand">
+              <div class="pdf-section-title">
+                <svg class="pdf-section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="32" height="32"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a7.5 7.5 0 0115 0v1m-15 4a7.5 7.5 0 0015 0m-15-4a7.5 7.5 0 0115 0"/></svg>
+                <h2 class="font-serif text-2xl text-oll-dark m-0">Unified Best Practices: Assisted Massage Therapy</h2>
+              </div>
+              <div>
+                <p class="text-oll-gray-text leading-relaxed mb-4">This section unifies meditation, breathwork, and assisted massage into a single flow. The client is facedown for Phase 1 (meditation) and the first part of Phase 2 (massage); then face-up for the remainder. Use these as best practices for a coherent, peak-performance-oriented session.</p>
+                <h3 class="font-serif text-xl text-oll-dark mt-6 mb-2">PHASE 1: MEDITATION (0:00 → 0:30)</h3>
+                <p class="text-oll-gray-text leading-relaxed mb-2">Facedown, upper body supported. Goal: clear mental clutter, stabilize the biofield, and prepare the body for touch.</p>
+                <ul class="text-oll-gray-text leading-relaxed mb-4 list-disc pl-5 space-y-1">
+                  <li><strong>0:00–0:05 — Observer Softening:</strong> Notice thoughts without engaging; let the observer relax.</li>
+                  <li><strong>0:05–0:10 — Thought Exposure &amp; Safety Reclamation:</strong> Allow any anxious or repetitive thoughts to be present; affirm that you are safe in the room.</li>
+                  <li><strong>0:10–0:20 — Transcendental Anchor + Stoic Reflection:</strong> Rest attention on a single anchor (breath, mantra, or body sensation); optional brief reflection on what is within your control.</li>
+                  <li><strong>0:20–0:25 — Empowerment Tone Shift:</strong> Shift internal tone from passive to empowered—e.g. “I am here by choice; I am capable.”</li>
+                  <li><strong>0:25–0:30 — Somatic Readiness:</strong> Bring awareness fully into the body; prepare to receive the massage with presence. Transition into Phase 2.</li>
+                </ul>
+                <h3 class="font-serif text-xl text-oll-dark mt-6 mb-2">PHASE 2: MASSAGE + BREATHWORK (0:30 → 1:30)</h3>
+                <p class="text-oll-gray-text leading-relaxed mb-2"><strong>Face-Down (0:30–1:15):</strong></p>
+                <ul class="text-oll-gray-text leading-relaxed mb-2 list-disc pl-5 space-y-1">
+                  <li>Opening Pathways — Broad, flowing strokes along spine, shoulders, and back to open tissue and signal safety.</li>
+                  <li>Depth &amp; Resonance — Deeper work as needed; maintain breath awareness and avoid pain.</li>
+                  <li>Gluteal &amp; Cervical Harmonization — Release hip and neck holding patterns; connect to psoas and vagal pathways.</li>
+                  <li>Return to Central Line — Integrate with gentle spinal sweeps and centering strokes.</li>
+                </ul>
+                <div class="pdf-face-up-block">
+                  <p class="text-oll-gray-text leading-relaxed mb-2"><strong>Face-Up (1:15–1:30):</strong></p>
+                  <ul class="text-oll-gray-text leading-relaxed mb-4 list-disc pl-5 space-y-1">
+                    <li>Lower-Body Circulation — Legs and feet; support venous return and relaxation.</li>
+                    <li>Torso, Arms, Shoulders — Chest, arms, and shoulder girdle; encourage breath and heart space.</li>
+                    <li>Neck &amp; Crown Closure — Gentle neck and scalp work to close the session and downregulate.</li>
+                  </ul>
+                </div>
+                <p class="text-oll-gray-text leading-relaxed mb-4"><strong>Breath rhythm during massage:</strong> Inhale 4–5s, hold 2s, exhale 6–7s. Encourage the client to maintain this when possible. After the session, leave 3–5 minutes of quiet stillness before moving.</p>
+                <h3 class="font-serif text-xl text-oll-dark mt-6 mb-2">Integration &amp; Notes</h3>
+                <p class="text-oll-gray-text leading-relaxed mb-4">Sync touch with the client’s breath where possible. Use the Harmonic Principle below as the underlying intention: restoration of coherence through breath-synchronized compression and release, so the body and nervous system can rebalance.</p>
+                <h3 class="font-serif text-xl text-oll-dark mt-6 mb-2">Harmonic Principle Anchor</h3>
+                <p class="text-oll-gray-text leading-relaxed">
+                  A resonance cascade—restoration of coherence through breath-synchronized compression and release. Spinal sweeps activate the central resonance axis. Breath cycles modulate field coherence. Wiggle micro-movements create interference harmonics. Massage becomes less manipulation, more modulation: you are supporting the body to find its own rhythm and capacity for peak performance.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="no-print mt-16 pt-8 border-t border-oll-dark/10 dark:border-white/10 text-center">
+        <button
+          id="download-pdf-btn-footer"
+          class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-oll-dark dark:bg-white text-white dark:text-oll-dark text-xs font-bold uppercase tracking-widest hover:opacity-90 transition-opacity"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          Download PDF (Letter)
+        </button>
+        <p class="text-xs opacity-60 mt-3">Downloads a letter-size PDF with all sections.</p>
+        <a href="focus-course.html" class="block mt-6 text-sm uppercase tracking-widest opacity-70 hover:opacity-100">← Back to course overview</a>
+      </div>
+    </main>
+
+    <script type="module" src="./assets/js/main.js"></script>
+    <script>
+      (function() {
+        function downloadPdf() {
+          var btn = document.getElementById("download-pdf-btn");
+          var btnFooter = document.getElementById("download-pdf-btn-footer");
+          var content = document.getElementById("pdf-content");
+          if (!content || typeof html2pdf === "undefined") return;
+          if (btn) { btn.disabled = true; btn.textContent = "Generating…"; }
+          if (btnFooter) { btnFooter.disabled = true; btnFooter.textContent = "Generating…"; }
+
+          window.scrollTo(0, 0);
+          content.scrollIntoView({ block: "start" });
+          var main = document.querySelector("main");
+          var bodyOverflow = document.body.style.overflow;
+          var mainOverflow = main ? main.style.overflow : "";
+          var contentOverflow = content.style.overflow;
+          document.body.style.overflow = "visible";
+          if (main) main.style.overflow = "visible";
+          content.style.overflow = "visible";
+
+          var runOpt = {
+            margin: 0.5,
+            filename: "FOCUS-on-Peak-Performance.pdf",
+            image: { type: "jpeg", quality: 0.95 },
+            html2canvas: {
+              scale: 1.35,
+              useCORS: true,
+              logging: false,
+              scrollY: 0,
+              scrollX: 0,
+              onclone: function(clonedDoc, clone) {
+                var cloneContent = clonedDoc.getElementById("pdf-content");
+                if (cloneContent) {
+                  cloneContent.style.overflow = "visible";
+                  cloneContent.style.background = "#fff";
+                  cloneContent.style.maxWidth = "7.5in";
+                  cloneContent.style.width = "100%";
+                  cloneContent.style.overflowWrap = "break-word";
+                  cloneContent.style.wordBreak = "break-word";
+                  var icons = cloneContent.querySelectorAll(".pdf-section-icon");
+                  for (var i = 0; i < icons.length; i++) {
+                    var svg = icons[i];
+                    svg.setAttribute("stroke", "#111111");
+                    svg.setAttribute("width", "32");
+                    svg.setAttribute("height", "32");
+                    svg.style.stroke = "#111111";
+                    svg.style.fill = "none";
+                    var paths = svg.querySelectorAll("path");
+                    for (var j = 0; j < paths.length; j++) {
+                      paths[j].setAttribute("stroke", "#111111");
+                      paths[j].style.stroke = "#111111";
+                    }
+                  }
+                }
+              }
+            },
+            jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+            pagebreak: {
+              mode: "css",
+              before: [".pdf-section + .pdf-section", ".pdf-practice-of-week-push", ".pdf-face-up-block"],
+              avoid: [".pdf-practice-box", ".pdf-section-title", "h3", "h4", ".pdf-title-block", ".pdf-keep-together", ".pdf-face-up-block"]
+            }
+          };
+
+          setTimeout(function() {
+            html2pdf().set(runOpt).from(content).save().then(function() {
+            document.body.style.overflow = bodyOverflow;
+            if (main) main.style.overflow = mainOverflow;
+            content.style.overflow = contentOverflow;
+            if (btn) { btn.disabled = false; btn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg> Download PDF'; }
+            if (btnFooter) { btnFooter.disabled = false; btnFooter.innerHTML = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg> Download PDF (Letter)'; }
+          }).catch(function() {
+            document.body.style.overflow = bodyOverflow;
+            if (main) main.style.overflow = mainOverflow;
+            content.style.overflow = contentOverflow;
+            if (btn) { btn.disabled = false; btn.textContent = "Download PDF"; }
+            if (btnFooter) { btnFooter.disabled = false; btnFooter.textContent = "Download PDF (Letter)"; }
+          });
+          }, 150);
+        }
+
+        document.getElementById("download-pdf-btn") && document.getElementById("download-pdf-btn").addEventListener("click", downloadPdf);
+        document.getElementById("download-pdf-btn-footer") && document.getElementById("download-pdf-btn-footer").addEventListener("click", downloadPdf);
+      })();
+    </script>
+  </body>
+</html>

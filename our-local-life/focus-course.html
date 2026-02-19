@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FOCUS on Peak Performance | Our Local Life</title>
+    <meta
+      name="description"
+      content="A 6-week course connecting body, mind, and peak performance for entrepreneurs. Free the body, free the mind."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#111111" />
+    <link rel="canonical" href="https://ourlocallife.com/focus-course" />
+    <link
+      rel="icon"
+      href="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/cropped-4.webp"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "oll-dark": "#111111",
+              "oll-white": "#FFFFFF",
+              "oll-sand": "#DED9D5",
+              "oll-sand-light": "#F2F0EE",
+              "oll-gray-text": "#333333",
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', "serif"],
+              sans: ['"Inter"', "sans-serif"],
+            },
+            letterSpacing: { widest: ".2em" },
+            boxShadow: {
+              pill: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.5)",
+              float: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body
+    class="font-sans antialiased selection:bg-oll-sand selection:text-oll-dark bg-white dark:bg-oll-dark text-oll-dark dark:text-white transition-colors duration-500"
+    id="page-body"
+  >
+    <nav
+      class="md:hidden fixed top-0 left-0 w-full z-50 bg-white/95 dark:bg-oll-dark/95 backdrop-blur-md border-b border-oll-dark/10 dark:border-white/10 text-oll-dark dark:text-white transition-colors duration-500"
+      id="mobile-nav"
+    >
+      <div class="flex items-center justify-between px-6 h-16">
+        <a href="index.html">
+          <img
+            src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/5-1.png"
+            alt="OLL Icon"
+            class="h-8 w-auto dark:invert"
+          />
+        </a>
+        <div class="flex items-center gap-4">
+          <label class="theme-switch">
+            <input type="checkbox" class="theme-toggle-input" onchange="toggleTheme(this)" />
+            <span class="slider"></span>
+          </label>
+          <button id="mobile-toggle" class="p-2 focus:outline-none">
+            <svg id="icon-hamburger" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="mx-4 mt-2 rounded-2xl shadow-2xl border border-oll-dark/10 dark:border-white/10 absolute left-0 right-0 bg-white dark:bg-oll-dark text-oll-dark dark:text-white"
+      >
+        <div class="flex flex-col space-y-2 p-4">
+          <a href="index.html" class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+            <span class="uppercase tracking-widest text-xs font-medium">Home</span>
+          </a>
+          <a href="about.html" class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+            <span class="uppercase tracking-widest text-xs font-medium">About</span>
+          </a>
+          <a href="focus-course.html" class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+            <span class="uppercase tracking-widest text-xs font-medium">FOCUS Course</span>
+          </a>
+          <a href="featured-entrepreneur.html" class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+            <span class="uppercase tracking-widest text-xs font-medium">Spotlight</span>
+          </a>
+          <a href="contact.html" class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+            <span class="uppercase tracking-widest text-xs font-medium">Contact</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <nav
+      id="sidebar"
+      class="hidden md:flex fixed top-4 left-4 bottom-4 w-16 bg-white/90 dark:bg-oll-dark/90 backdrop-blur-md z-50 flex-col shadow-float rounded-2xl overflow-hidden border border-oll-dark/10 dark:border-white/20 text-oll-dark dark:text-white transition-colors duration-300"
+    >
+      <div class="h-20 flex items-center justify-center border-b border-oll-dark/5 dark:border-white/10 px-2 relative">
+        <button id="menu-toggle" class="p-2 hover:bg-gray-100 dark:hover:bg-white/10 rounded-full transition-colors z-20">
+          <svg id="icon-contracted" class="w-5 h-5 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="icon-expanded" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="py-4 flex justify-center items-center h-20 relative">
+        <img
+          id="logo-expanded"
+          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/cropped-4.webp"
+          alt="OLL Logo"
+          class="w-32 h-auto absolute opacity-0 pointer-events-none transition-opacity duration-300 transform scale-90 dark:invert"
+        />
+      </div>
+      <div class="flex-1 flex flex-col space-y-3 px-2 mt-2 overflow-y-auto">
+        <a href="index.html" class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item">
+          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium">Home</span>
+        </a>
+        <a href="about.html" class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item">
+          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z" />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium">About</span>
+        </a>
+        <a href="focus-course.html" class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item bg-oll-sand/30 dark:bg-white/10">
+          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium">Course</span>
+        </a>
+        <a href="featured-entrepreneur.html" class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item">
+          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" stroke-width="1.5" />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium">Spotlight</span>
+        </a>
+        <a href="contact.html" class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item">
+          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium">Contact</span>
+        </a>
+      </div>
+      <div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
+      <div class="px-2 flex justify-center pb-4">
+        <label class="theme-switch">
+          <input type="checkbox" class="theme-toggle-input" onchange="toggleTheme(this)" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </nav>
+
+    <main id="main-content" class="md:ml-24 pt-0">
+      <!-- Hero -->
+      <header class="relative min-h-[75vh] flex flex-col justify-end overflow-hidden bg-oll-dark text-white">
+        <div class="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1920&auto=format&fit=crop"
+            alt="Mind and body connection"
+            class="w-full h-full object-cover opacity-50"
+          />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/90"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto px-6 pb-20 pt-32 text-center">
+          <p class="text-xs uppercase tracking-[0.4em] text-oll-sand/90 mb-4">Education</p>
+          <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl leading-tight">
+            FOCUS on Peak Performance
+          </h1>
+          <p class="text-lg md:text-xl text-white/85 mt-6 max-w-2xl mx-auto font-light">
+            Free the body, free the mind. A 6-week journey connecting fascia, breath, heart, and clarity for entrepreneurs.
+          </p>
+          <p class="text-sm text-oll-sand/80 mt-4 max-w-xl mx-auto">
+            Every week answers: <em>Why does anyone care? And how does this increase peak performance?</em>
+          </p>
+          <button
+            onclick="openCourseOptIn()"
+            class="mt-10 inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-oll-dark font-semibold uppercase tracking-widest text-xs hover:bg-oll-sand-light transition-colors shadow-float"
+          >
+            Access the Course
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Why this course -->
+      <section class="py-20 bg-oll-sand-light dark:bg-[#1a1a1a] text-oll-dark dark:text-white border-y border-oll-dark/10 dark:border-white/10">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+          <h2 class="font-serif text-3xl md:text-4xl mb-6">Why this course?</h2>
+          <p class="text-lg opacity-90 leading-relaxed">
+            Your body is a living feedback system. Thoughts, emotions, and beliefs show up in your physiology—and the other way around. This course decodes that connection so you can release what holds you back and step into focus, clarity, and sustained peak performance.
+          </p>
+        </div>
+      </section>
+
+      <!-- 6 weeks overview -->
+      <section class="py-24 bg-white dark:bg-oll-dark text-oll-dark dark:text-white">
+        <div class="max-w-7xl mx-auto px-6">
+          <p class="text-xs uppercase tracking-[0.3em] opacity-60 mb-2">Curriculum</p>
+          <h2 class="font-serif text-4xl md:text-5xl mb-16">Six weeks. One question each week.</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article class="group border border-oll-dark/10 dark:border-white/10 rounded-2xl p-6 hover:border-oll-sand dark:hover:border-white/20 transition-colors bg-oll-sand-light/30 dark:bg-white/5">
+              <div class="w-10 h-10 rounded-xl bg-oll-dark/10 dark:bg-white/10 flex items-center justify-center mb-4 text-oll-dark dark:text-white">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <span class="text-xs uppercase tracking-widest text-oll-dark/60 dark:text-white/60">Week 1</span>
+              <h3 class="font-serif text-xl mt-1 mb-2">Smile, Laughing & Neuroplasticity</h3>
+              <p class="text-sm opacity-80">Repatterning through the face and body. How we learn, why we repeat patterns, and Tabata-style smile/laugh practice to connect intention to your neural networks.</p>
+            </article>
+            <article class="group border border-oll-dark/10 dark:border-white/10 rounded-2xl p-6 hover:border-oll-sand dark:hover:border-white/20 transition-colors bg-oll-sand-light/30 dark:bg-white/5">
+              <div class="w-10 h-10 rounded-xl bg-oll-dark/10 dark:bg-white/10 flex items-center justify-center mb-4 text-oll-dark dark:text-white">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              </div>
+              <span class="text-xs uppercase tracking-widest text-oll-dark/60 dark:text-white/60">Week 2</span>
+              <h3 class="font-serif text-xl mt-1 mb-2">Fascia, Hips & Spine</h3>
+              <p class="text-sm opacity-80">How fascia, hips, and spine hold memory and charge. Three stretches/movements to build neural connections and momentum toward clarity and confidence.</p>
+            </article>
+            <article class="group border border-oll-dark/10 dark:border-white/10 rounded-2xl p-6 hover:border-oll-sand dark:hover:border-white/20 transition-colors bg-oll-sand-light/30 dark:bg-white/5">
+              <div class="w-10 h-10 rounded-xl bg-oll-dark/10 dark:bg-white/10 flex items-center justify-center mb-4 text-oll-dark dark:text-white">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+              </div>
+              <span class="text-xs uppercase tracking-widest text-oll-dark/60 dark:text-white/60">Week 3</span>
+              <h3 class="font-serif text-xl mt-1 mb-2">Cell Salts & Hydration</h3>
+              <p class="text-sm opacity-80">How salts and water work in the cell. Celtic Sea Salt and spring water on waking and at wind-down. Sweat daily for one week. Signs of dehydration in body and spirit.</p>
+            </article>
+            <article class="group border border-oll-dark/10 dark:border-white/10 rounded-2xl p-6 hover:border-oll-sand dark:hover:border-white/20 transition-colors bg-oll-sand-light/30 dark:bg-white/5">
+              <div class="w-10 h-10 rounded-xl bg-oll-dark/10 dark:bg-white/10 flex items-center justify-center mb-4 text-oll-dark dark:text-white">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.514 0-1.02.05-1.527.145m-3.985.965l-.027-.01M9 6l2 3"/></svg>
+              </div>
+              <span class="text-xs uppercase tracking-widest text-oll-dark/60 dark:text-white/60">Week 4</span>
+              <h3 class="font-serif text-xl mt-1 mb-2">Breath & Thought Connection</h3>
+              <p class="text-sm opacity-80">How we breathe shapes how we think. Diaphragmatic breath, challenge reps, and heart-based gratitude breathing to optimize brain and state.</p>
+            </article>
+            <article class="group border border-oll-dark/10 dark:border-white/10 rounded-2xl p-6 hover:border-oll-sand dark:hover:border-white/20 transition-colors bg-oll-sand-light/30 dark:bg-white/5">
+              <div class="w-10 h-10 rounded-xl bg-oll-dark/10 dark:bg-white/10 flex items-center justify-center mb-4 text-oll-dark dark:text-white">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              </div>
+              <span class="text-xs uppercase tracking-widest text-oll-dark/60 dark:text-white/60">Week 5</span>
+              <h3 class="font-serif text-xl mt-1 mb-2">Gratitude & Heart Coherence</h3>
+              <p class="text-sm opacity-80">The heart as the bridge between spirit and body. Intention and how to use it. Combining hydration, fascia/hips/spine release, and heart-based breathing with intention.</p>
+            </article>
+            <article class="group border border-oll-dark/10 dark:border-white/10 rounded-2xl p-6 hover:border-oll-sand dark:hover:border-white/20 transition-colors bg-oll-sand-light/30 dark:bg-white/5">
+              <div class="w-10 h-10 rounded-xl bg-oll-dark/10 dark:bg-white/10 flex items-center justify-center mb-4 text-oll-dark dark:text-white">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+              </div>
+              <span class="text-xs uppercase tracking-widest text-oll-dark/60 dark:text-white/60">Week 6</span>
+              <h3 class="font-serif text-xl mt-1 mb-2">Systems & Organ Teammates</h3>
+                <p class="text-sm opacity-80">How sexual, digestive, and other systems store charge and recruit bodily teammates. “Fasting” per system and its effect on the brain and long-term reward.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="py-24 bg-oll-dark text-white">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+          <h2 class="font-serif text-4xl md:text-5xl mb-6">Free the body. Free the mind.</h2>
+          <p class="text-lg text-white/80 mb-10">
+            Get full course content, practices, and downloadable materials. Enter your details to access the course page and PDF.
+          </p>
+          <button
+            onclick="openCourseOptIn()"
+            class="inline-flex items-center gap-2 px-10 py-4 rounded-full bg-white text-oll-dark font-semibold uppercase tracking-widest text-xs hover:bg-oll-sand-light transition-colors"
+          >
+            Get Access
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <footer class="py-12 border-t border-oll-dark/10 dark:border-white/10 bg-white dark:bg-oll-dark text-oll-dark dark:text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+          <p class="text-xs uppercase tracking-widest opacity-60">&copy; 2025 Our Local Life</p>
+          <a href="index.html" class="text-sm opacity-70 hover:opacity-100 mt-2 inline-block">Back to Home</a>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Course opt-in modal -->
+    <div
+      id="course-optin-modal"
+      class="modal hidden-modal fixed inset-0 z-[60] flex items-center justify-center p-4"
+    >
+      <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeCourseOptIn()"></div>
+      <div class="relative bg-white dark:bg-oll-dark p-8 md:p-12 max-w-md w-full shadow-2xl border border-oll-sand dark:border-white/10 text-oll-dark dark:text-white rounded-2xl">
+        <button
+          onclick="closeCourseOptIn()"
+          class="absolute top-4 right-4 text-gray-400 hover:text-oll-dark dark:hover:text-white transition-colors"
+          aria-label="Close"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <h3 class="font-serif text-2xl md:text-3xl mb-2">Access the Course</h3>
+        <p class="text-sm opacity-70 mb-6">
+          Enter your name and email to open the course page and download the full curriculum as a PDF.
+        </p>
+        <form id="course-optin-form" class="space-y-4" onsubmit="submitCourseOptIn(event)">
+          <div>
+            <label for="course-name" class="block text-xs uppercase tracking-widest opacity-60 mb-1">Name</label>
+            <input
+              id="course-name"
+              type="text"
+              name="name"
+              required
+              autocomplete="name"
+              placeholder="Your name"
+              class="w-full border-b border-oll-dark/20 dark:border-white/20 p-2 focus:outline-none focus:border-oll-dark dark:focus:border-white bg-transparent text-sm"
+            />
+          </div>
+          <div>
+            <label for="course-email" class="block text-xs uppercase tracking-widest opacity-60 mb-1">Email</label>
+            <input
+              id="course-email"
+              type="email"
+              name="email"
+              required
+              autocomplete="email"
+              placeholder="you@example.com"
+              class="w-full border-b border-oll-dark/20 dark:border-white/20 p-2 focus:outline-none focus:border-oll-dark dark:focus:border-white bg-transparent text-sm"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-oll-dark dark:bg-white text-white dark:text-oll-dark py-3 uppercase tracking-widest text-xs font-bold mt-6 transition-colors rounded-full"
+          >
+            Open Course &amp; Download PDF
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="./assets/js/main.js"></script>
+    <script>
+      function openCourseOptIn() {
+        const modal = document.getElementById("course-optin-modal");
+        if (modal) {
+          modal.classList.add("visible-modal");
+          modal.classList.remove("hidden-modal");
+        }
+      }
+      function closeCourseOptIn() {
+        const modal = document.getElementById("course-optin-modal");
+        if (modal) {
+          modal.classList.remove("visible-modal");
+          modal.classList.add("hidden-modal");
+        }
+      }
+      function submitCourseOptIn(e) {
+        e.preventDefault();
+        const form = document.getElementById("course-optin-form");
+        const name = form?.querySelector('[name="name"]')?.value || "";
+        const email = form?.querySelector('[name="email"]')?.value || "";
+        if (name && email) {
+          try {
+            sessionStorage.setItem("focusCourseName", name);
+            sessionStorage.setItem("focusCourseEmail", email);
+          } catch (err) {}
+          window.location.href = "focus-course-content.html";
+        }
+      }
+      window.openCourseOptIn = openCourseOptIn;
+      window.closeCourseOptIn = closeCourseOptIn;
+      window.submitCourseOptIn = submitCourseOptIn;
+    </script>
+  </body>
+</html>
