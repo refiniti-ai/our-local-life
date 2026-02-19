@@ -3,8 +3,7 @@ export const curatedStories = [
     id: "dustin-defrates-building-people-places-purpose",
     title: "Dustin DeFrates: Building People, Building Places, Building Purpose",
     description: "A curated story and interview transcript with Dustin DeFrates.",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2000&auto=format&fit=crop",
+    image: "assets/image/Dustin Defrates_our local life.jpeg",
     url: "pages/stories/dustin-defrates-building-people-places-purpose.html",
     category: "soul",
     label: "Soul",
@@ -69,8 +68,7 @@ export const entrepreneurs = [
     name: "Dustin DeFrates",
     archetype: "The Builder",
     description: "A high-vibe, editorial profile celebrating Dustin DeFrates.",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2000&auto=format&fit=crop",
+    image: "assets/image/Dustin Defrates_our local life.jpeg",
     url: "pages/spotlight/dustin-defrates-builder-of-people-places-purpose.html",
     date: "2026-01-23",
   },
