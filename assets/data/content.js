@@ -3,7 +3,7 @@ export const curatedStories = [
     id: "dustin-defrates-building-people-places-purpose",
     title: "Dustin DeFrates: Building People, Building Places, Building Purpose",
     description: "A curated story and interview transcript with Dustin DeFrates.",
-    image: "assets/image/Dustin Defrates_our local life.jpeg",
+    image: "assets/image/serene-natural-forest-landscape-our-local-life.webp",
     url: "pages/stories/dustin-defrates-building-people-places-purpose.html",
     category: "soul",
     label: "Soul",
@@ -68,7 +68,7 @@ export const entrepreneurs = [
     name: "Dustin DeFrates",
     archetype: "The Builder",
     description: "A high-vibe, editorial profile celebrating Dustin DeFrates.",
-    image: "assets/image/Dustin Defrates_our local life.jpeg",
+    image: "assets/image/dustin-building-people-places-ourlocallife.webp",
     url: "pages/spotlight/dustin-defrates-builder-of-people-places-purpose.html",
     date: "2026-01-23",
   },
@@ -77,8 +77,7 @@ export const entrepreneurs = [
     name: "Lai Lam",
     archetype: "The Intentional Matchmaker",
     description: "A high-vibe, editorial profile celebrating Lai Lam.",
-    image:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=2000&auto=format&fit=crop",
+    image: "assets/image/lailam-founder-resumate-our-local-life3.webp",
     url: "pages/spotlight/lai-lam-resumate-intentional-dating.html",
     date: "2026-01-22",
   },
@@ -88,8 +87,7 @@ export const entrepreneurs = [
     archetype: "The Regenerator",
     description:
       "A high-vibe, editorial profile celebrating Christina 'Kat' Cat.",
-    image:
-      "https://images.unsplash.com/photo-1474314243412-cd4a79f02c5a?q=80&w=2000&auto=format&fit=crop",
+    image: "assets/image/kristina-cat-humuson-soil-regeneration.webp",
     url: "pages/spotlight/christina-kat-cat-sapropel-organics.html",
     date: "2026-01-20",
   },
@@ -109,8 +107,7 @@ export const entrepreneurs = [
     name: "Chris Wuehr",
     archetype: "The Mindful Architect",
     description: "A high-vibe, editorial profile celebrating Chris Wuehr.",
-    image:
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2000&auto=format&fit=crop",
+    image: "assets/image/chris-wuehr-thought-leader-our-local-life.webp",
     url: "pages/spotlight/chris-wuehr-mind-body-connection.html",
     date: "2026-01-17",
   },

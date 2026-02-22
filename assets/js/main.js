@@ -267,7 +267,7 @@ function renderCuratedStoriesGrid() {
             <img
               src="${story.image}"
               alt="${story.title}"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 bg-white"
             />
           </div>
           <div class="p-6 space-y-3">
