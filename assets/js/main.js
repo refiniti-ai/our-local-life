@@ -515,7 +515,7 @@ const mapStoryFromDoc = (path, doc) => {
     title: title || "Curated Story",
     description,
     image,
-    url: path,
+    url: path.startsWith("/") ? path : `/${path}`,
     category,
     label,
     cta: "Read story",
@@ -542,7 +542,7 @@ const mapEntrepreneurFromDoc = (path, doc) => {
     archetype,
     description,
     image,
-    url: path,
+    url: path.startsWith("/") ? path : `/${path}`,
     date,
   };
 };

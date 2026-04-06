@@ -1,10 +1,23 @@
 export const curatedStories = [
   {
+    id: "the-practice-of-presence-inside-atmas-approach-to-healing",
+    title: "The Practice of Presence: Inside Atma’s Approach to Healing",
+    description:
+      "For Atma, healing isn’t about fixing something broken.",
+    image:
+      "https://images.unsplash.com/photo-1526312426976-f4d754fa9bd6?q=80&w=2000&auto=format&fit=crop",
+    url: "/pages/stories/the-practice-of-presence-inside-atmas-approach-to-healing.html",
+    category: "mind",
+    label: "Mind",
+    cta: "Read story",
+    date: "2026-03-10",
+  },
+  {
     id: "dustin-defrates-building-people-places-purpose",
     title: "Dustin DeFrates: Building People, Building Places, Building Purpose",
     description: "A curated story and interview transcript with Dustin DeFrates.",
-    image: "assets/image/serene-natural-forest-landscape-our-local-life.webp",
-    url: "pages/stories/dustin-defrates-building-people-places-purpose.html",
+    image: "/assets/image/serene-natural-forest-landscape-our-local-life.webp",
+    url: "/pages/stories/dustin-defrates-building-people-places-purpose.html",
     category: "soul",
     label: "Soul",
     cta: "Read story",
@@ -17,11 +30,22 @@ export const curatedStories = [
     description: "A curated story and interview transcript with Lai Lam.",
     image:
       "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=2000&auto=format&fit=crop",
-    url: "pages/stories/intentional-dating-resumate-lai-lam.html",
+    url: "/pages/stories/intentional-dating-resumate-lai-lam.html",
     category: "soul",
     label: "Soul",
     cta: "Read story",
     date: "2026-01-23",
+  },
+  {
+    id: "linking-the-body-demarius-parker",
+    title: "Linking the Body: A Conversation with Demarius Parker",
+    description: "A curated story and interview transcript with Demarius Parker.",
+    image: "/assets/image/Linking-the-Body-A-Conversation-with-Demarius-Parker.webp",
+    url: "/pages/stories/linking-the-body-demarius-parker.html",
+    category: "body",
+    label: "Body",
+    cta: "Read story",
+    date: "2026-01-19",
   },
   {
     id: "restoring-the-soil-with-christina-kat-cat",
@@ -29,24 +53,12 @@ export const curatedStories = [
     description:
       "A curated story and interview transcript with Christina 'Kat' Cat.",
     image:
-      "https://images.unsplash.com/photo-1474314243412-cd4a79f02c5a?q=80&w=2000&auto=format&fit=crop",
-    url: "pages/stories/restoring-the-soil-with-christina-kat-cat.html",
+      "/assets/image/b7618599-c5f2-47b9-b999-f6ffedad5c5f.jpeg",
+    url: "/pages/stories/restoring-the-soil-with-christina-kat-cat.html",
     category: "body",
     label: "Body",
     cta: "Read story",
     date: "2026-01-21",
-  },
-  {
-    id: "linking-the-body-demarius-parker",
-    title: "Linking the Body: A Conversation with Demarius Parker",
-    description: "A curated story and interview transcript with Demarius Parker.",
-    image:
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2000&auto=format&fit=crop",
-    url: "pages/stories/linking-the-body-demarius-parker.html",
-    category: "body",
-    label: "Body",
-    cta: "Read story",
-    date: "2026-01-19",
   },
   {
     id: "meet-chris-wuehr-mind-body-connection",
@@ -54,7 +66,7 @@ export const curatedStories = [
     description: "A curated story and interview transcript with Chris Wuehr.",
     image:
       "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2000&auto=format&fit=crop",
-    url: "pages/stories/meet-chris-wuehr-mind-body-connection.html",
+    url: "/pages/stories/meet-chris-wuehr-mind-body-connection.html",
     category: "mind",
     label: "Mind",
     cta: "Read story",
@@ -68,8 +80,8 @@ export const entrepreneurs = [
     name: "Dustin DeFrates",
     archetype: "The Builder",
     description: "A high-vibe, editorial profile celebrating Dustin DeFrates.",
-    image: "assets/image/dustin-building-people-places-ourlocallife.webp",
-    url: "pages/spotlight/dustin-defrates-builder-of-people-places-purpose.html",
+    image: "/assets/image/dustin-building-people-places-ourlocallife.webp",
+    url: "/pages/spotlight/dustin-defrates-builder-of-people-places-purpose.html",
     date: "2026-01-23",
   },
   {
@@ -77,8 +89,8 @@ export const entrepreneurs = [
     name: "Lai Lam",
     archetype: "The Intentional Matchmaker",
     description: "A high-vibe, editorial profile celebrating Lai Lam.",
-    image: "assets/image/lailam-founder-resumate-our-local-life3.webp",
-    url: "pages/spotlight/lai-lam-resumate-intentional-dating.html",
+    image: "/assets/image/lailam-founder-resumate-our-local-life3.webp",
+    url: "/pages/spotlight/lai-lam-resumate-intentional-dating.html",
     date: "2026-01-22",
   },
   {
@@ -87,8 +99,8 @@ export const entrepreneurs = [
     archetype: "The Regenerator",
     description:
       "A high-vibe, editorial profile celebrating Christina 'Kat' Cat.",
-    image: "assets/image/kristina-cat-humuson-soil-regeneration.webp",
-    url: "pages/spotlight/christina-kat-cat-sapropel-organics.html",
+    image: "/assets/image/kristina-cat-humuson-soil-regeneration.webp",
+    url: "/pages/spotlight/christina-kat-cat-sapropel-organics.html",
     date: "2026-01-20",
   },
   {
@@ -97,9 +109,8 @@ export const entrepreneurs = [
     archetype: "The Linker",
     description:
       "An editorial spotlight on Demarius Parker, the Body lead in the Mind Body Soul collective.",
-    image:
-      "https://images.unsplash.com/photo-1549576490-b0b4831ef60a?q=80&w=2000&auto=format&fit=crop",
-    url: "pages/spotlight/demarius-parker-body-whisperer.html",
+    image: "/assets/image/Demarius-Parker-Body-Savant-Our-local-life.webp",
+    url: "/pages/spotlight/demarius-parker-body-whisperer.html",
     date: "2026-01-19",
   },
   {
@@ -107,9 +118,20 @@ export const entrepreneurs = [
     name: "Chris Wuehr",
     archetype: "The Mindful Architect",
     description: "A high-vibe, editorial profile celebrating Chris Wuehr.",
-    image: "assets/image/chris-wuehr-thought-leader-our-local-life.webp",
-    url: "pages/spotlight/chris-wuehr-mind-body-connection.html",
+    image: "/assets/image/chris-wuehr-thought-leader-our-local-life.webp",
+    url: "/pages/spotlight/chris-wuehr-mind-body-connection.html",
     date: "2026-01-17",
+  },
+  {
+    id: "atma-practice-of-presence",
+    name: "Atma",
+    archetype: "The Soul Guide",
+    description:
+      "Kundalini Yoga, meditation, and ancestral healing to bring people back into presence and nervous system balance.",
+    image:
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2000&auto=format&fit=crop",
+    url: "/pages/spotlight/atma-practice-of-presence.html",
+    date: "2026-03-10",
   },
 ];
 
