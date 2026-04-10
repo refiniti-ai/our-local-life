@@ -5,6 +5,69 @@ import {
   magazineIssues,
 } from "../data/content.js";
 
+const PILLAR_LABELS = {
+  mind: "Mind",
+  body: "Body",
+  soul: "Soul",
+  community: "Community",
+};
+
+const pillarLabel = (pillar) => PILLAR_LABELS[pillar] || "";
+
+/** Arizona (no DST). Used for “current issue” month on the home hero. */
+const PHOENIX_TZ = "America/Phoenix";
+
+const MAGAZINE_MONTH_SLUGS = [
+  "january",
+  "february",
+  "march",
+  "april",
+  "may",
+  "june",
+  "july",
+  "august",
+  "september",
+  "october",
+  "november",
+  "december",
+];
+
+/** Which `*-issue.html` files exist under `pages/magazine/`. Add slugs as you publish new months. */
+const MAGAZINE_ISSUE_PAGES_AVAILABLE = new Set(["january-issue.html"]);
+
+function getPhoenixMonthLongName() {
+  return new Intl.DateTimeFormat("en-US", {
+    timeZone: PHOENIX_TZ,
+    month: "long",
+  }).format(new Date());
+}
+
+function getHeroMagazineIssueHref() {
+  const monthLong = getPhoenixMonthLongName();
+  const idx = MAGAZINE_MONTH_SLUGS.indexOf(monthLong.toLowerCase());
+  const slug = idx >= 0 ? MAGAZINE_MONTH_SLUGS[idx] : "january";
+  const filename = `${slug}-issue.html`;
+  const fallback =
+    [...MAGAZINE_ISSUE_PAGES_AVAILABLE][0] || "january-issue.html";
+  const path = MAGAZINE_ISSUE_PAGES_AVAILABLE.has(filename)
+    ? `pages/magazine/${filename}`
+    : `pages/magazine/${fallback}`;
+  return new URL(path, window.location.href).href;
+}
+
+function updateHomeHeroMagazineLinks() {
+  const monthLong = getPhoenixMonthLongName();
+  const label = `${monthLong.toUpperCase()} ISSUE`;
+  const href = getHeroMagazineIssueHref();
+
+  document.querySelectorAll("[data-hero-magazine-link]").forEach((el) => {
+    el.setAttribute("href", href);
+  });
+  document.querySelectorAll("[data-hero-magazine-label]").forEach((el) => {
+    el.textContent = label;
+  });
+}
+
 function toggleTheme(checkbox) {
   const html = document.documentElement;
   if (checkbox.checked) {
@@ -186,9 +249,9 @@ function renderLatestStoryCard() {
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
       </div>
-      <h3 class="font-serif text-3xl mb-4">${latestStory.title}</h3>
+      <h3 class="font-serif text-3xl mb-4">Free the Body. Free the Mind.</h3>
       <p class="text-sm opacity-70 max-w-md mx-auto leading-relaxed font-sans">
-        ${latestStory.description}
+        Emotional weight and mental fog often live in your physical tissue. Through targeted fascia release, diaphragmatic breathing, and heart alignment, you can return to the clarity and confidence required for peak performance.
       </p>
     </a>
   `;
@@ -199,18 +262,20 @@ function renderLatestEntrepreneurCard() {
   if (!container) return;
   const latestEntrepreneur = getLatestItem(currentEntrepreneurs);
   if (!latestEntrepreneur) return;
+  const imageSrc = encodeURI(latestEntrepreneur.image);
+  const profileHref = new URL(latestEntrepreneur.url, window.location.href).href;
   container.innerHTML = `
-    <a href="${latestEntrepreneur.url}" class="block group">
+    <a href="${profileHref}" class="block group">
       <div class="aspect-[4/3] overflow-hidden mb-8">
         <img
-          src="${latestEntrepreneur.image}"
+          src="${imageSrc}"
           alt="${latestEntrepreneur.name}"
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
       </div>
-      <h3 class="font-serif text-3xl mb-4">${latestEntrepreneur.name}</h3>
+      <h3 class="font-serif text-3xl mb-4">Meet the Great Minds of Our Local Life</h3>
       <p class="text-sm opacity-70 max-w-md mx-auto leading-relaxed font-sans">
-        ${latestEntrepreneur.description}
+        Explore the stories, visions, and impact of the ethical entrepreneurs and creative leaders shaping our community. Discover how these thinkers are turning high-vibe concepts into local reality.
       </p>
     </a>
   `;
@@ -271,7 +336,7 @@ function renderCuratedStoriesGrid() {
             />
           </div>
           <div class="p-6 space-y-3">
-            <p class="text-xs uppercase tracking-widest opacity-60">Curated Story</p>
+            <p class="text-xs uppercase tracking-widest opacity-60">${story.label}</p>
             <h3 class="font-serif text-2xl">${story.title}</h3>
             <p class="text-sm opacity-70">${story.description}</p>
             <span class="text-xs uppercase tracking-widest border-b border-current pb-1">
@@ -307,6 +372,11 @@ function renderEntrepreneurGrid() {
             />
           </div>
           <div class="p-6 space-y-3">
+            ${
+              profile.pillar
+                ? `<p class="text-xs uppercase tracking-widest opacity-90">${pillarLabel(profile.pillar)}</p>`
+                : ""
+            }
             <p class="text-xs uppercase tracking-widest opacity-60">${profile.archetype}</p>
             <h3 class="font-serif text-2xl">${profile.name}</h3>
             <p class="text-sm opacity-70">${profile.description}</p>
@@ -414,7 +484,7 @@ function renderMagazineCollections() {
               />
             </div>
             <div class="p-6 space-y-3">
-              <p class="text-xs uppercase tracking-widest opacity-60">Curated Story</p>
+              <p class="text-xs uppercase tracking-widest opacity-60">${story.label}</p>
               <h3 class="font-serif text-2xl">${story.title}</h3>
               <p class="text-sm opacity-70">${story.description}</p>
               <span class="text-xs uppercase tracking-widest border-b border-current pb-1">
@@ -446,6 +516,11 @@ function renderMagazineCollections() {
               />
             </div>
             <div class="p-6 space-y-3">
+              ${
+                profile.pillar
+                  ? `<p class="text-xs uppercase tracking-widest opacity-90">${pillarLabel(profile.pillar)}</p>`
+                  : ""
+              }
               <p class="text-xs uppercase tracking-widest opacity-60">${profile.archetype}</p>
               <h3 class="font-serif text-2xl">${profile.name}</h3>
               <p class="text-sm opacity-70">${profile.description}</p>
@@ -469,6 +544,7 @@ renderPodcastGrid();
 renderMagazineIssue();
 renderMagazineCollections();
 setupMbsFilters();
+updateHomeHeroMagazineLinks();
 
 const getMetaContent = (doc, key) => {
   const meta = doc.querySelector(`meta[name="${key}"], meta[property="${key}"]`);
@@ -483,6 +559,17 @@ const normalizeTitle = (rawTitle) =>
     .replace("| Featured Entrepreneur", "")
     .trim();
 
+const VALID_PILLARS = ["mind", "body", "soul", "community"];
+
+const inferPillarFromSpotlightSlug = (slug) => {
+  if (!slug) return "community";
+  const s = slug.toLowerCase();
+  if (s.includes("chris-wuehr") || s.includes("dustin-defrates")) return "mind";
+  if (s.includes("demarius-parker")) return "body";
+  if (s.includes("atma")) return "soul";
+  return "community";
+};
+
 const inferCategory = (doc) => {
   const explicit = getMetaContent(doc, "oll:category");
   if (explicit) return explicit.toLowerCase();
@@ -493,7 +580,7 @@ const inferCategory = (doc) => {
   if (/mind\b/i.test(text)) return "mind";
   if (/body\b/i.test(text)) return "body";
   if (/soul\b/i.test(text)) return "soul";
-  return "soul";
+  return "community";
 };
 
 const mapStoryFromDoc = (path, doc) => {
@@ -507,7 +594,10 @@ const mapStoryFromDoc = (path, doc) => {
     "https://images.unsplash.com/photo-1474314243412-cd4a79f02c5a?q=80&w=2000&auto=format&fit=crop";
   const date = getMetaContent(doc, "oll:date") || "1900-01-01";
   const category = inferCategory(doc);
-  const label = category.charAt(0).toUpperCase() + category.slice(1);
+  const label =
+    category === "community"
+      ? "Community"
+      : category.charAt(0).toUpperCase() + category.slice(1);
   const slug = path.split("/").pop().replace(".html", "");
 
   return {
@@ -535,10 +625,15 @@ const mapEntrepreneurFromDoc = (path, doc) => {
   const date = getMetaContent(doc, "oll:date") || "1900-01-01";
   const archetype = getMetaContent(doc, "oll:archetype") || "Featured Entrepreneur";
   const slug = path.split("/").pop().replace(".html", "");
+  const pillarMeta = getMetaContent(doc, "oll:pillar").toLowerCase();
+  const pillar = VALID_PILLARS.includes(pillarMeta)
+    ? pillarMeta
+    : inferPillarFromSpotlightSlug(slug);
 
   return {
     id: slug,
     name: title || "Featured Entrepreneur",
+    pillar,
     archetype,
     description,
     image,

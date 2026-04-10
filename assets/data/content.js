@@ -7,8 +7,8 @@ export const curatedStories = [
     image:
       "https://images.unsplash.com/photo-1526312426976-f4d754fa9bd6?q=80&w=2000&auto=format&fit=crop",
     url: "/pages/stories/the-practice-of-presence-inside-atmas-approach-to-healing.html",
-    category: "mind",
-    label: "Mind",
+    category: "soul",
+    label: "Soul",
     cta: "Read story",
     date: "2026-03-10",
   },
@@ -18,8 +18,8 @@ export const curatedStories = [
     description: "A curated story and interview transcript with Dustin DeFrates.",
     image: "/assets/image/serene-natural-forest-landscape-our-local-life.webp",
     url: "/pages/stories/dustin-defrates-building-people-places-purpose.html",
-    category: "soul",
-    label: "Soul",
+    category: "mind",
+    label: "Mind",
     cta: "Read story",
     date: "2026-01-24",
   },
@@ -31,8 +31,8 @@ export const curatedStories = [
     image:
       "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=2000&auto=format&fit=crop",
     url: "/pages/stories/intentional-dating-resumate-lai-lam.html",
-    category: "soul",
-    label: "Soul",
+    category: "community",
+    label: "Community",
     cta: "Read story",
     date: "2026-01-23",
   },
@@ -55,8 +55,8 @@ export const curatedStories = [
     image:
       "/assets/image/b7618599-c5f2-47b9-b999-f6ffedad5c5f.jpeg",
     url: "/pages/stories/restoring-the-soil-with-christina-kat-cat.html",
-    category: "body",
-    label: "Body",
+    category: "community",
+    label: "Community",
     cta: "Read story",
     date: "2026-01-21",
   },
@@ -78,6 +78,7 @@ export const entrepreneurs = [
   {
     id: "dustin-defrates-builder-of-people-places-purpose",
     name: "Dustin DeFrates",
+    pillar: "mind",
     archetype: "The Builder",
     description: "A high-vibe, editorial profile celebrating Dustin DeFrates.",
     image: "/assets/image/dustin-building-people-places-ourlocallife.webp",
@@ -87,6 +88,7 @@ export const entrepreneurs = [
   {
     id: "lai-lam-resumate-intentional-dating",
     name: "Lai Lam",
+    pillar: "community",
     archetype: "The Intentional Matchmaker",
     description: "A high-vibe, editorial profile celebrating Lai Lam.",
     image: "/assets/image/lailam-founder-resumate-our-local-life3.webp",
@@ -96,6 +98,7 @@ export const entrepreneurs = [
   {
     id: "christina-kat-cat-sapropel-organics",
     name: "Christina 'Kat' Cat",
+    pillar: "community",
     archetype: "The Regenerator",
     description:
       "A high-vibe, editorial profile celebrating Christina 'Kat' Cat.",
@@ -106,6 +109,7 @@ export const entrepreneurs = [
   {
     id: "demarius-parker-body-whisperer",
     name: "Demarius Parker",
+    pillar: "body",
     archetype: "The Linker",
     description:
       "An editorial spotlight on Demarius Parker, the Body lead in the Mind Body Soul collective.",
@@ -116,6 +120,7 @@ export const entrepreneurs = [
   {
     id: "chris-wuehr-mind-body-connection",
     name: "Chris Wuehr",
+    pillar: "mind",
     archetype: "The Mindful Architect",
     description: "A high-vibe, editorial profile celebrating Chris Wuehr.",
     image: "/assets/image/chris-wuehr-thought-leader-our-local-life.webp",
@@ -125,6 +130,7 @@ export const entrepreneurs = [
   {
     id: "atma-practice-of-presence",
     name: "Atma",
+    pillar: "soul",
     archetype: "The Soul Guide",
     description:
       "Kundalini Yoga, meditation, and ancestral healing to bring people back into presence and nervous system balance.",
