@@ -1,0 +1,13 @@
+{
+  "name": "tanner-website",
+  "private": true,
+  "description": "designbytanner — coming soon (Firebase Hosting)",
+  "scripts": {
+    "serve": "firebase serve --only hosting",
+    "deploy": "firebase deploy --only hosting",
+    "deploy:live": "firebase deploy --only hosting"
+  },
+  "devDependencies": {
+    "firebase-tools": "^13.29.1"
+  }
+}
