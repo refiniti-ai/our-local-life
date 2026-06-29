@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
   <head>
+    <script data-oll-theme-init="true">
+      (function () {
+        try {
+          if (localStorage.getItem("oll-theme") === "dark") {
+            document.documentElement.classList.add("dark");
+            document.documentElement.classList.remove("light");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Intentional Dating in a Swipe-Driven World: A Conversation with Resumate Founder Lai Lam | Curated Story
+      Meet Lai Lam: Intentional Dating in a Swipe Driven World | Curated Story
     </title>
     <meta
       name="description"
-      content="Intentional Dating in a Swipe-Driven World: A Conversation with Resumate Founder Lai Lam, a curated story and interview transcript for Our Local Life."
+      content="Meet Lai Lam: Intentional Dating in a Swipe Driven World, a curated story and interview transcript for Our Local Life."
     />
     <meta name="oll:category" content="community" />
     <meta name="oll:date" content="2026-01-23" />
@@ -26,7 +36,7 @@
     <meta property="og:site_name" content="Our Local Life" />
     <meta
       property="og:title"
-      content="Intentional Dating in a Swipe-Driven World: A Conversation with Resumate Founder Lai Lam | Curated Story"
+      content="Meet Lai Lam: Intentional Dating in a Swipe Driven World | Curated Story"
     />
     <meta
       property="og:description"
@@ -44,7 +54,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Intentional Dating in a Swipe-Driven World: A Conversation with Resumate Founder Lai Lam | Curated Story"
+      content="Meet Lai Lam: Intentional Dating in a Swipe Driven World | Curated Story"
     />
     <meta
       name="twitter:description"
@@ -52,7 +62,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=2000&auto=format&fit=crop"
+      content="https://ourlocallife.com/assets/image/A-Conversation-with-Resumate-Founder-Lai-Lam.webp"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -95,7 +105,8 @@
       };
     </script>
 
-    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <script type="module" crossorigin src="/assets/main-CJuVpVQo.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-DBjioDFf.css">
   </head>
   <body
     class="font-sans antialiased selection:bg-oll-sand selection:text-oll-dark bg-white dark:bg-oll-dark text-oll-dark dark:text-white transition-colors duration-500"
@@ -107,9 +118,9 @@
     >
       <div class="flex items-center justify-between px-6 h-16">
         <img
-          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/5-1.png"
-          alt="OLL Icon"
-          class="h-8 w-auto dark:invert"
+          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/cropped-4.webp"
+          alt="Our Local Life"
+          class="h-7 w-auto dark:invert"
         />
         <div class="flex items-center gap-4">
           <label class="theme-switch">
@@ -221,6 +232,27 @@
             <span class="uppercase tracking-widest text-xs font-medium">Stories</span>
           </a>
           <a
+            href="../../hub.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+                />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium">Hub</span>
+          </a>
+          <a
             href="../../featured-entrepreneur.html"
             class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
           >
@@ -237,7 +269,7 @@
             <span class="uppercase tracking-widest text-xs font-medium">Spotlight</span>
           </a>
           <a
-            href="../podcast/index.html"
+            href="../../pages/podcast/index.html"
             class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
           >
             <div class="w-6 h-6 flex justify-center items-center">
@@ -255,7 +287,9 @@
                 />
               </svg>
             </div>
-            <span class="uppercase tracking-widest text-xs font-medium">Podcast</span>
+            <span class="uppercase tracking-widest text-xs font-medium"
+              >Podcast</span
+            >
           </a>
           <div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
           <button
@@ -277,9 +311,11 @@
                 />
               </svg>
             </div>
-            <span class="uppercase tracking-widest text-xs font-medium">Join The Movement</span>
+            <span class="uppercase tracking-widest text-xs font-medium"
+              >Join The Movement</span
+            >
           </button>
-        </div>
+</div>
       </div>
     </nav>
 
@@ -337,7 +373,9 @@
           href="../../index.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -360,7 +398,9 @@
           href="../../about.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -383,7 +423,9 @@
           href="../../curated-stories.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -403,10 +445,37 @@
           >
         </a>
         <a
+          href="../../hub.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+              />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >Hub</span
+          >
+        </a>
+        <a
           href="../../featured-entrepreneur.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -421,10 +490,12 @@
           >
         </a>
         <a
-          href="../podcast/index.html"
+          href="../../pages/podcast/index.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -448,7 +519,9 @@
           onclick="toggleSubscribe()"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item w-full"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -468,7 +541,7 @@
             >Join The Movement</span
           >
         </button>
-        <div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
+<div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
         <div class="px-2 flex justify-center pt-2">
           <label class="theme-switch">
             <input
@@ -486,7 +559,7 @@
       <header class="relative min-h-[60vh] bg-oll-dark text-white overflow-hidden">
         <div class="absolute inset-0">
           <img
-            src="/assets/image/A-Conversation-with-Resumate-Founder-Lai-Lam.webp"
+            src="/assets/A-Conversation-with-Resumate-Founder-Lai-Lam-JEgc5X6i.webp"
             alt="Intentional dating story hero"
             class="w-full h-full object-cover opacity-70"
           />
@@ -497,7 +570,7 @@
             Curated Story
           </span>
           <h1 class="font-serif text-4xl md:text-6xl leading-tight mt-6">
-            Intentional Dating in a Swipe-Driven World: A Conversation with Resumate Founder Lai Lam
+            Meet Lai Lam: Intentional Dating in a Swipe Driven World
           </h1>
           <p class="text-lg md:text-xl text-white/80 mt-6">
             Founder of Resumate and advocate for clarity-first connection.
@@ -525,25 +598,26 @@
 
       <section class="py-24 bg-white dark:bg-oll-dark text-oll-dark dark:text-white border-b border-oll-dark/10 dark:border-white/10">
         <div class="max-w-6xl mx-auto px-6 space-y-12">
-          <div class="text-center">
-            <p class="text-xs uppercase tracking-[0.3em] opacity-60 mb-4">Feature Story</p>
-            <h2 class="font-serif text-4xl md:text-5xl">
-              Intentional Dating in a Swipe-Driven World
-            </h2>
-          </div>
-          <div class="max-w-3xl mx-auto mb-12">
+<div class="max-w-3xl mx-auto mb-12">
             <img
-              src="../../assets/image/lailam-founder-resumate-our-local-life.webp"
+              src="/assets/lailam-founder-resumate-our-local-life-CR-Tak5J.webp"
               alt="Lai Lam, Founder of Resumate"
               class="w-full rounded-[28px] border border-oll-dark/10 dark:border-white/10 object-cover"
             />
             <p class="text-xs uppercase tracking-widest opacity-60 mt-3 text-center">Lai Lam, Resumate</p>
           </div>
-          <div class="grid lg:grid-cols-2 gap-10">
-            <article class="bg-oll-sand-light dark:bg-[#1a1a1a] rounded-[28px] p-8 space-y-4">
-              <h3 class="font-serif text-2xl">
-                A Conversation with Resumate Founder Lai Lam
-              </h3>
+          
+          <div class="text-center max-w-3xl mx-auto">
+            <p class="text-xs uppercase tracking-[0.3em] opacity-60 mb-4">EDITORIAL</p>
+            <h2 class="font-serif text-3xl md:text-4xl leading-tight text-balance mb-4">
+              Meet Lai Lam: Intentional Dating in a Swipe Driven World
+            </h2>
+            <p class="text-lg md:text-xl opacity-80 max-w-2xl mx-auto font-light leading-relaxed">
+              Clarity-first connection in a swipe-driven world.
+            </p>
+          </div>
+<div class="max-w-3xl mx-auto">
+            <article class="bg-oll-sand-light dark:bg-[#1a1a1a] rounded-[28px] p-8 md:p-10 space-y-4">
               <p class="text-sm leading-relaxed opacity-80">
                 In an age of fast swipes, filtered faces, and dating fatigue, Lai Lam is choosing
                 something different: clarity, alignment, and respect. As the founder of Resumate,
@@ -552,45 +626,44 @@
               <p class="text-sm leading-relaxed opacity-80">
                 The app grew from personal heartbreak, not market trends. “Finding a boyfriend?
                 That’s easy. But finding someone whose vision aligns with yours, that’s rare,” Lai
-                shares. She built Resumate to slow the process down and honor what really matters.
+                shares. Her story begins in the quiet ache of misaligned relationships and evolves
+                into a vision grounded in clarity and care. She built Resumate to slow the process
+                down and honor what really matters.
               </p>
               <p class="text-sm leading-relaxed opacity-80">
                 Instead of swiping, users answer open-ended questions about goals, dreams, and
                 non-negotiables. AI condenses those answers into a one-page “dating résumé,” which
-                becomes the starting point for a video call, no filters, no hiding, no wasted time.
+                becomes the starting point for a video call, no filters, no hiding, no wasted
+                time.
+              </p>
+              
+              <h3 class="story-section-break text-xs uppercase tracking-[0.3em] opacity-60 pt-8 pb-4 text-center border-t border-oll-dark/10 dark:border-white/10">
+                Mind, body, and soul in practice
+              </h3>
+<p class="text-sm leading-relaxed opacity-80">
+                “We value depth over dopamine,” Lai says, building a platform that honors time,
+                energy, and emotional sovereignty. Resumate is about seeing values, goals, and
+                whether two paths converge before emotional investments are made.
               </p>
               <p class="text-sm leading-relaxed opacity-80">
                 For Lai, respect is the baseline. There’s no manipulation, no dark patterns, and no
                 exploiting loneliness for profit. Resumate is designed to protect users, especially
                 women, from emotional exhaustion and disillusionment.
               </p>
-            </article>
-            <article class="bg-white dark:bg-oll-dark border border-oll-dark/10 dark:border-white/10 rounded-[28px] p-8 space-y-4">
-              <h3 class="font-serif text-2xl">Meet Lai Lam: Designing Love With Intention</h3>
               <p class="text-sm leading-relaxed opacity-80">
-                At OurLocalLife.com, we spotlight local entrepreneurs who awaken the Mind, nurture
-                the Body, and uplift the Soul. Lai’s story begins in the quiet ache of misaligned
-                relationships and evolves into a vision grounded in clarity and care.
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                Resumate is not about swiping, it’s about seeing values, goals, and whether two paths
-                converge before emotional investments are made. “We value depth over dopamine,” Lai
-                says, building a platform that honors time, energy, and emotional sovereignty.
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                Through hyper-local collaborations, salons, Pilates classes, and salsa nights, she’s
-                growing Resumate one community at a time. Her mission has shifted from dating
+                Through hyper-local collaborations, salons, Pilates classes, and salsa nights,
+                she’s growing Resumate one community at a time. Her mission has shifted from dating
                 facilitation to emotional advocacy, rooted in one question: “Would I want someone I
                 love using this app?”
               </p>
               <p class="text-sm leading-relaxed opacity-80">
                 Her vision is state-by-state expansion starting in Arizona, then Texas, Hawaii, and
-                beyond. The goal remains the same: help people make healthy decisions before falling
-                into connections they’d later regret.
+                beyond. The goal remains the same: help people make healthy decisions before
+                falling into connections they’d later regret.
               </p>
             </article>
           </div>
-        </div>
+</div>
       </section>
 
       <section class="py-24 bg-oll-sand-light dark:bg-[#1a1a1a] text-oll-dark dark:text-white border-b border-oll-dark/10 dark:border-white/10">
@@ -749,7 +822,6 @@
                 <li><a href="../../curated-stories.html" class="hover:opacity-100">Stories</a></li>
                 <li><a href="../../featured-entrepreneur.html" class="hover:opacity-100">Spotlight</a></li>
                 <li><a href="../podcast/index.html" class="hover:opacity-100">Podcast</a></li>
-                <li><a href="#" class="hover:opacity-100">Shop</a></li>
               </ul>
             </div>
             <div>
@@ -883,6 +955,5 @@
         </form>
       </div>
     </div>
-    <script type="module" src="../../assets/js/main.js"></script>
   </body>
 </html>

@@ -4,6 +4,7 @@ import {
   podcasts,
   magazineIssues,
 } from "../data/content.js";
+import { hubBlogs } from "../data/hub-blogs.js";
 
 const PILLAR_LABELS = {
   mind: "Mind",
@@ -33,7 +34,10 @@ const MAGAZINE_MONTH_SLUGS = [
 ];
 
 /** Which `*-issue.html` files exist under `pages/magazine/`. Add slugs as you publish new months. */
-const MAGAZINE_ISSUE_PAGES_AVAILABLE = new Set(["january-issue.html"]);
+const MAGAZINE_ISSUE_PAGES_AVAILABLE = new Set([
+  "january-issue.html",
+  "april-issue.html",
+]);
 
 function getPhoenixMonthLongName() {
   return new Intl.DateTimeFormat("en-US", {
@@ -68,9 +72,11 @@ function updateHomeHeroMagazineLinks() {
   });
 }
 
-function toggleTheme(checkbox) {
+const THEME_STORAGE_KEY = "oll-theme";
+
+function applyTheme(isDark) {
   const html = document.documentElement;
-  if (checkbox.checked) {
+  if (isDark) {
     html.classList.add("dark");
     html.classList.remove("light");
   } else {
@@ -78,10 +84,30 @@ function toggleTheme(checkbox) {
     html.classList.add("light");
   }
   document.querySelectorAll(".theme-toggle-input").forEach((input) => {
-    input.checked = checkbox.checked;
+    input.checked = isDark;
   });
 }
+
+function toggleTheme(checkbox) {
+  applyTheme(checkbox.checked);
+  try {
+    localStorage.setItem(THEME_STORAGE_KEY, checkbox.checked ? "dark" : "light");
+  } catch (error) {
+    // ignore private browsing / blocked storage
+  }
+}
 window.toggleTheme = toggleTheme;
+
+function initThemeFromStorage() {
+  try {
+    const saved = localStorage.getItem(THEME_STORAGE_KEY);
+    if (saved === "dark") applyTheme(true);
+    else if (saved === "light") applyTheme(false);
+  } catch (error) {
+    // ignore
+  }
+}
+initThemeFromStorage();
 
 function toggleSubscribe() {
   const modal = document.getElementById("subscribe-modal");
@@ -150,6 +176,18 @@ if (scrollContainer && scrollLeftBtn && scrollRightBtn) {
   });
 }
 
+const communityScrollContainer = document.getElementById("community-grid");
+const communityScrollLeft = document.getElementById("community-scroll-left");
+const communityScrollRight = document.getElementById("community-scroll-right");
+if (communityScrollContainer && communityScrollLeft && communityScrollRight) {
+  communityScrollLeft.addEventListener("click", () => {
+    communityScrollContainer.scrollBy({ left: -350, behavior: "smooth" });
+  });
+  communityScrollRight.addEventListener("click", () => {
+    communityScrollContainer.scrollBy({ left: 350, behavior: "smooth" });
+  });
+}
+
 const podcastContainer = document.getElementById("podcast-grid");
 const podcastLeftBtn = document.getElementById("podcast-scroll-left");
 const podcastRightBtn = document.getElementById("podcast-scroll-right");
@@ -163,27 +201,29 @@ if (podcastContainer && podcastLeftBtn && podcastRightBtn) {
 }
 
 function setupMbsFilters() {
-  const mbsFilters = document.querySelectorAll("#mbs-filters .filter-btn");
-  const mbsCards = document.querySelectorAll(".mbs-card");
-  if (!mbsFilters.length || !mbsCards.length) return;
+  const filterRoot = document.getElementById("mbs-filters");
+  if (!filterRoot) return;
 
-  mbsFilters.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      mbsFilters.forEach((b) => {
-        b.classList.remove("active");
-        b.classList.add("opacity-50");
-      });
-      btn.classList.add("active");
-      btn.classList.remove("opacity-50");
+  filterRoot.addEventListener("click", (e) => {
+    const btn = e.target.closest(".filter-btn");
+    if (!btn || !filterRoot.contains(btn)) return;
 
-      const filter = btn.getAttribute("data-filter");
-      mbsCards.forEach((card) => {
-        if (filter === "all" || card.getAttribute("data-category") === filter) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
-      });
+    const mbsFilters = filterRoot.querySelectorAll(".filter-btn");
+    const mbsCards = document.querySelectorAll("#mbs-grid .mbs-card");
+    mbsFilters.forEach((b) => {
+      b.classList.remove("active");
+      b.classList.add("opacity-50");
+    });
+    btn.classList.add("active");
+    btn.classList.remove("opacity-50");
+
+    const filter = btn.getAttribute("data-filter");
+    mbsCards.forEach((card) => {
+      if (filter === "all" || card.getAttribute("data-category") === filter) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
     });
   });
 }
@@ -217,6 +257,66 @@ const sortByDateDesc = (list) =>
 
 const getLatestItem = (list) => sortByDateDesc(list)[0];
 
+const ensureMinimumItems = (items, min, fillers) => {
+  const result = [...items];
+  let i = 0;
+  while (result.length < min && i < fillers.length) {
+    result.push(fillers[i]);
+    i += 1;
+  }
+  return result;
+};
+
+const podcastCardHtml = (episode, layout = "grid") => {
+  const isCarousel = layout === "carousel";
+  const articleClass = isCarousel
+    ? "podcast-card flex-shrink-0 w-full md:w-[320px] rounded-[28px] border border-oll-dark/10 dark:border-white/20 bg-white/80 dark:bg-oll-dark/80 overflow-hidden scroll-item"
+    : "overflow-hidden rounded-[28px] border border-oll-dark/10 dark:border-white/20 bg-white/80 dark:bg-oll-dark/80";
+  const dataCategory = isCarousel ? ' data-category="interviews"' : "";
+
+  return `
+    <article class="${articleClass}"${dataCategory}>
+      <a href="${episode.url}" class="group block">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img
+            src="${encodeURI(episode.image)}"
+            alt="${episode.title}"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        </div>
+      </a>
+      <div class="p-6 space-y-3">
+        <p class="text-xs uppercase tracking-widest opacity-60">Podcast</p>
+        <h3 class="font-serif text-2xl leading-snug">
+          <a href="${episode.url}" class="hover:opacity-80">${episode.title}</a>
+        </h3>
+        <p class="text-sm opacity-70">${episode.description}</p>
+        <div class="flex flex-wrap gap-4 pt-1">
+          <a href="${episode.url}" class="text-xs uppercase tracking-widest border-b border-current pb-1">
+            ${episode.placeholder ? "Episode coming soon" : "Listen now"}
+          </a>
+          ${
+            episode.blogUrl
+              ? `<a href="${episode.blogUrl}" class="text-xs uppercase tracking-widest border-b border-current pb-1 opacity-70 hover:opacity-100">Read article</a>`
+              : ""
+          }
+        </div>
+      </div>
+    </article>
+  `;
+};
+
+/** Match `magazineIssues` entry to the HTML file in the URL so each issue page shows the right title. */
+const getMagazineIssueForCurrentPath = () => {
+  const file = (window.location.pathname || "").split("/").filter(Boolean).pop() || "";
+  if (!file.endsWith(".html")) return getLatestItem(magazineIssues);
+  const matched = magazineIssues.find((issue) => {
+    const issueFile = (issue.url || "").split("/").pop();
+    return issueFile === file;
+  });
+  return matched || getLatestItem(magazineIssues);
+};
+
 let currentCuratedStories = curatedStories || [];
 let currentEntrepreneurs = entrepreneurs || [];
 
@@ -230,6 +330,8 @@ const applyContentUpdate = ({ stories, entrepreneurList } = {}) => {
   renderLatestStoryCard();
   renderLatestEntrepreneurCard();
   renderCuratedStoriesCarousel();
+  renderCommunityStoriesCarousel();
+  renderHubBlogGrid();
   renderCuratedStoriesGrid();
   renderEntrepreneurGrid();
   renderMagazineCollections();
@@ -275,16 +377,23 @@ function renderLatestEntrepreneurCard() {
       </div>
       <h3 class="font-serif text-3xl mb-4">Meet the Great Minds of Our Local Life</h3>
       <p class="text-sm opacity-70 max-w-md mx-auto leading-relaxed font-sans">
-        Explore the stories, visions, and impact of the ethical entrepreneurs and creative leaders shaping our community. Discover how these thinkers are turning high-vibe concepts into local reality.
+        Explore the stories, visions, and impact of the ethical entrepreneurs and creative leaders shaping our community. Discover how these thinkers are turning high vibe concepts into local reality.
       </p>
     </a>
   `;
 }
 
+const storiesForCuratedCarousel = () =>
+  (currentCuratedStories || []).filter((s) => s.category !== "community");
+
+const communityStoriesList = () =>
+  (currentCuratedStories || []).filter((s) => s.category === "community");
+
 function renderCuratedStoriesCarousel() {
   const container = document.getElementById("mbs-grid");
   if (!container) return;
-  container.innerHTML = currentCuratedStories
+  const list = storiesForCuratedCarousel();
+  container.innerHTML = list
     .map(
       (story) => `
         <a
@@ -318,9 +427,85 @@ function renderCuratedStoriesCarousel() {
     .join("");
 }
 
+function renderHubBlogGrid() {
+  const container = document.getElementById("community-hub-grid");
+  if (!container) return;
+  const list = sortByDateDesc(hubBlogs || []);
+  container.innerHTML = list
+    .map(
+      (blog) => `
+        <a
+          href="${blog.url.startsWith("/") ? blog.url.slice(1) : blog.url}"
+          class="group block overflow-hidden rounded-[28px] border border-oll-dark/10 dark:border-white/20 bg-white/80 dark:bg-oll-dark/80"
+        >
+          <div class="aspect-[4/3] overflow-hidden">
+            <img
+              src="${blog.image}"
+              alt="${blog.title}"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 bg-white"
+            />
+          </div>
+          <div class="p-6 space-y-3">
+            <p class="text-xs uppercase tracking-widest opacity-60">${blog.label}</p>
+            <h3 class="font-serif text-2xl">${blog.title}</h3>
+            <p class="text-sm opacity-70">${blog.description}</p>
+            <span class="text-xs uppercase tracking-widest border-b border-current pb-1">
+              ${blog.cta}
+            </span>
+          </div>
+        </a>
+      `
+    )
+    .join("");
+  const count = document.getElementById("community-story-count");
+  if (count) {
+    const n = list.length;
+    count.textContent = `${n} communit${n === 1 ? "y story" : "y stories"} live`;
+  }
+}
+
+function renderCommunityStoriesCarousel() {
+  const container = document.getElementById("community-grid");
+  if (!container) return;
+  const list = sortByDateDesc(communityStoriesList());
+  container.innerHTML = list
+    .map(
+      (story) => `
+        <a
+          href="${story.url}"
+          class="community-mbs-card flex-shrink-0 w-full md:w-[350px] relative h-[500px] rounded-[30px] overflow-hidden group cursor-pointer scroll-item"
+          data-category="${story.category}"
+        >
+          <img
+            src="${story.image}"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            alt="${story.title}"
+          />
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
+          <div class="absolute top-6 left-6 px-4 py-2 rounded-full bg-white/20 backdrop-blur text-white text-[10px] uppercase tracking-widest">
+            ${story.label}
+          </div>
+          <div class="absolute bottom-8 left-8 right-8 text-white">
+            <span class="text-[10px] uppercase tracking-widest opacity-80 mb-2 block">
+              ${story.label}
+            </span>
+            <h3 class="font-serif text-3xl mb-3 leading-tight">
+              ${story.title}
+            </h3>
+            <span class="text-xs uppercase tracking-widest border-b border-white pb-1">
+              ${story.cta}
+            </span>
+          </div>
+        </a>
+      `
+    )
+    .join("");
+}
+
 function renderCuratedStoriesGrid() {
   const container = document.getElementById("curated-stories-grid");
   if (!container) return;
+  if (container.dataset.prerendered === "true") return;
   container.innerHTML = currentCuratedStories
     .map(
       (story) => `
@@ -350,13 +535,15 @@ function renderCuratedStoriesGrid() {
 
   const count = document.getElementById("curated-story-count");
   if (count) {
-    count.textContent = `${currentCuratedStories.length} story${currentCuratedStories.length === 1 ? "" : "ies"} live`;
+    const n = currentCuratedStories.length;
+    count.textContent = `${n} ${n === 1 ? "story" : "stories"} live`;
   }
 }
 
 function renderEntrepreneurGrid() {
   const container = document.getElementById("entrepreneur-grid");
   if (!container) return;
+  if (container.dataset.prerendered === "true") return;
   container.innerHTML = currentEntrepreneurs
     .map(
       (profile) => `
@@ -396,38 +583,30 @@ function renderEntrepreneurGrid() {
   }
 }
 
+function renderHomePodcastCarousel() {
+  const container = document.getElementById("podcast-grid");
+  if (!container) return;
+  const podcastPlaceholders = podcasts.filter((podcast) => podcast.placeholder);
+  const podcastBase = sortByDateDesc(
+    podcasts.filter((podcast) => !podcast.placeholder)
+  );
+  const podcastFilled = ensureMinimumItems(podcastBase, 3, podcastPlaceholders);
+  container.innerHTML = podcastFilled
+    .map((episode) => podcastCardHtml(episode, "carousel"))
+    .join("");
+}
+
 function renderPodcastGrid() {
   const container = document.getElementById("podcast-grid-page");
   if (!container) return;
   const podcastPlaceholders = podcasts.filter((podcast) => podcast.placeholder);
-  const podcastBase = podcasts.filter((podcast) => !podcast.placeholder);
+  const podcastBase = sortByDateDesc(
+    podcasts.filter((podcast) => !podcast.placeholder)
+  );
   const podcastFilled = ensureMinimumItems(podcastBase, 6, podcastPlaceholders);
 
   container.innerHTML = podcastFilled
-    .map(
-      (episode) => `
-        <a
-          href="${episode.url}"
-          class="group block overflow-hidden rounded-[28px] border border-oll-dark/10 dark:border-white/20 bg-white/80 dark:bg-oll-dark/80"
-        >
-          <div class="aspect-[4/3] overflow-hidden">
-            <img
-              src="${episode.image}"
-              alt="${episode.title}"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-          </div>
-          <div class="p-6 space-y-3">
-            <p class="text-xs uppercase tracking-widest opacity-60">Podcast</p>
-            <h3 class="font-serif text-2xl">${episode.title}</h3>
-            <p class="text-sm opacity-70">${episode.description}</p>
-            <span class="text-xs uppercase tracking-widest border-b border-current pb-1">
-              ${episode.placeholder ? "Coming soon" : "Listen now"}
-            </span>
-          </div>
-        </a>
-      `
-    )
+    .map((episode) => podcastCardHtml(episode, "grid"))
     .join("");
 
   const count = document.getElementById("podcast-count");
@@ -439,7 +618,7 @@ function renderPodcastGrid() {
 function renderMagazineIssue() {
   const hero = document.getElementById("issue-hero");
   if (!hero) return;
-  const latestIssue = getLatestItem(magazineIssues);
+  const latestIssue = getMagazineIssueForCurrentPath();
   if (!latestIssue) return;
   hero.innerHTML = `
     <div class="absolute inset-0">
@@ -538,8 +717,11 @@ function renderMagazineCollections() {
 renderLatestStoryCard();
 renderLatestEntrepreneurCard();
 renderCuratedStoriesCarousel();
+renderCommunityStoriesCarousel();
+renderHubBlogGrid();
 renderCuratedStoriesGrid();
 renderEntrepreneurGrid();
+renderHomePodcastCarousel();
 renderPodcastGrid();
 renderMagazineIssue();
 renderMagazineCollections();
@@ -549,6 +731,19 @@ updateHomeHeroMagazineLinks();
 const getMetaContent = (doc, key) => {
   const meta = doc.querySelector(`meta[name="${key}"], meta[property="${key}"]`);
   return meta ? meta.getAttribute("content")?.trim() : "";
+};
+
+/**
+ * og:image values are often authored as `assets/...` (root-relative without leading slash).
+ * Browsers resolve that against the *current page* URL, so images break on nested routes
+ * (e.g. magazine). Force root-absolute paths for same-origin assets.
+ */
+const normalizeMetaImageUrl = (url) => {
+  const u = (url || "").trim();
+  if (!u) return u;
+  if (/^(https?:)?\/\//i.test(u) || /^data:/i.test(u) || /^blob:/i.test(u)) return u;
+  if (u.startsWith("/")) return u;
+  return `/${u.replace(/^\.\//, "")}`;
 };
 
 const getDocTitle = (doc) => doc.querySelector("title")?.textContent?.trim() || "";
@@ -589,9 +784,10 @@ const mapStoryFromDoc = (path, doc) => {
     getMetaContent(doc, "og:description") ||
     getMetaContent(doc, "description") ||
     "A curated story from Our Local Life.";
-  const image =
+  const image = normalizeMetaImageUrl(
     getMetaContent(doc, "og:image") ||
-    "https://images.unsplash.com/photo-1474314243412-cd4a79f02c5a?q=80&w=2000&auto=format&fit=crop";
+      "https://images.unsplash.com/photo-1474314243412-cd4a79f02c5a?q=80&w=2000&auto=format&fit=crop"
+  );
   const date = getMetaContent(doc, "oll:date") || "1900-01-01";
   const category = inferCategory(doc);
   const label =
@@ -619,9 +815,10 @@ const mapEntrepreneurFromDoc = (path, doc) => {
     getMetaContent(doc, "og:description") ||
     getMetaContent(doc, "description") ||
     "A featured entrepreneur spotlight.";
-  const image =
+  const image = normalizeMetaImageUrl(
     getMetaContent(doc, "og:image") ||
-    "https://images.unsplash.com/photo-1474314243412-cd4a79f02c5a?q=80&w=2000&auto=format&fit=crop";
+      "https://images.unsplash.com/photo-1474314243412-cd4a79f02c5a?q=80&w=2000&auto=format&fit=crop"
+  );
   const date = getMetaContent(doc, "oll:date") || "1900-01-01";
   const archetype = getMetaContent(doc, "oll:archetype") || "Featured Entrepreneur";
   const slug = path.split("/").pop().replace(".html", "");
@@ -642,10 +839,14 @@ const mapEntrepreneurFromDoc = (path, doc) => {
   };
 };
 
+/** Root-absolute path for fetch. Relative URLs break on nested pages (e.g. `pages/magazine/`). */
+const fetchPath = (relativeFromRoot) =>
+  relativeFromRoot.startsWith("/") ? relativeFromRoot : `/${relativeFromRoot}`;
+
 const loadContentFromSitemap = async () => {
   let xmlText = "";
   try {
-    const response = await fetch("sitemap.xml", { cache: "no-store" });
+    const response = await fetch(fetchPath("sitemap.xml"), { cache: "no-store" });
     if (!response.ok) return null;
     xmlText = await response.text();
   } catch (error) {
@@ -674,7 +875,7 @@ const loadContentFromSitemap = async () => {
   const storyResults = await Promise.all(
     storyPaths.map(async (path) => {
       try {
-        const response = await fetch(path, { cache: "no-store" });
+        const response = await fetch(fetchPath(path), { cache: "no-store" });
         if (!response.ok) return null;
         const html = await response.text();
         const doc = new DOMParser().parseFromString(html, "text/html");
@@ -688,7 +889,7 @@ const loadContentFromSitemap = async () => {
   const entrepreneurResults = await Promise.all(
     spotlightPaths.map(async (path) => {
       try {
-        const response = await fetch(path, { cache: "no-store" });
+        const response = await fetch(fetchPath(path), { cache: "no-store" });
         if (!response.ok) return null;
         const html = await response.text();
         const doc = new DOMParser().parseFromString(html, "text/html");
@@ -705,12 +906,7 @@ const loadContentFromSitemap = async () => {
   };
 };
 
-loadContentFromSitemap()
-  .then((result) => {
-    if (!result) return;
-    applyContentUpdate(result);
-  })
-  .catch(() => {});
+// Listing grids use content.js directly — no runtime sitemap HTML fetch (avoids flash + slow loads).
 
 
 

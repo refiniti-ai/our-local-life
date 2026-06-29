@@ -4,6 +4,10 @@ node_modules/
 # Build
 dist/
 
+# Deploy snapshots (duplicate copies — slow indexing)
+_firebase-live/
+_firebase-live-sync/
+
 # Firebase
 .firebase/
 

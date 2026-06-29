@@ -5,12 +5,69 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**",
-      "dist/**"
+      "dist/**",
+      "_firebase-live-sync/**",
+      "_firebase-live/**",
+      "turfflex/**",
+      "tanner-website/**",
+      "our-local-life/**",
+      "our-local-life/**",
+      "scripts/**",
+      "turfflex/**",
+      "tanner-website/**",
+      "docs/**"
+    ],
+    "headers": [
+      {
+        "source": "**/*.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/hub",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/hub/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/assets/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(js|css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, max-age=0, must-revalidate"
+          }
+        ]
+      }
     ],
     "rewrites": [
       {
-        "source": "**",
-        "destination": "/index.html"
+        "source": "/hub",
+        "destination": "/hub.html"
       }
     ]
   }

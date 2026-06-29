@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
   <head>
+    <script data-oll-theme-init="true">
+      (function () {
+        try {
+          if (localStorage.getItem("oll-theme") === "dark") {
+            document.documentElement.classList.add("dark");
+            document.documentElement.classList.remove("light");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lai Lam | Featured Entrepreneur</title>
@@ -26,7 +36,7 @@
     <meta property="og:title" content="Lai Lam | Featured Entrepreneur" />
     <meta
       property="og:description"
-      content="A high-vibe, editorial profile celebrating Lai Lam."
+      content="A high vibe, editorial profile celebrating Lai Lam."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -35,17 +45,17 @@
     />
     <meta
       property="og:image"
-      content="assets/image/lailam-founder-resumate-our-local-life3.webp"
+      content="/assets/image/lailam-founder-resumate-our-local-life.webp"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Lai Lam | Featured Entrepreneur" />
     <meta
       name="twitter:description"
-      content="A high-vibe, editorial profile celebrating Lai Lam."
+      content="A high vibe, editorial profile celebrating Lai Lam."
     />
     <meta
       name="twitter:image"
-      content="assets/image/lailam-founder-resumate-our-local-life3.webp"
+      content="/assets/image/lailam-founder-resumate-our-local-life.webp"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -88,7 +98,8 @@
       };
     </script>
 
-    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <script type="module" crossorigin src="/assets/main-CJuVpVQo.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-DBjioDFf.css">
   </head>
   <body
     class="font-sans antialiased selection:bg-oll-sand selection:text-oll-dark bg-white dark:bg-oll-dark text-oll-dark dark:text-white transition-colors duration-500"
@@ -100,9 +111,9 @@
     >
       <div class="flex items-center justify-between px-6 h-16">
         <img
-          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/5-1.png"
-          alt="OLL Icon"
-          class="h-8 w-auto dark:invert"
+          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/cropped-4.webp"
+          alt="Our Local Life"
+          class="h-7 w-auto dark:invert"
         />
         <div class="flex items-center gap-4">
           <label class="theme-switch">
@@ -214,6 +225,27 @@
             <span class="uppercase tracking-widest text-xs font-medium">Stories</span>
           </a>
           <a
+            href="../../hub.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+                />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium">Hub</span>
+          </a>
+          <a
             href="../../featured-entrepreneur.html"
             class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
           >
@@ -230,7 +262,7 @@
             <span class="uppercase tracking-widest text-xs font-medium">Spotlight</span>
           </a>
           <a
-            href="../podcast/index.html"
+            href="../../pages/podcast/index.html"
             class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
           >
             <div class="w-6 h-6 flex justify-center items-center">
@@ -248,7 +280,9 @@
                 />
               </svg>
             </div>
-            <span class="uppercase tracking-widest text-xs font-medium">Podcast</span>
+            <span class="uppercase tracking-widest text-xs font-medium"
+              >Podcast</span
+            >
           </a>
           <div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
           <button
@@ -270,9 +304,11 @@
                 />
               </svg>
             </div>
-            <span class="uppercase tracking-widest text-xs font-medium">Join The Movement</span>
+            <span class="uppercase tracking-widest text-xs font-medium"
+              >Join The Movement</span
+            >
           </button>
-        </div>
+</div>
       </div>
     </nav>
 
@@ -330,7 +366,9 @@
           href="../../index.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -353,7 +391,9 @@
           href="../../about.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -376,7 +416,9 @@
           href="../../curated-stories.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -396,10 +438,37 @@
           >
         </a>
         <a
+          href="../../hub.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+              />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >Hub</span
+          >
+        </a>
+        <a
           href="../../featured-entrepreneur.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -414,10 +483,12 @@
           >
         </a>
         <a
-          href="../podcast/index.html"
+          href="../../pages/podcast/index.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -441,7 +512,9 @@
           onclick="toggleSubscribe()"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item w-full"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -461,7 +534,7 @@
             >Join The Movement</span
           >
         </button>
-        <div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
+<div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
         <div class="px-2 flex justify-center pt-2">
           <label class="theme-switch">
             <input
@@ -492,7 +565,7 @@
           </div>
           <div class="bg-white/10 border border-white/20 rounded-3xl p-6">
             <img
-              src="../../assets/image/lailam-founder-resumate-ourlocallife.webp"
+              src="/assets/lailam-founder-resumate-ourlocallife-BH8d-sWG.webp"
               alt="Lai Lam lifestyle portrait"
               class="w-full h-[360px] object-cover rounded-2xl"
             />
@@ -536,7 +609,7 @@
             >
               <div class="aspect-video overflow-hidden">
                 <img
-                  src="../../assets/image/lailam-founder-resumate-our-local-life.webp"
+                  src="/assets/lailam-founder-resumate-our-local-life-CR-Tak5J.webp"
                   alt="Lai Lam, curated story"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -710,7 +783,6 @@
                 <li><a href="../../curated-stories.html" class="hover:opacity-100">Stories</a></li>
                 <li><a href="../../featured-entrepreneur.html" class="hover:opacity-100">Spotlight</a></li>
                 <li><a href="../podcast/index.html" class="hover:opacity-100">Podcast</a></li>
-                <li><a href="#" class="hover:opacity-100">Shop</a></li>
               </ul>
             </div>
             <div>
@@ -844,6 +916,5 @@
         </form>
       </div>
     </div>
-    <script type="module" src="../../assets/js/main.js"></script>
   </body>
 </html>

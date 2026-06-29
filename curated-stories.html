@@ -1,6 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="light">
   <head>
+    <script data-oll-theme-init="true">
+      (function () {
+        try {
+          if (localStorage.getItem("oll-theme") === "dark") {
+            document.documentElement.classList.add("dark");
+            document.documentElement.classList.remove("light");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curated Stories | Our Local Life</title>
@@ -78,8 +88,14 @@
         },
       };
     </script>
-
-    <link rel="stylesheet" href="assets/css/styles.css" />
+        <link rel="preload" as="image" href="/assets/image/the-practice-of-presence-atma-erice.webp" />
+    <link rel="preload" as="image" href="/assets/image/Building-People-Building-Places-Building-Purpose.webp" />
+    <link rel="preload" as="image" href="/assets/image/A-Conversation-with-Resumate-Founder-Lai-Lam.webp" />
+    <link rel="preload" as="image" href="/assets/image/Restoring-the-Soil-with-Christina-Kat-Cat.webp" />
+    <link rel="preload" as="image" href="/assets/image/Linking-the-Body-A-Conversation-with-Demarius-Parker.webp" />
+    <link rel="preload" as="image" href="/assets/image/The-Mind-Behind-the-Mind-Body-Connection.webp" />
+    <script type="module" crossorigin src="/assets/main-CJuVpVQo.js?v=20260609"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-DBjioDFf.css">
   </head>
   <body
     class="font-sans antialiased selection:bg-oll-sand selection:text-oll-dark bg-white dark:bg-oll-dark text-oll-dark dark:text-white transition-colors duration-500"
@@ -91,9 +107,9 @@
     >
       <div class="flex items-center justify-between px-6 h-16">
         <img
-          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/5-1.png"
-          alt="OLL Icon"
-          class="h-8 w-auto dark:invert"
+          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/cropped-4.webp"
+          alt="Our Local Life"
+          class="h-7 w-auto dark:invert"
         />
         <div class="flex items-center gap-4">
           <label class="theme-switch">
@@ -203,6 +219,27 @@
               </svg>
             </div>
             <span class="uppercase tracking-widest text-xs font-medium">Stories</span>
+          </a>
+          <a
+            href="hub.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+                />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium">Hub</span>
           </a>
           <a
             href="featured-entrepreneur.html"
@@ -325,7 +362,9 @@
           href="index.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -348,7 +387,9 @@
           href="about.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -371,7 +412,9 @@
           href="curated-stories.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -391,10 +434,37 @@
           >
         </a>
         <a
+          href="hub.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+              />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >Hub</span
+          >
+        </a>
+        <a
           href="featured-entrepreneur.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -412,7 +482,9 @@
           href="pages/podcast/index.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -436,7 +508,9 @@
           onclick="toggleSubscribe()"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item w-full"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -501,11 +575,161 @@
               <h2 class="font-serif text-4xl md:text-5xl">All curated stories</h2>
             </div>
             <span id="curated-story-count" class="text-xs uppercase tracking-widest opacity-60">
-              Loading stories
+              6 stories live
             </span>
           </div>
-          <div id="curated-stories-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-        </div>
+          <div id="curated-stories-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-prerendered="true">
+            <a
+              href="pages/stories/the-practice-of-presence-inside-atmas-approach-to-healing.html"
+              class="group block overflow-hidden rounded-[28px] border border-oll-dark/10 dark:border-white/20 bg-white/80 dark:bg-oll-dark/80"
+            >
+              <div class="aspect-[4/3] overflow-hidden">
+                <img
+                  src="/assets/image/the-practice-of-presence-atma-erice.webp"
+                  alt="Meet Atma Erice: The Practice of Presence"
+                  width="800"
+                  height="600"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 bg-white"
+                />
+              </div>
+              <div class="p-6 space-y-3">
+                <p class="text-xs uppercase tracking-widest opacity-60">Soul</p>
+                <h3 class="font-serif text-2xl">Meet Atma Erice: The Practice of Presence</h3>
+                <p class="text-sm opacity-70">For Atma, healing isn’t about fixing something broken.</p>
+                <span class="text-xs uppercase tracking-widest border-b border-current pb-1">
+                  Read story
+                </span>
+              </div>
+            </a>
+            <a
+              href="pages/stories/dustin-defrates-building-people-places-purpose.html"
+              class="group block overflow-hidden rounded-[28px] border border-oll-dark/10 dark:border-white/20 bg-white/80 dark:bg-oll-dark/80"
+            >
+              <div class="aspect-[4/3] overflow-hidden">
+                <img
+                  src="/assets/image/Building-People-Building-Places-Building-Purpose.webp"
+                  alt="Meet Dustin DeFrates: Builder of People, Places, and Purpose"
+                  width="800"
+                  height="600"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 bg-white"
+                />
+              </div>
+              <div class="p-6 space-y-3">
+                <p class="text-xs uppercase tracking-widest opacity-60">Mind</p>
+                <h3 class="font-serif text-2xl">Meet Dustin DeFrates: Builder of People, Places, and Purpose</h3>
+                <p class="text-sm opacity-70">A curated story and interview transcript with Dustin DeFrates.</p>
+                <span class="text-xs uppercase tracking-widest border-b border-current pb-1">
+                  Read story
+                </span>
+              </div>
+            </a>
+            <a
+              href="pages/stories/intentional-dating-resumate-lai-lam.html"
+              class="group block overflow-hidden rounded-[28px] border border-oll-dark/10 dark:border-white/20 bg-white/80 dark:bg-oll-dark/80"
+            >
+              <div class="aspect-[4/3] overflow-hidden">
+                <img
+                  src="/assets/image/A-Conversation-with-Resumate-Founder-Lai-Lam.webp"
+                  alt="Meet Lai Lam: Intentional Dating in a Swipe Driven World"
+                  width="800"
+                  height="600"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 bg-white"
+                />
+              </div>
+              <div class="p-6 space-y-3">
+                <p class="text-xs uppercase tracking-widest opacity-60">Community</p>
+                <h3 class="font-serif text-2xl">Meet Lai Lam: Intentional Dating in a Swipe Driven World</h3>
+                <p class="text-sm opacity-70">A curated story and interview transcript with Lai Lam.</p>
+                <span class="text-xs uppercase tracking-widest border-b border-current pb-1">
+                  Read story
+                </span>
+              </div>
+            </a>
+            <a
+              href="pages/stories/restoring-the-soil-with-christina-kat-cat.html"
+              class="group block overflow-hidden rounded-[28px] border border-oll-dark/10 dark:border-white/20 bg-white/80 dark:bg-oll-dark/80"
+            >
+              <div class="aspect-[4/3] overflow-hidden">
+                <img
+                  src="/assets/image/Restoring-the-Soil-with-Christina-Kat-Cat.webp"
+                  alt="Meet Christina 'Kat' Cat: Restoring the Soil"
+                  width="800"
+                  height="600"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 bg-white"
+                />
+              </div>
+              <div class="p-6 space-y-3">
+                <p class="text-xs uppercase tracking-widest opacity-60">Community</p>
+                <h3 class="font-serif text-2xl">Meet Christina 'Kat' Cat: Restoring the Soil</h3>
+                <p class="text-sm opacity-70">A curated story and interview transcript with Christina 'Kat' Cat.</p>
+                <span class="text-xs uppercase tracking-widest border-b border-current pb-1">
+                  Read story
+                </span>
+              </div>
+            </a>
+            <a
+              href="pages/stories/linking-the-body-demarius-parker.html"
+              class="group block overflow-hidden rounded-[28px] border border-oll-dark/10 dark:border-white/20 bg-white/80 dark:bg-oll-dark/80"
+            >
+              <div class="aspect-[4/3] overflow-hidden">
+                <img
+                  src="/assets/image/Linking-the-Body-A-Conversation-with-Demarius-Parker.webp"
+                  alt="Meet Demarius Parker: Linking the Body"
+                  width="800"
+                  height="600"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 bg-white"
+                />
+              </div>
+              <div class="p-6 space-y-3">
+                <p class="text-xs uppercase tracking-widest opacity-60">Body</p>
+                <h3 class="font-serif text-2xl">Meet Demarius Parker: Linking the Body</h3>
+                <p class="text-sm opacity-70">A curated story and interview transcript with Demarius Parker.</p>
+                <span class="text-xs uppercase tracking-widest border-b border-current pb-1">
+                  Read story
+                </span>
+              </div>
+            </a>
+            <a
+              href="pages/stories/meet-chris-wuehr-mind-body-connection.html"
+              class="group block overflow-hidden rounded-[28px] border border-oll-dark/10 dark:border-white/20 bg-white/80 dark:bg-oll-dark/80"
+            >
+              <div class="aspect-[4/3] overflow-hidden">
+                <img
+                  src="/assets/image/The-Mind-Behind-the-Mind-Body-Connection.webp"
+                  alt="Meet Chris Wuehr: The Mind Behind the Mind Body Connection"
+                  width="800"
+                  height="600"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 bg-white"
+                />
+              </div>
+              <div class="p-6 space-y-3">
+                <p class="text-xs uppercase tracking-widest opacity-60">Mind</p>
+                <h3 class="font-serif text-2xl">Meet Chris Wuehr: The Mind Behind the Mind Body Connection</h3>
+                <p class="text-sm opacity-70">A curated story and interview transcript with Chris Wuehr.</p>
+                <span class="text-xs uppercase tracking-widest border-b border-current pb-1">
+                  Read story
+                </span>
+              </div>
+            </a>
+          
       </section>
 
       <section class="py-24 bg-oll-sand-light dark:bg-[#1a1a1a] text-oll-dark dark:text-white border-b border-oll-dark/10 dark:border-white/10">
@@ -581,10 +805,9 @@
                 Explore
               </h5>
               <ul class="space-y-2 opacity-60">
-                <li><a href="index.html#mbs" class="hover:opacity-100">Mind</a></li>
-                <li><a href="index.html#mbs" class="hover:opacity-100">Body</a></li>
-                <li><a href="index.html#mbs" class="hover:opacity-100">Soul</a></li>
-                <li><a href="#" class="hover:opacity-100">Shop</a></li>
+                <li><a href="index.html#mbs-mind" class="hover:opacity-100">Mind</a></li>
+                <li><a href="index.html#mbs-body" class="hover:opacity-100">Body</a></li>
+                <li><a href="index.html#mbs-soul" class="hover:opacity-100">Soul</a></li>
               </ul>
             </div>
             <div>
@@ -718,6 +941,5 @@
         </form>
       </div>
     </div>
-    <script type="module" src="./assets/js/main.js"></script>
 </body>
 </html>

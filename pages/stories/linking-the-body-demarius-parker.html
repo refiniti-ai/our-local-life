@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
   <head>
+    <script data-oll-theme-init="true">
+      (function () {
+        try {
+          if (localStorage.getItem("oll-theme") === "dark") {
+            document.documentElement.classList.add("dark");
+            document.documentElement.classList.remove("light");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linking the Body: A Conversation with Demarius Parker | Curated Story</title>
+    <title>Meet Demarius Parker: Linking the Body | Curated Story</title>
     <meta
       name="description"
-      content="Linking the Body: A Conversation with Demarius Parker, a curated story and interview transcript for Our Local Life."
+      content="Meet Demarius Parker: Linking the Body, a curated story and interview transcript for Our Local Life."
     />
     <meta name="oll:category" content="body" />
     <meta name="oll:date" content="2026-01-19" />
@@ -24,7 +34,7 @@
     <meta property="og:site_name" content="Our Local Life" />
     <meta
       property="og:title"
-      content="Linking the Body: A Conversation with Demarius Parker | Curated Story"
+      content="Meet Demarius Parker: Linking the Body | Curated Story"
     />
     <meta
       property="og:description"
@@ -37,12 +47,12 @@
     />
     <meta
       property="og:image"
-      content="/assets/image/linking-the-body-demarius-parker.webp"
+      content="/assets/image/Linking-the-Body-A-Conversation-with-Demarius-Parker.webp"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Linking the Body: A Conversation with Demarius Parker | Curated Story"
+      content="Meet Demarius Parker: Linking the Body | Curated Story"
     />
     <meta
       name="twitter:description"
@@ -50,7 +60,7 @@
     />
     <meta
       name="twitter:image"
-      content="/assets/image/Demarius-Parker-Body-Savant-Our-local-life.webp"
+      content="https://ourlocallife.com/assets/image/Linking-the-Body-A-Conversation-with-Demarius-Parker.webp"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -93,7 +103,8 @@
       };
     </script>
 
-    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <script type="module" crossorigin src="/assets/main-CJuVpVQo.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-DBjioDFf.css">
   </head>
   <body
     class="font-sans antialiased selection:bg-oll-sand selection:text-oll-dark bg-white dark:bg-oll-dark text-oll-dark dark:text-white transition-colors duration-500"
@@ -105,9 +116,9 @@
     >
       <div class="flex items-center justify-between px-6 h-16">
         <img
-          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/5-1.png"
-          alt="OLL Icon"
-          class="h-8 w-auto dark:invert"
+          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/cropped-4.webp"
+          alt="Our Local Life"
+          class="h-7 w-auto dark:invert"
         />
         <div class="flex items-center gap-4">
           <label class="theme-switch">
@@ -219,6 +230,27 @@
             <span class="uppercase tracking-widest text-xs font-medium">Stories</span>
           </a>
           <a
+            href="../../hub.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+                />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium">Hub</span>
+          </a>
+          <a
             href="../../featured-entrepreneur.html"
             class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
           >
@@ -235,7 +267,7 @@
             <span class="uppercase tracking-widest text-xs font-medium">Spotlight</span>
           </a>
           <a
-            href="../podcast/index.html"
+            href="../../pages/podcast/index.html"
             class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
           >
             <div class="w-6 h-6 flex justify-center items-center">
@@ -253,7 +285,9 @@
                 />
               </svg>
             </div>
-            <span class="uppercase tracking-widest text-xs font-medium">Podcast</span>
+            <span class="uppercase tracking-widest text-xs font-medium"
+              >Podcast</span
+            >
           </a>
           <div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
           <button
@@ -275,9 +309,11 @@
                 />
               </svg>
             </div>
-            <span class="uppercase tracking-widest text-xs font-medium">Join The Movement</span>
+            <span class="uppercase tracking-widest text-xs font-medium"
+              >Join The Movement</span
+            >
           </button>
-        </div>
+</div>
       </div>
     </nav>
 
@@ -335,7 +371,9 @@
           href="../../index.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -358,7 +396,9 @@
           href="../../about.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -381,7 +421,9 @@
           href="../../curated-stories.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -401,10 +443,37 @@
           >
         </a>
         <a
+          href="../../hub.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+              />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >Hub</span
+          >
+        </a>
+        <a
           href="../../featured-entrepreneur.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -419,10 +488,12 @@
           >
         </a>
         <a
-          href="../podcast/index.html"
+          href="../../pages/podcast/index.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -446,7 +517,9 @@
           onclick="toggleSubscribe()"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item w-full"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -466,7 +539,7 @@
             >Join The Movement</span
           >
         </button>
-        <div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
+<div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
         <div class="px-2 flex justify-center pt-2">
           <label class="theme-switch">
             <input
@@ -484,7 +557,7 @@
       <header class="relative min-h-[60vh] bg-oll-dark text-white overflow-hidden">
         <div class="absolute inset-0">
           <img
-            src="/assets/image/Linking-the-Body-A-Conversation-with-Demarius-Parker.webp"
+            src="/assets/Linking-the-Body-A-Conversation-with-Demarius-Parker-ADZymV7v.webp"
             alt="Demarius Parker, Linking the Body story hero"
             class="w-full h-full object-cover opacity-70"
           />
@@ -495,7 +568,7 @@
             Curated Story
           </span>
           <h1 class="font-serif text-4xl md:text-6xl leading-tight mt-6">
-            Linking the Body: A Conversation with Demarius Parker
+            Meet Demarius Parker: Linking the Body
           </h1>
           <p class="text-lg md:text-xl text-white/80 mt-6">
             The Body lead in our Mind Body Soul collective on healing, movement, and embodied sovereignty.
@@ -511,7 +584,7 @@
               class="w-full h-full object-cover"
               poster="https://images.unsplash.com/photo-1549576490-b0b4831ef60a?q=80&w=2000&auto=format&fit=crop"
             >
-              <source src="assets/video/kat-interview-placeholder.mp4" type="video/mp4" />
+              <source src="data:video/mp4;base64,UGxhY2Vob2xkZXIgdmlkZW8gZmlsZS4gUmVwbGFjZSB0aGlzIHdpdGggdGhlIGZpbmFsIGludGVydmlldyBNUDQuCg==" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -523,82 +596,83 @@
 
       <section class="py-24 bg-white dark:bg-oll-dark text-oll-dark dark:text-white border-b border-oll-dark/10 dark:border-white/10">
         <div class="max-w-6xl mx-auto px-6 space-y-12">
-          <div class="text-center">
-            <p class="text-xs uppercase tracking-[0.3em] opacity-60 mb-4">Feature Story</p>
-            <h2 class="font-serif text-4xl md:text-5xl">
-              Linking the Body: A Conversation with Demarius Parker
-            </h2>
-          </div>
-          <div class="max-w-3xl mx-auto mb-12">
+<div class="max-w-3xl mx-auto mb-12">
             <img
-              src="../../assets/image/Demarius-Parker-The-Linker-Our-local-life.webp"
+              src="/assets/Demarius-Parker-The-Linker-Our-local-life-ChCHeWFZ.webp"
               alt="Demarius Parker, The Linker, Our Local Life"
               class="w-full rounded-[28px] border border-oll-dark/10 dark:border-white/10 object-cover"
             />
             <p class="text-xs uppercase tracking-widest opacity-60 mt-3 text-center">Demarius Parker, Body and healing</p>
           </div>
-          <div class="grid lg:grid-cols-2 gap-10">
-            <article class="bg-oll-sand-light dark:bg-[#1a1a1a] rounded-[28px] p-8 space-y-4">
-              <h3 class="font-serif text-2xl">
-                Linking the Body: A Conversation with Demarius Parker
-              </h3>
+          
+          <div class="text-center max-w-3xl mx-auto">
+            <p class="text-xs uppercase tracking-[0.3em] opacity-60 mb-4">EDITORIAL</p>
+            <h2 class="font-serif text-3xl md:text-4xl leading-tight text-balance mb-4">
+              Meet Demarius Parker: Linking the Body
+            </h2>
+            <p class="text-lg md:text-xl opacity-80 max-w-2xl mx-auto font-light leading-relaxed">
+              Body lead in the Mind Body Soul collective and guide to embodied healing.
+            </p>
+            <div class="mt-8 mb-4">
+              <a
+                href="../practice/demarius-parker-practice.html"
+                class="inline-block uppercase text-xs font-bold tracking-widest border border-current rounded-full px-6 py-3 hover:bg-oll-dark hover:text-white dark:hover:bg-white dark:hover:text-oll-dark transition-colors"
+              >
+                Work with Demarius
+              </a>
+            </div>
+          </div>
+<div class="max-w-3xl mx-auto">
+            <article class="bg-oll-sand-light dark:bg-[#1a1a1a] rounded-[28px] p-8 md:p-10 space-y-4">
               <p class="text-sm leading-relaxed opacity-80">
-                In a world where the mind and spirit often overshadow the body in wellness discussions,
-                Demarius Parker brings a grounded presence. As the Body lead in the Mind Body Soul
-                collective, he fuses healing touch, movement, and intuition into a philosophy that is
-                as practical as it is profound.
+                In a world where the mind and spirit often overshadow the body in wellness
+                discussions, Demarius Parker brings a grounded presence. As the Body lead within
+                the Mind Body Soul Collective, he fuses healing touch, movement, and intuition into
+                a philosophy that is as practical as it is profound, bringing clarity of movement,
+                muscle, and identity beneath the noise.
               </p>
               <p class="text-sm leading-relaxed opacity-80">
-                Originally from Louisiana, Parker describes himself as a body savant, a natural-born
-                healer who listens to the subtle language of the body and knows instinctively how to
-                guide it back into balance. "You give me a body," he says, "and I will do whatever you
-                want with it to get it right."
+                Originally from Louisiana, Parker describes himself as a body savant, one of those
+                rare individuals who does not just work on the body but with it, a natural-born
+                healer who listens to the subtle language of the body and knows instinctively how
+                to guide it back into balance. "You give me a body," he says, "and I will do
+                whatever you want with it to get it right."
               </p>
               <p class="text-sm leading-relaxed opacity-80">
-                His genius is in linking. He connects disparate ideas across nutrition, movement,
-                muscles, and organs like a translator bridging cultures. Everyone has a piece of the
-                puzzle. His work is about linking those pieces.
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                Sessions begin by attuning to a person's baseline, their natural blueprint for health.
-                If someone is below that baseline, bodywork becomes the quickest path to transformation.
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                The method is serious in intent but light in delivery. He cracks jokes while unwinding
-                trauma, blending intensity with levity so clients stay engaged through discomfort.
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                At its core, Parker's work is about sovereignty, the ability to trust your body again.
-                He wants people to know when to rest, when to eat, and when they just need to be touched.
-              </p>
-            </article>
-            <article class="bg-white dark:bg-oll-dark border border-oll-dark/10 dark:border-white/10 rounded-[28px] p-8 space-y-4">
-              <h3 class="font-serif text-2xl">
-                Demarius Parker: The Body Whisperer of the Mind Body Soul Collective
-              </h3>
-              <p class="text-sm leading-relaxed opacity-80">
-                There are healers, and then there are body savants, those rare individuals who do not
-                just work on the body but with it. Demarius Parker is one such being. As the Body lead
-                within the Mind Body Soul Collective, he brings clarity of movement, muscle, and
-                identity beneath the noise.
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                Beyond bodywork or Qigong, Demarius is a linker. He connects the forgotten spaces
-                between nutrition, movement, emotion, and energy. Whether someone needs nervous system
-                restoration or a deeper movement practice, he begins by realigning them to their
-                natural center.
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                His sessions are fun and focused. The humor short-circuits trauma, but his attention
-                to detail is surgical. Every joint placement carries a precise, deliberate intent.
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                Raised in Louisiana, he learned bodywork early by rubbing his mother's feet. He credits
+                His path began early. He learned bodywork by rubbing his mother's feet, and credits
                 Dragon Ball Z for his first inspirations in Qigong and energy awareness.
               </p>
               <p class="text-sm leading-relaxed opacity-80">
-                Demarius wants to nourish households, shift cultural narratives around power and safety,
-                and help people feel they do not want to be in anyone else's body but their own.
+                Beyond bodywork or Qigong, Demarius is a linker. He connects disparate ideas across
+                nutrition, movement, muscles, organs, emotion, and energy like a translator
+                bridging cultures. Everyone has a piece of the puzzle. His work is about linking
+                those pieces.
+              </p>
+              
+              <h3 class="story-section-break text-xs uppercase tracking-[0.3em] opacity-60 pt-8 pb-4 text-center border-t border-oll-dark/10 dark:border-white/10">
+                Mind, body, and soul in practice
+              </h3>
+<p class="text-sm leading-relaxed opacity-80">
+                Sessions begin by attuning to a person's baseline, their natural blueprint for
+                health. Whether someone needs nervous system restoration or a deeper movement
+                practice, he begins by realigning them to their natural center. If someone is below
+                that baseline, bodywork becomes the quickest path to transformation.
+              </p>
+              <p class="text-sm leading-relaxed opacity-80">
+                The method is serious in intent but light in delivery. He cracks jokes while
+                unwinding trauma, blending intensity with levity so clients stay engaged through
+                discomfort. The humor short-circuits trauma, but his attention to detail is
+                surgical. Every joint placement carries a precise, deliberate intent.
+              </p>
+              <p class="text-sm leading-relaxed opacity-80">
+                At its core, Parker's work is about sovereignty, the ability to trust your body
+                again. He wants people to know when to rest, when to eat, and when they just need
+                to be touched.
+              </p>
+              <p class="text-sm leading-relaxed opacity-80">
+                His larger vision is to nourish households, shift cultural narratives around power
+                and safety, and help people feel they do not want to be in anyone else's body but
+                their own.
               </p>
               <p class="text-sm leading-relaxed opacity-80">
                 His mantra is simple: "It ain't rocket science." Sit, stand, move, pray, stretch,
@@ -606,7 +680,7 @@
               </p>
             </article>
           </div>
-        </div>
+</div>
       </section>
 
       <section class="py-24 bg-oll-sand-light dark:bg-[#1a1a1a] text-oll-dark dark:text-white border-b border-oll-dark/10 dark:border-white/10">
@@ -739,7 +813,6 @@
                 <li><a href="../../curated-stories.html" class="hover:opacity-100">Stories</a></li>
                 <li><a href="../../featured-entrepreneur.html" class="hover:opacity-100">Spotlight</a></li>
                 <li><a href="../podcast/index.html" class="hover:opacity-100">Podcast</a></li>
-                <li><a href="#" class="hover:opacity-100">Shop</a></li>
               </ul>
             </div>
             <div>
@@ -873,6 +946,5 @@
         </form>
       </div>
     </div>
-    <script type="module" src="../../assets/js/main.js"></script>
   </body>
 </html>

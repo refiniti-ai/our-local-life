@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
   <head>
+    <script data-oll-theme-init="true">
+      (function () {
+        try {
+          if (localStorage.getItem("oll-theme") === "dark") {
+            document.documentElement.classList.add("dark");
+            document.documentElement.classList.remove("light");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meet Chris Wuehr: The Mind Behind the Mind-Body Connection | Curated Story</title>
+    <title>Meet Chris Wuehr: The Mind Behind the Mind Body Connection | Curated Story</title>
     <meta
       name="description"
-      content="Meet Chris Wuehr: The Mind Behind the Mind-Body Connection, a curated story and interview transcript for Our Local Life."
+      content="Meet Chris Wuehr: The Mind Behind the Mind Body Connection, a curated story and interview transcript for Our Local Life."
     />
     <meta name="oll:category" content="mind" />
     <meta name="oll:date" content="2026-01-18" />
@@ -24,7 +34,7 @@
     <meta property="og:site_name" content="Our Local Life" />
     <meta
       property="og:title"
-      content="Meet Chris Wuehr: The Mind Behind the Mind-Body Connection | Curated Story"
+      content="Meet Chris Wuehr: The Mind Behind the Mind Body Connection | Curated Story"
     />
     <meta
       property="og:description"
@@ -42,7 +52,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Meet Chris Wuehr: The Mind Behind the Mind-Body Connection | Curated Story"
+      content="Meet Chris Wuehr: The Mind Behind the Mind Body Connection | Curated Story"
     />
     <meta
       name="twitter:description"
@@ -50,7 +60,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2000&auto=format&fit=crop"
+      content="https://ourlocallife.com/assets/image/The-Mind-Behind-the-Mind-Body-Connection.webp"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -93,7 +103,8 @@
       };
     </script>
 
-    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <script type="module" crossorigin src="/assets/main-CJuVpVQo.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-DBjioDFf.css">
   </head>
   <body
     class="font-sans antialiased selection:bg-oll-sand selection:text-oll-dark bg-white dark:bg-oll-dark text-oll-dark dark:text-white transition-colors duration-500"
@@ -105,9 +116,9 @@
     >
       <div class="flex items-center justify-between px-6 h-16">
         <img
-          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/5-1.png"
-          alt="OLL Icon"
-          class="h-8 w-auto dark:invert"
+          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/cropped-4.webp"
+          alt="Our Local Life"
+          class="h-7 w-auto dark:invert"
         />
         <div class="flex items-center gap-4">
           <label class="theme-switch">
@@ -219,6 +230,27 @@
             <span class="uppercase tracking-widest text-xs font-medium">Stories</span>
           </a>
           <a
+            href="../../hub.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+                />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium">Hub</span>
+          </a>
+          <a
             href="../../featured-entrepreneur.html"
             class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
           >
@@ -235,7 +267,7 @@
             <span class="uppercase tracking-widest text-xs font-medium">Spotlight</span>
           </a>
           <a
-            href="../podcast/index.html"
+            href="../../pages/podcast/index.html"
             class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
           >
             <div class="w-6 h-6 flex justify-center items-center">
@@ -253,7 +285,9 @@
                 />
               </svg>
             </div>
-            <span class="uppercase tracking-widest text-xs font-medium">Podcast</span>
+            <span class="uppercase tracking-widest text-xs font-medium"
+              >Podcast</span
+            >
           </a>
           <div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
           <button
@@ -275,9 +309,11 @@
                 />
               </svg>
             </div>
-            <span class="uppercase tracking-widest text-xs font-medium">Join The Movement</span>
+            <span class="uppercase tracking-widest text-xs font-medium"
+              >Join The Movement</span
+            >
           </button>
-        </div>
+</div>
       </div>
     </nav>
 
@@ -335,7 +371,9 @@
           href="../../index.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -358,7 +396,9 @@
           href="../../about.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -381,7 +421,9 @@
           href="../../curated-stories.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -401,10 +443,37 @@
           >
         </a>
         <a
+          href="../../hub.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+              />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >Hub</span
+          >
+        </a>
+        <a
           href="../../featured-entrepreneur.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -419,10 +488,12 @@
           >
         </a>
         <a
-          href="../podcast/index.html"
+          href="../../pages/podcast/index.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -446,7 +517,9 @@
           onclick="toggleSubscribe()"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item w-full"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -466,7 +539,7 @@
             >Join The Movement</span
           >
         </button>
-        <div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
+<div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
         <div class="px-2 flex justify-center pt-2">
           <label class="theme-switch">
             <input
@@ -484,7 +557,7 @@
       <header class="relative min-h-[60vh] bg-oll-dark text-white overflow-hidden">
         <div class="absolute inset-0">
           <img
-            src="/assets/image/The-Mind-Behind-the-Mind-Body-Connection.webp"
+            src="/assets/The-Mind-Behind-the-Mind-Body-Connection-DMhxzCH9.webp"
             alt="Mind-body connection story hero"
             class="w-full h-full object-cover opacity-70"
           />
@@ -495,10 +568,10 @@
             Curated Story
           </span>
           <h1 class="font-serif text-4xl md:text-6xl leading-tight mt-6">
-            Meet Chris Wuehr: The Mind Behind the Mind-Body Connection
+            Meet Chris Wuehr: The Mind Behind the Mind Body Connection
           </h1>
           <p class="text-lg md:text-xl text-white/80 mt-6">
-            Head of the Mind branch in our Mind-Body-Soul framework and a leading voice on embodied healing.
+            Head of the Mind branch in our Mind Body Soul framework and a leading voice on embodied healing.
           </p>
         </div>
       </header>
@@ -522,81 +595,93 @@
 
       <section class="py-24 bg-white dark:bg-oll-dark text-oll-dark dark:text-white border-b border-oll-dark/10 dark:border-white/10">
         <div class="max-w-6xl mx-auto px-6 space-y-12">
-          <div class="text-center">
-            <p class="text-xs uppercase tracking-[0.3em] opacity-60 mb-4">Feature Story</p>
-            <h2 class="font-serif text-4xl md:text-5xl">
-              Stillness That Speaks: Chris Wuehr and the Science of Listening Within
-            </h2>
-          </div>
-          <div class="max-w-3xl mx-auto mb-12">
+<div class="max-w-3xl mx-auto mb-12">
             <img
-              src="../../assets/image/chris-wuehr-thought-our-local-life.webp"
+              src="/assets/chris-wuehr-thought-our-local-life-Bd0s8TNM.webp"
               alt="Chris Wuehr, Thought Leader, Our Local Life"
               class="w-full rounded-[28px] border border-oll-dark/10 dark:border-white/10 object-cover"
             />
-            <p class="text-xs uppercase tracking-widest opacity-60 mt-3 text-center">Chris Wuehr, Mind-Body Connection</p>
+            <p class="text-xs uppercase tracking-widest opacity-60 mt-3 text-center">Chris Wuehr, Mind Body Connection</p>
           </div>
-          <div class="grid lg:grid-cols-2 gap-10">
-            <article class="bg-oll-sand-light dark:bg-[#1a1a1a] rounded-[28px] p-8 space-y-4">
-              <h3 class="font-serif text-2xl">
-                Meet Chris Wuehr: The Mind Behind the Mind-Body Connection
+          
+          <div class="text-center max-w-3xl mx-auto">
+            <p class="text-xs uppercase tracking-[0.3em] opacity-60 mb-4">EDITORIAL</p>
+            <h2 class="font-serif text-3xl md:text-4xl leading-tight text-balance mb-4">
+              Meet Chris Wuehr: The Mind Behind the Mind Body Connection
+            </h2>
+            <p class="text-lg md:text-xl opacity-80 max-w-2xl mx-auto font-light leading-relaxed">
+              Stillness that speaks, and the science of listening within.
+            </p>
+            <div class="mt-8 mb-4">
+              <a
+                href="../practice/chris-wuehr-practice.html"
+                class="inline-block uppercase text-xs font-bold tracking-widest border border-current rounded-full px-6 py-3 hover:bg-oll-dark hover:text-white dark:hover:bg-white dark:hover:text-oll-dark transition-colors"
+              >
+                Work with Chris
+              </a>
+            </div>
+          </div>
+<div class="max-w-3xl mx-auto">
+            <article class="bg-oll-sand-light dark:bg-[#1a1a1a] rounded-[28px] p-8 md:p-10 space-y-4">
+              <p class="text-sm leading-relaxed opacity-80">
+                In a world saturated with stimulation and stress, Chris Wuehr offers something
+                rare: stillness that speaks. A thought leader in the Our Local Life community and
+                head of the Mind branch of our Mind Body Soul framework, Chris bridges modern
+                science with ancient wisdom to help people reclaim the connection between their
+                mental and physical worlds.
+              </p>
+              <p class="text-sm leading-relaxed opacity-80">
+                Chris is not just a wellness guide. He is a developer by trade, a systems thinker
+                by nature, and a healer by necessity. His journey into holistic health began in the
+                most personal of ways: through illness. Between ages 18 and 22, Chris faced a
+                cascade of metabolic and emotional health issues. "My thoughts were getting darker
+                as my health got worse. That's when I saw how tightly the body and mind are
+                linked," he shares.
+              </p>
+              <p class="text-sm leading-relaxed opacity-80">
+                Rather than settle for generic solutions, Chris became his own case study. He dove
+                into scientific journals, experimented with sleep, diet, and movement, and
+                developed a unique practice grounded in self-respect and body literacy. What began
+                as survival has transformed into service. His work reminds us that healing is not a
+                quick fix. It is a practice of attention, and a return to what the body has always
+                been saying.
+              </p>
+              <p class="text-sm leading-relaxed opacity-80">
+                A session with Chris is less about fixing and more about reconnecting. "Our bodies
+                send us millions of signals every day," he says. "The problem is we have forgotten
+                how to interpret them." Chris helps people decode those signals, shifting the
+                perception of pain, fatigue, and anxiety from obstacles to guidance systems.
+              </p>
+              
+              <h3 class="story-section-break text-xs uppercase tracking-[0.3em] opacity-60 pt-8 pb-4 text-center border-t border-oll-dark/10 dark:border-white/10">
+                Mind, body, and soul in practice
               </h3>
-              <p class="text-sm leading-relaxed opacity-80">
-                In a world saturated with stimulation and stress, Chris Wuehr offers something rare: stillness
-                that speaks. A thought-leader in our Our Local Life community and head of the Mind branch of our
-                Mind-Body-Soul framework, Chris bridges modern science with ancient wisdom to help people reclaim
-                the connection between their mental and physical worlds.
+<p class="text-sm leading-relaxed opacity-80">
+                Whether you are seeking more energy, sharper focus, or emotional regulation, his
+                work invites you into a deeper sense of personal power, trust, and clarity. The
+                answers we seek are often already in our bodies, waiting to be noticed.
               </p>
               <p class="text-sm leading-relaxed opacity-80">
-                Chris is not just a wellness guide. He is a developer by trade, a systems thinker by nature, and
-                a healer by necessity. His journey into holistic health began in the most personal of ways:
-                through illness. Between ages 18 and 22, Chris faced a cascade of metabolic and emotional health
-                issues. "My thoughts were getting darker as my health got worse. That's when I saw how tightly
-                the body and mind are linked," he shares.
+                Chris believes in active evolution. He is not here to provide a one-time
+                breakthrough but to invite you into a lifelong process of listening and learning.
+                "Once I solved my initial health crisis, I realized I had to discover a new
+                purpose," he reflects. "Life does not give you the chance to rest in what you have
+                already learned. It keeps inviting you to grow."
               </p>
               <p class="text-sm leading-relaxed opacity-80">
-                Rather than settle for generic solutions, Chris became his own case study. He dove into scientific
-                journals, experimented with sleep, diet, and movement, and developed a unique practice grounded in
-                self-respect and body literacy. What began as survival has transformed into service.
+                Today, Chris is deeply involved in breathwork, hiking, and yoga circles where
+                movement and meditation meet. Through Our Local Life, he is committed to creating
+                space for others to return to their breath, their body, and ultimately, themselves.
               </p>
               <p class="text-sm leading-relaxed opacity-80">
-                His work reminds us that healing is not a quick fix. It is a practice of attention, and a return
-                to what the body has always been saying.
-              </p>
-            </article>
-            <article class="bg-white dark:bg-oll-dark border border-oll-dark/10 dark:border-white/10 rounded-[28px] p-8 space-y-4">
-              <h3 class="font-serif text-2xl">What Happens in a Session with Chris?</h3>
-              <p class="text-sm leading-relaxed opacity-80">
-                A session with Chris is less about fixing and more about reconnecting. "Our bodies send us millions
-                of signals every day," he says. "The problem is we have forgotten how to interpret them." Chris
-                helps people decode those signals, shifting the perception of pain, fatigue, and anxiety from
-                obstacles to guidance systems.
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                Whether you are seeking more energy, sharper focus, or emotional regulation, his work invites
-                you into a deeper sense of personal power, trust, and clarity. The answers we seek are often
-                already in our bodies, waiting to be noticed.
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                Chris believes in active evolution. He is not here to provide a one-time breakthrough but to
-                invite you into a lifelong process of listening and learning. "Once I solved my initial health
-                crisis, I realized I had to discover a new purpose," he reflects. "Life does not give you the
-                chance to rest in what you have already learned. It keeps inviting you to grow."
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                Today, Chris is deeply involved in breathwork, hiking, and yoga circles where movement and
-                meditation meet. Through Our Local Life, he is committed to creating space for others to return
-                to their breath, their body, and ultimately, themselves.
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                If Chris could leave you with one insight, it would be this: "Everything in the mind can be traced
-                back to the body, and everything in the body can be traced back to the mind. When we learn one, we
-                learn the other, allowing us to learn more and love more of ourselves." It is more than a quote.
-                It is a compass.
+                If Chris could leave you with one insight, it would be this: "Everything in the
+                mind can be traced back to the body, and everything in the body can be traced back
+                to the mind. When we learn one, we learn the other, allowing us to learn more and
+                love more of ourselves." It is more than a quote. It is a compass.
               </p>
             </article>
           </div>
-        </div>
+</div>
       </section>
 
       <section class="py-24 bg-oll-sand-light dark:bg-[#1a1a1a] text-oll-dark dark:text-white border-b border-oll-dark/10 dark:border-white/10">
@@ -604,7 +689,7 @@
           <div class="text-center mb-12">
             <p class="text-xs uppercase tracking-[0.3em] opacity-60">Transcript</p>
             <h2 class="font-serif text-4xl md:text-5xl">
-              The Mind-Body Connection: An Interview with Chris Wuehr
+              The Mind Body Connection: An Interview with Chris Wuehr
             </h2>
           </div>
           <details class="bg-white/80 dark:bg-oll-dark/80 border border-oll-dark/10 dark:border-white/10 rounded-[28px] p-8">
@@ -714,7 +799,6 @@
                 <li><a href="../../curated-stories.html" class="hover:opacity-100">Stories</a></li>
                 <li><a href="../../featured-entrepreneur.html" class="hover:opacity-100">Spotlight</a></li>
                 <li><a href="../podcast/index.html" class="hover:opacity-100">Podcast</a></li>
-                <li><a href="#" class="hover:opacity-100">Shop</a></li>
               </ul>
             </div>
             <div>
@@ -848,6 +932,5 @@
         </form>
       </div>
     </div>
-    <script type="module" src="../../assets/js/main.js"></script>
   </body>
 </html>

@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
   <head>
+    <script data-oll-theme-init="true">
+      (function () {
+        try {
+          if (localStorage.getItem("oll-theme") === "dark") {
+            document.documentElement.classList.add("dark");
+            document.documentElement.classList.remove("light");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Local Life | Where Great Minds Cultivate Local Life</title>
@@ -79,7 +89,8 @@
       };
     </script>
 
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script type="module" crossorigin src="/assets/main-CJuVpVQo.js?v=20260612b"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-DBjioDFf.css">
   </head>
   <body
     class="font-sans antialiased selection:bg-oll-sand selection:text-oll-dark bg-white dark:bg-oll-dark text-oll-dark dark:text-white transition-colors duration-500"
@@ -91,9 +102,9 @@
     >
       <div class="flex items-center justify-between px-6 h-16">
         <img
-          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/5-1.png"
-          alt="OLL Icon"
-          class="h-8 w-auto dark:invert"
+          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/cropped-4.webp"
+          alt="Our Local Life"
+          class="h-7 w-auto dark:invert"
         />
         <div class="flex items-center gap-4">
           <label class="theme-switch">
@@ -203,6 +214,27 @@
               </svg>
             </div>
             <span class="uppercase tracking-widest text-xs font-medium">Stories</span>
+          </a>
+          <a
+            href="hub.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+                />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium">Hub</span>
           </a>
           <a
             href="featured-entrepreneur.html"
@@ -397,6 +429,31 @@
           >
         </a>
         <a
+          href="hub.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+              />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >Hub</span
+          >
+        </a>
+        <a
           href="featured-entrepreneur.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
@@ -509,14 +566,6 @@
             alt="Our Local Life Nameplate"
             class="h-24 md:h-32 w-auto mb-6 object-contain invert-0"
           />
-          <a
-            id="hero-issue-month-link"
-            href="pages/magazine/january-issue.html"
-            data-hero-magazine-link
-            data-hero-magazine-label
-            class="inline-block text-xs md:text-sm tracking-[0.4em] uppercase mb-6 opacity-90 text-oll-sand font-medium"
-            >January Issue</a
-          >
           <h1
             class="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.05] mb-8 drop-shadow-2xl text-balance"
           >
@@ -525,20 +574,18 @@
           <p
             class="text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed mb-10 text-white/90 drop-shadow-md"
           >
-            The community-owned home for local stories and events, built to connect leaders
-            and inspire excellence in mind, body, and soul.
+            The community-owned home for local stories and events, built to connect leaders and inspire excellence in mind, body, and soul.
           </p>
           <a
             id="hero-issue-cta-link"
-            href="pages/magazine/january-issue.html"
-            data-hero-magazine-link
+            href="#leaders"
             class="inline-flex items-center gap-2 px-8 py-3 rounded-full border border-white/40 bg-white/10 text-xs uppercase tracking-[0.3em] font-semibold hover:bg-white/20 transition-colors"
           >
-            View the Magazine
+            Meet our Leaders
           </a>
         </div>
 
-        <div class="relative z-20 w-full border-t border-white/10 py-6">
+        <div id="leaders" class="relative z-20 w-full border-t border-white/10 py-6">
           <div class="max-w-7xl mx-auto px-6">
             <p
               class="text-center text-[10px] md:text-xs uppercase tracking-[0.35em] text-white/70 mb-5"
@@ -556,7 +603,7 @@
                   class="aspect-[4/3] bg-gray-800 mb-2 overflow-hidden rounded-lg relative ring-1 ring-white/10 group-hover:ring-white/30 transition-all"
                 >
                   <img
-                    src="assets/image/chris-wuehr-thought-leader-our-local-life.webp"
+                    src="/assets/chris-wuehr-thought-leader-our-local-life-GhZ49_tF.webp"
                     alt="Chris Wuehr"
                     class="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-opacity"
                   />
@@ -580,7 +627,7 @@
                   class="aspect-[4/3] bg-gray-800 mb-2 overflow-hidden rounded-lg relative ring-1 ring-white/10 group-hover:ring-white/30 transition-all"
                 >
                   <img
-                    src="assets/image/Atma-Approach-to-Healings.webp"
+                    src="/assets/Atma-Approach-to-Healings-Du_1ncd0.webp"
                     alt="Atma Erice"
                     class="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-opacity"
                   />
@@ -604,7 +651,7 @@
                   class="aspect-[4/3] bg-gray-800 mb-2 overflow-hidden rounded-lg relative ring-1 ring-white/10 group-hover:ring-white/30 transition-all"
                 >
                   <img
-                    src="assets/image/Linking-the-Body-A-Conversation-with-Demarius-Parker.webp"
+                    src="/assets/Linking-the-Body-A-Conversation-with-Demarius-Parker-ADZymV7v.webp"
                     alt="Demarius Parker"
                     class="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-opacity"
                   />
@@ -630,48 +677,72 @@
         class="py-24 bg-white dark:bg-oll-dark text-oll-dark dark:text-white border-b border-oll-dark/10 dark:border-white/10"
       >
         <div class="max-w-7xl mx-auto px-6">
-          <div class="flex flex-col lg:flex-row gap-12 lg:gap-0">
-            <div class="flex-1 lg:pr-12 lg:border-r border-oll-dark/10 dark:border-white/10">
-              <div class="text-center mb-12">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0 lg:divide-x divide-oll-dark/10 dark:divide-white/10 items-stretch"
+          >
+            <div class="featured-promo-column flex flex-col min-w-0 lg:pr-12">
+              <div
+                class="featured-promo-eyebrow text-center mb-12 min-h-[3rem] flex items-end justify-center"
+              >
                 <span class="text-xs font-light tracking-[0.2em] uppercase"
                   >The Peak Performance Protocol</span
                 >
               </div>
-              <article id="latest-story-card" class="group cursor-pointer text-center">
-                <div class="aspect-[4/3] overflow-hidden mb-8">
-                  <div
-                    class="w-full h-full bg-oll-sand-light dark:bg-white/10 flex items-center justify-center text-xs uppercase tracking-widest opacity-60"
-                  >
-                    Loading latest story
+              <article class="featured-promo-card flex flex-col flex-1 text-center">
+                <a href="focus-course.html" class="block group flex flex-col flex-1">
+                  <div class="aspect-[4/3] overflow-hidden mb-8 w-full">
+                    <img
+                      src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&amp;w=1200&amp;auto=format&amp;fit=crop"
+                      alt="The Peak Performance Protocol"
+                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      width="1200"
+                      height="900"
+                      loading="lazy"
+                    />
                   </div>
-                </div>
-                <h3 class="font-serif text-3xl mb-4">Free the Body. Free the Mind.</h3>
-                <p class="text-sm opacity-70 max-w-md mx-auto leading-relaxed font-sans">
-                  Emotional weight and mental fog often live in your physical tissue. Through
-                  targeted fascia release, diaphragmatic breathing, and heart alignment, you can
-                  return to the clarity and confidence required for peak performance.
-                </p>
+                  <h3
+                    class="featured-promo-headline font-serif text-3xl mb-4 text-balance min-h-[4.5rem] flex items-center justify-center"
+                  >
+                    Free the Body. Free the Mind.
+                  </h3>
+                  <p
+                    class="featured-promo-description text-sm opacity-70 max-w-md mx-auto leading-relaxed font-sans text-pretty flex-1"
+                  >
+                    Emotional weight and mental fog often live in your physical tissue. Through
+                    targeted fascia release, diaphragmatic breathing, and heart alignment, you can
+                    return to the clarity and confidence required for peak performance.
+                  </p>
+                </a>
               </article>
             </div>
 
-            <div class="flex-1 lg:pl-12">
-              <div class="text-center mb-12">
+            <div class="featured-promo-column flex flex-col min-w-0 lg:pl-12">
+              <div
+                class="featured-promo-eyebrow text-center mb-12 min-h-[3rem] flex items-end justify-center"
+              >
                 <span class="text-xs font-light tracking-[0.2em] uppercase"
                   >The Visionary Index</span
                 >
               </div>
-              <article id="latest-entrepreneur-card" class="group cursor-pointer text-center">
-                <div class="aspect-[4/3] overflow-hidden mb-8">
+              <article
+                id="latest-entrepreneur-card"
+                class="featured-promo-card flex flex-col flex-1 text-center"
+              >
+                <div class="aspect-[4/3] overflow-hidden mb-8 w-full">
                   <div
-                    class="w-full h-full bg-oll-sand-light dark:bg-white/10 flex items-center justify-center text-xs uppercase tracking-widest opacity-60"
+                    class="w-full h-full bg-oll-sand-light dark:bg-white/10 flex items-center justify-center text-xs uppercase tracking-widest opacity-60 min-h-[12rem]"
                   >
                     Loading latest entrepreneur
                   </div>
                 </div>
-                <h3 class="font-serif text-3xl mb-4">
+                <h3
+                  class="featured-promo-headline font-serif text-3xl mb-4 text-balance min-h-[4.5rem] flex items-center justify-center"
+                >
                   Meet the Great Minds of Our Local Life
                 </h3>
-                <p class="text-sm opacity-70 max-w-md mx-auto leading-relaxed font-sans">
+                <p
+                  class="featured-promo-description text-sm opacity-70 max-w-md mx-auto leading-relaxed font-sans text-pretty flex-1"
+                >
                   Explore the stories, visions, and impact of the ethical entrepreneurs and
                   creative leaders shaping our community. Discover how these thinkers are
                   turning high-vibe concepts into local reality.
@@ -788,6 +859,10 @@
               <p class="mt-4 opacity-60 max-w-md">
                 Listen to the voices shaping our community.
               </p>
+              <p class="mt-4 flex flex-wrap gap-4 text-xs uppercase tracking-widest">
+                <a href="pages/podcast/index.html" class="border-b border-current pb-1">All episodes</a>
+                <a href="pages/blog/index.html" class="border-b border-current pb-1 opacity-70">Companion articles</a>
+              </p>
             </div>
             <div class="mt-8 md:mt-0 space-x-2" id="podcast-filters">
               <button
@@ -853,187 +928,7 @@
           <div
             class="scroll-container flex space-x-6 overflow-x-auto hide-scrollbar pb-10"
             id="podcast-grid"
-          >
-            <div
-              class="podcast-card adaptive-card flex-shrink-0 w-full md:w-[300px] relative h-auto rounded-[30px] overflow-hidden group cursor-pointer p-8 flex flex-col scroll-item"
-              data-category="interviews"
-            >
-              <div class="mb-2 text-current">
-                <svg
-                  class="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
-                  />
-                </svg>
-              </div>
-              <div class="relative z-20 mb-4">
-                <span
-                  class="text-[10px] uppercase tracking-widest opacity-60 mb-2 block"
-                  >Episode 42</span
-                >
-                <h3 class="font-serif text-2xl mb-3 leading-tight">
-                  The Sound of Silence
-                </h3>
-                <p class="text-sm opacity-70 line-clamp-2">
-                  Exploring the importance of quiet in a loud world.
-                </p>
-              </div>
-              <div class="podcast-image-container w-full rounded-xl overflow-hidden mt-auto">
-                <img
-                  src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop"
-                  class="w-full aspect-square object-cover"
-                  alt="Podcast 1"
-                />
-              </div>
-              <div class="mt-4">
-                <span class="text-xs uppercase tracking-widest border-b border-current pb-1"
-                  >Listen Now</span
-                >
-              </div>
-            </div>
-
-            <div
-              class="podcast-card adaptive-card flex-shrink-0 w-full md:w-[300px] relative h-auto rounded-[30px] overflow-hidden group cursor-pointer p-8 flex flex-col scroll-item"
-              data-category="stories"
-            >
-              <div class="mb-2 text-current">
-                <svg
-                  class="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
-                  />
-                </svg>
-              </div>
-              <div class="relative z-20 mb-4">
-                <span
-                  class="text-[10px] uppercase tracking-widest opacity-60 mb-2 block"
-                  >Episode 41</span
-                >
-                <h3 class="font-serif text-2xl mb-3 leading-tight">
-                  Building Community
-                </h3>
-                <p class="text-sm opacity-70 line-clamp-2">
-                  How small businesses are revitalizing local neighborhoods.
-                </p>
-              </div>
-              <div class="podcast-image-container w-full rounded-xl overflow-hidden mt-auto">
-                <img
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2032&auto=format&fit=crop"
-                  class="w-full aspect-square object-cover"
-                  alt="Podcast 2"
-                />
-              </div>
-              <div class="mt-4">
-                <span class="text-xs uppercase tracking-widest border-b border-current pb-1"
-                  >Listen Now</span
-                >
-              </div>
-            </div>
-
-            <div
-              class="podcast-card adaptive-card flex-shrink-0 w-full md:w-[300px] relative h-auto rounded-[30px] overflow-hidden group cursor-pointer p-8 flex flex-col scroll-item"
-              data-category="interviews"
-            >
-              <div class="mb-2 text-current">
-                <svg
-                  class="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
-                  />
-                </svg>
-              </div>
-              <div class="relative z-20 mb-4">
-                <span
-                  class="text-[10px] uppercase tracking-widest opacity-60 mb-2 block"
-                  >Episode 40</span
-                >
-                <h3 class="font-serif text-2xl mb-3 leading-tight">
-                  Modern Mindfulness
-                </h3>
-                <p class="text-sm opacity-70 line-clamp-2">
-                  Techniques for staying grounded in a digital age.
-                </p>
-              </div>
-              <div class="podcast-image-container w-full rounded-xl overflow-hidden mt-auto">
-                <img
-                  src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1999&auto=format&fit=crop"
-                  class="w-full aspect-square object-cover"
-                  alt="Podcast 3"
-                />
-              </div>
-              <div class="mt-4">
-                <span class="text-xs uppercase tracking-widest border-b border-current pb-1"
-                  >Listen Now</span
-                >
-              </div>
-            </div>
-
-            <div
-              class="podcast-card adaptive-card flex-shrink-0 w-full md:w-[300px] relative h-auto rounded-[30px] overflow-hidden group cursor-pointer p-8 flex flex-col scroll-item"
-              data-category="stories"
-            >
-              <div class="mb-2 text-current">
-                <svg
-                  class="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
-                  />
-                </svg>
-              </div>
-              <div class="relative z-20 mb-4">
-                <span
-                  class="text-[10px] uppercase tracking-widest opacity-60 mb-2 block"
-                  >Episode 39</span
-                >
-                <h3 class="font-serif text-2xl mb-3 leading-tight">
-                  The Future of Food
-                </h3>
-                <p class="text-sm opacity-70 line-clamp-2">
-                  Sustainable practices and new culinary frontiers.
-                </p>
-              </div>
-              <div class="podcast-image-container w-full rounded-xl overflow-hidden mt-auto">
-                <img
-                  src="https://images.unsplash.com/photo-1555169062-013468b47731?q=80&w=1974&auto=format&fit=crop"
-                  class="w-full aspect-square object-cover"
-                  alt="Podcast 4"
-                />
-              </div>
-              <div class="mt-4">
-                <span class="text-xs uppercase tracking-widest border-b border-current pb-1"
-                  >Listen Now</span
-                >
-              </div>
-            </div>
-          </div>
+          ></div>
         </div>
       </section>
 
@@ -1052,10 +947,9 @@
                 Explore
               </h5>
               <ul class="space-y-2 opacity-60">
-                <li><a href="#" class="hover:opacity-100">Mind</a></li>
-                <li><a href="#" class="hover:opacity-100">Body</a></li>
-                <li><a href="#" class="hover:opacity-100">Soul</a></li>
-                <li><a href="#" class="hover:opacity-100">Shop</a></li>
+                <li><a href="#mbs-mind" class="hover:opacity-100">Mind</a></li>
+                <li><a href="#mbs-body" class="hover:opacity-100">Body</a></li>
+                <li><a href="#mbs-soul" class="hover:opacity-100">Soul</a></li>
               </ul>
             </div>
             <div>
@@ -1190,6 +1084,5 @@
         </form>
       </div>
     </div>
-    <script type="module" src="./assets/js/main.js"></script>
 </body>
 </html>

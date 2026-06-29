@@ -1,0 +1,18 @@
+﻿# Duplicate deploy snapshots
+_firebase-live/
+_firebase-live-sync/
+our-local-life/
+
+# Build output
+dist/
+
+# Dependencies
+node_modules/
+
+# Other projects in monorepo folder
+turfflex/
+tanner-website/
+
+# Large media
+**/*.mp4
+**/*.webm

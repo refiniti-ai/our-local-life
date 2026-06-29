@@ -1,12 +1,22 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="light">
   <head>
+    <script data-oll-theme-init="true">
+      (function () {
+        try {
+          if (localStorage.getItem("oll-theme") === "dark") {
+            document.documentElement.classList.add("dark");
+            document.documentElement.classList.remove("light");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About | Our Local Life</title>
     <meta
       name="description"
-      content="Our Local Life is a community-owned media platform elevating the way we live, work, and connect."
+      content="Our Local Life is a community-owned media platform featuring real stories, local leaders, and powerful practices. Ethical media for the mind, body, and soul."
     />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#111111" />
@@ -20,7 +30,7 @@
     <meta property="og:title" content="About | Our Local Life" />
     <meta
       property="og:description"
-      content="Ethical media for the mind, body, and soul. Meet the people behind Our Local Life."
+      content="Where Great Minds Meet, and Local Life Grows. Community-owned ethical media for the mind, body, and soul."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ourlocallife.com/about" />
@@ -32,7 +42,7 @@
     <meta name="twitter:title" content="About | Our Local Life" />
     <meta
       name="twitter:description"
-      content="Ethical media for the mind, body, and soul. Meet the people behind Our Local Life."
+      content="Where Great Minds Meet, and Local Life Grows. Community-owned ethical media for the mind, body, and soul."
     />
     <meta
       name="twitter:image"
@@ -79,7 +89,8 @@
       };
     </script>
 
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script type="module" crossorigin src="/assets/main-CJuVpVQo.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-DBjioDFf.css">
   </head>
   <body
     class="font-sans antialiased selection:bg-oll-sand selection:text-oll-dark bg-white dark:bg-oll-dark text-oll-dark dark:text-white transition-colors duration-500"
@@ -91,9 +102,9 @@
     >
       <div class="flex items-center justify-between px-6 h-16">
         <img
-          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/5-1.png"
-          alt="OLL Icon"
-          class="h-8 w-auto dark:invert"
+          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/cropped-4.webp"
+          alt="Our Local Life"
+          class="h-7 w-auto dark:invert"
         />
         <div class="flex items-center gap-4">
           <label class="theme-switch">
@@ -203,6 +214,27 @@
               </svg>
             </div>
             <span class="uppercase tracking-widest text-xs font-medium">Stories</span>
+          </a>
+          <a
+            href="hub.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+                />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium">Hub</span>
           </a>
           <a
             href="featured-entrepreneur.html"
@@ -397,6 +429,31 @@
           >
         </a>
         <a
+          href="hub.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+              />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >Hub</span
+          >
+        </a>
+        <a
           href="featured-entrepreneur.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
@@ -505,9 +562,6 @@
             Where Great Minds Meet,<br />
             <span class="italic font-light">and Local Life Grows.</span>
           </h1>
-          <p class="text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed text-white/90">
-            Ethical media for the mind, body, and soul. Community-owned. Purpose-led.
-          </p>
         </div>
       </header>
 
@@ -520,19 +574,19 @@
             <p class="text-xs uppercase tracking-[0.3em] text-oll-gray-text/70 mb-4">
               A New Kind of Local Media
             </p>
-            <h2 class="font-serif text-4xl md:text-5xl mb-6">
-              Real stories. Local leaders. Powerful practices.
-            </h2>
             <p class="text-base md:text-lg leading-relaxed opacity-80 mb-6">
               In a world full of noise, division, and influencer obsession, we believe
-              something better is possible. Our Local Life is a community-owned media
-              platform featuring real stories, local leaders, and powerful practices
-              that elevate the way we live, work, and connect.
+              something better is possible.
+            </p>
+            <p class="text-base md:text-lg leading-relaxed opacity-80 mb-6">
+              Our Local Life is a community-owned media platform featuring real stories,
+              local leaders, and powerful practices that elevate the way we live, work, and
+              connect.
             </p>
             <p class="text-base md:text-lg leading-relaxed opacity-80">
-              We spotlight entrepreneurs, wellness practitioners, and creatives who
-              embody integrity, innovation, and heart. From regenerative soil scientists
-              to somatic bodyworkers, we bring you voices grounded in purpose, not algorithms.
+              We spotlight entrepreneurs, wellness practitioners, and creatives who embody
+              integrity, innovation, and heart. From regenerative soil scientists to somatic
+              bodyworkers, we bring you voices grounded in purpose, not algorithms.
             </p>
           </div>
           <div class="relative">
@@ -559,14 +613,17 @@
             <p class="text-xs uppercase tracking-[0.3em] opacity-70 mb-4">
               Meet the People. Learn the Path.
             </p>
-            <h2 class="font-serif text-4xl md:text-5xl mb-6">
-              Good people, doing their best at what they’re good at.
-            </h2>
             <p class="text-base md:text-lg leading-relaxed opacity-80 mb-6">
-              Our contributors are ethical entrepreneurs, healers, educators, and builders
-              who share interviews, tools, and practices from the fields of business, health,
-              healing, and human potential. Every article you read fuels a shared ecosystem
-              of wisdom and impact.
+              Our contributors are ethical entrepreneurs, healers, educators, and builders who
+              live by one simple code:
+            </p>
+            <p class="font-serif text-2xl leading-snug opacity-90 mb-6">
+              “Good people, doing their best at what they’re good at.”
+            </p>
+            <p class="text-base md:text-lg leading-relaxed opacity-80 mb-6">
+              They share interviews, tools, and practices from the fields of business, health,
+              healing, and human potential. Every article you read fuels a shared ecosystem of
+              wisdom and impact.
             </p>
             <p class="text-base md:text-lg leading-relaxed opacity-80">
               Explore our featured stories from:
@@ -618,27 +675,26 @@
         <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
           <div class="space-y-6">
             <p class="text-xs uppercase tracking-[0.3em] opacity-60">Want to Level Up?</p>
-            <h2 class="font-serif text-4xl md:text-5xl">
-              A free 6-week course to realign your energy, mind, and body.
-            </h2>
             <p class="text-base md:text-lg leading-relaxed opacity-80">
-              You don’t need more hustle. You need more harmony. We’ve created a guided
-              course built to help you reset, recalibrate, and reconnect.
+              We’ve created a free 6-week course built to realign your energy, mind, and body.
             </p>
-            <div class="space-y-4 text-sm uppercase tracking-widest">
+            <div class="space-y-4 text-sm leading-relaxed opacity-80">
               <div class="flex items-start gap-3">
-                <span class="text-oll-dark dark:text-white">✔</span>
-                Unlock peak performance with fascia release, hydration protocols, and vagus nerve resets
+                <span class="text-oll-dark dark:text-white flex-shrink-0">✔</span>
+                <span>Unlock peak performance with fascia release, hydration protocols, and vagus nerve resets</span>
               </div>
               <div class="flex items-start gap-3">
-                <span class="text-oll-dark dark:text-white">✔</span>
-                Repattern your nervous system through breathwork, stillness, and nutrition
+                <span class="text-oll-dark dark:text-white flex-shrink-0">✔</span>
+                <span>Repattern your nervous system through breathwork, stillness, and nutrition</span>
               </div>
               <div class="flex items-start gap-3">
-                <span class="text-oll-dark dark:text-white">✔</span>
-                Apply these tools to relationships, business, and personal breakthroughs
+                <span class="text-oll-dark dark:text-white flex-shrink-0">✔</span>
+                <span>Apply these tools to relationships, business, and personal breakthroughs</span>
               </div>
             </div>
+            <p class="text-base md:text-lg leading-relaxed opacity-80">
+              You don’t need more hustle. You need more harmony.
+            </p>
           </div>
           <div class="relative">
             <div class="bg-oll-sand text-oll-dark rounded-[30px] p-10 shadow-float">
@@ -649,24 +705,22 @@
                   class="flex items-center justify-between border-b border-oll-dark/20 pb-4 hover:opacity-80 transition-opacity"
                 >
                   <div>
-                    <p class="text-xs uppercase tracking-widest opacity-70 mb-2">
-                      Read Real Stories
+                    <p class="text-base font-medium">
+                      Read Real Stories: Explore interviews with ethical entrepreneurs and inspiring creators.
                     </p>
-                    <p class="text-base">Explore interviews with ethical entrepreneurs and inspiring creators.</p>
                   </div>
-                  <span class="text-2xl">👉</span>
+                  <span class="text-2xl flex-shrink-0">👉</span>
                 </a>
                 <a
                   href="focus-course.html"
                   class="flex items-center justify-between hover:opacity-80 transition-opacity"
                 >
                   <div>
-                    <p class="text-xs uppercase tracking-widest opacity-70 mb-2">
-                      Join the Free Course
+                    <p class="text-base font-medium">
+                      Join the Free Course: 6 Weeks of content from experts in Mind, Body, and Soul.
                     </p>
-                    <p class="text-base">6 weeks of content from experts in Mind, Body, and Soul.</p>
                   </div>
-                  <span class="text-2xl">🎓</span>
+                  <span class="text-2xl flex-shrink-0">🎓</span>
                 </a>
               </div>
             </div>
@@ -686,13 +740,10 @@
         <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
           <div class="space-y-6">
             <p class="text-xs uppercase tracking-[0.3em] text-oll-sand">Local Voices. Global Impact.</p>
-            <h2 class="font-serif text-4xl md:text-5xl">
-              Ethical media, built for and by the people.
-            </h2>
             <p class="text-base md:text-lg leading-relaxed text-white/80">
-              This isn’t about content—it’s about community. Contributors earn revenue
-              based on engagement. The more their stories uplift and educate, the more
-              they benefit.
+              This isn’t about content. It’s about community. Contributors earn revenue based on
+              engagement. The more their stories uplift and educate, the more they benefit. It’s
+              ethical media, built for and by the people.
             </p>
             <p class="font-serif text-2xl italic text-oll-sand">
               “Find your circle. Connect intellectually. Build together.”
@@ -730,12 +781,9 @@
               <p class="text-xs uppercase tracking-[0.3em] opacity-60 mb-4">
                 Want to Be Featured or Join Our Network?
               </p>
-              <h2 class="font-serif text-4xl md:text-5xl mb-6">
-                We want to hear from you.
-              </h2>
               <p class="text-base md:text-lg leading-relaxed opacity-80">
                 Whether you’re a local business owner, practitioner, or someone with a story to
-                share, we’re building the next chapter together.
+                share. We want to hear from you.
               </p>
             </div>
             <div class="space-y-4">
@@ -769,25 +817,22 @@
         <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
           <div class="space-y-6">
             <p class="text-xs uppercase tracking-[0.3em] opacity-60">Follow the Vibe</p>
-            <h2 class="font-serif text-4xl md:text-5xl">
-              Local rhythms, global reach.
-            </h2>
-            <div class="space-y-4 text-sm uppercase tracking-widest">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-oll-dark dark:bg-white"></span>
-                Weekly podcast drops
+            <div class="space-y-4 text-sm leading-relaxed opacity-80">
+              <div class="flex items-start gap-3">
+                <span class="flex-shrink-0">✔</span>
+                <span>Weekly podcast drops</span>
               </div>
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-oll-dark dark:bg-white"></span>
-                Monthly meditations & live events
+              <div class="flex items-start gap-3">
+                <span class="flex-shrink-0">✔</span>
+                <span>Monthly meditations & live events</span>
               </div>
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-oll-dark dark:bg-white"></span>
-                Business education & AI mentorship
+              <div class="flex items-start gap-3">
+                <span class="flex-shrink-0">✔</span>
+                <span>Business education & AI mentorship</span>
               </div>
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-oll-dark dark:bg-white"></span>
-                Featured retreats, wellness spaces, and conscious travel
+              <div class="flex items-start gap-3">
+                <span class="flex-shrink-0">✔</span>
+                <span>Featured retreats, wellness spaces, and conscious travel</span>
               </div>
             </div>
           </div>
@@ -817,9 +862,6 @@
               Our Local Life
             </p>
             <h2 class="font-serif text-4xl md:text-6xl">Ethical Media for the Mind, Body, and Soul.</h2>
-            <p class="text-base md:text-lg opacity-70 max-w-2xl mx-auto">
-              A community-owned platform built on integrity, innovation, and heart.
-            </p>
           </div>
         </div>
       </section>
@@ -839,10 +881,9 @@
                 Explore
               </h5>
               <ul class="space-y-2 opacity-60">
-                <li><a href="index.html#mbs" class="hover:opacity-100">Mind</a></li>
-                <li><a href="index.html#mbs" class="hover:opacity-100">Body</a></li>
-                <li><a href="index.html#mbs" class="hover:opacity-100">Soul</a></li>
-                <li><a href="#" class="hover:opacity-100">Shop</a></li>
+                <li><a href="index.html#mbs-mind" class="hover:opacity-100">Mind</a></li>
+                <li><a href="index.html#mbs-body" class="hover:opacity-100">Body</a></li>
+                <li><a href="index.html#mbs-soul" class="hover:opacity-100">Soul</a></li>
               </ul>
             </div>
             <div>
@@ -976,6 +1017,5 @@
         </form>
       </div>
     </div>
-    <script type="module" src="./assets/js/main.js"></script>
 </body>
 </html>

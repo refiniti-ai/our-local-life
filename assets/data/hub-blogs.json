@@ -1,0 +1,138 @@
+[
+  {
+    "slug": "pretty-salon",
+    "title": "Pretty Salon: Look Good, Feel Good in Old Town Scottsdale",
+    "description": "Keri Leon's one-stop beauty room for cuts, color, lashes, tanning, and extensions.",
+    "image": "/assets/image/pretty-salon-1.webp",
+    "date": "2016-02-01",
+    "paragraphs": [
+      "Look good, feel good! It's as simple as two words, Pretty & Salon! In the midst of all the local Old Town Scottsdale bars and restaurants lies Keri Leon's beauty room Pretty Salon.",
+      "Whether you're grabbing a bite to eat or meeting a friend after getting your hair done, be prepared to shine the moment you step out from her salon. If you haven't had anyone tell you that you look like a \"Doll\" then get ready, because Keri and her stylists offer the best services that will have you looking and feeling unreal!",
+      "From cuts, color, and styling to eyelashes, tanning, and extensions your one-stop shop before any event is Pretty Salon in Scottsdale.",
+      "I think my greatest pet peeve is having to go from one salon to another to get everything spot on and I'm sure plenty of you can relate, am I right? With that being said, let's get the inside scoop on Keri aka \"Alex\", her stylists, and what makes this place your go-to salon!"
+    ],
+    "links": ["https://www.prettydollfaced.com"]
+  },
+  {
+    "slug": "the-bloguettes",
+    "title": "Meet Lorena Garcia & The Bloguettes",
+    "description": "How Bloguettes empowers women to launch digital brands through workshops and community.",
+    "image": "/assets/image/bloguettes-3.webp",
+    "date": "2016-02-02",
+    "byline": "Interview by Dustin DeFrates — Sterling Fine Properties",
+    "paragraphs": [
+      "Meet Lorena Garcia! As a dweller of Scottsdale for the past seven years, Lorena acts as an inspiration business leader and mentor to many women across the country. Our Local Life was ecstatic to spend some time understanding the person behind so much brilliant innovation in the Phoenix community. Follow along as we talk with this entrepreneurial spirit and how her company has impacted the lives around them!",
+      "DD: Tell us a little about yourself. LG: I'm an entrepreneur at heart! After I got my MBA, I was involved with many projects ranging from real estate to websites to finance. A few years ago, I discovered my passion for technology and budding startups and really wanted to see if I could start my own company. Eventually, I became the co-founder of Estoes Purpura, a Mexico-based women's fashion and news site, along with my current Phoenix startup, Bloguettes!",
+      "DD: What made you want to start these companies? LG: My business partner, Sakura, and I knew there were so many people out there who were just like us — people wanting to launch a digital business with absolutely no idea where to start. It's a valid concern because everything from finding a domain, creating brand-specific graphics, and marketing yourself as a business is a huge project to take on. Sakura and I have gained a lot of business know-how in our personal journeys and decided to create Bloguettes in order to teach and empower other women about how to start a brand in a very easy, fun, and creative way.",
+      "DD: What exactly does Bloguettes do? LG: Our aim is to be a resource for bloggers, creatives, and entrepreneurs. We educate our students through our workshops, webinars, blog, & videos, allowing them to elevate their digital presence and create a network amongst other like-minded individuals!"
+    ],
+    "links": ["https://www.bloguettes.com"]
+  },
+  {
+    "slug": "mayor-jim-lane-interview",
+    "title": "Interview with Mayor Jim Lane",
+    "description": "Full interview notes — personal life, revitalization, Operation Fix-It, technology jobs, and economic vision.",
+    "image": "/assets/image/mayor-jim-lane-1.webp",
+    "date": "2016-02-03",
+    "byline": "Interview by Dustin DeFrates & Kenny Buckland — Sterling Fine Properties",
+    "paragraphs": [
+      "I have met Mayor Lane at various events in 30-second segments… I hope this read will help you understand the man I met for the first time today. Our business operations are in Scottsdale and my family lives north of Old Town.",
+      "DeFrates: Thanks for meeting with me. Mayor Lane: I appreciate you coming by. I don't recognize OurLocal.Life and before we get started, can you tell me why you're here?",
+      "From my research prior to the interview, Mayor Lane has championed businesses both as an entrepreneur & executive. He was/is the founder, manager and/or CEO of technology, financial consulting & telecommunications companies.",
+      "DeFrates: My first question – after a stressful day, what is your \"happy place?\" Mayor: I love being with my grandkids; one of my favorite places to take them is the McCormick-Stillman Railroad Park.",
+      "DeFrates: What's your favorite guilty pleasure? Mayor: South Park, I love that show.",
+      "DeFrates: If you were on a deserted island, what celebrity or artist would you prefer to be stranded with? Mayor: Well, I suppose when in a life or death situation – I would want to be with someone I can outrun!",
+      "DeFrates: Let's assume survival isn't a problem – who would you choose? Mayor: I would enjoy spending time with Teddy Roosevelt. Roosevelt had a range of interests that allowed him to think & draw his opinion from diversity."
+    ]
+  },
+  {
+    "slug": "el-hefe-whiskey-row",
+    "title": "El Hefe & Whiskey Row with Mike",
+    "description": "Riot Hospitality Group on El Hefe, Dierks Bentley's Whiskey Row, Farm & Craft, and Hand Cut.",
+    "image": "/assets/image/el-hefe-1.webp",
+    "date": "2016-02-06",
+    "byline": "Interview by Dustin DeFrates — Sterling Fine Properties",
+    "paragraphs": [
+      "Dustin: Hey Mike, thanks for hanging out… you have a pretty amazing dream to reality story — how did you do it? Mike: I'm not sure how to answer that; I couldn't have done it myself. Besides a lot of hard work, my friends, family, and business associates were a huge support.",
+      "Dustin: What all do you have going right now? Mike: We have quite a few projects in the works across Arizona & a couple key states… Existing, we have three El Hefe's, two Whiskey Row's and we're excited about two new concepts — Farm & Craft and Hand Cut.",
+      "Dustin: Farm & Craft and Hand Cut seem outside your team's sweet spot — why the change in strategy? Mike: We believe we can be more successful than most startup restaurant concepts because we have local staff of over 300 that represent our demographic.",
+      "Mike: We assure superior food standards using award winning chefs and high quality ingredients, we have a strong marketing team and great employees. So yes, we can expand!"
+    ],
+    "links": [
+      "https://www.riothg.com",
+      "https://www.elhefe.com",
+      "https://www.dierkswhiskeyrow.com",
+      "https://www.farmandcraft.com",
+      "https://www.handcutburgers.com"
+    ]
+  },
+  {
+    "slug": "scottsdale-events-calendar",
+    "title": "Local Real Estate, Weather & Events Calendar",
+    "description": "Scottsdale happenings, market context, and what to watch around Old Town.",
+    "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000&auto=format&fit=crop",
+    "date": "2016-02-07",
+    "paragraphs": [
+      "Our Local Life's Old Town Scottsdale issue included a snapshot of local real estate conditions, seasonal weather patterns, and a calendar of community events.",
+      "Whether you're a resident, visitor, or investor, staying current on what's happening around Scottsdale helps you connect with the city beyond a single night out.",
+      "From art walks and farmers markets to restaurant openings and civic gatherings, Old Town rewards people who show up in person — exactly the spirit behind this magazine's launch.",
+      "Check back with Our Local Life for updated event roundups as we continue telling stories from the people who shape place and relationship."
+    ]
+  },
+  {
+    "slug": "metropolis-ryan-rinaldo",
+    "title": "Interview with Ryan Rinaldo at Metropolis",
+    "description": "Full interview — Optima community, valley-inspired menu, Keith Richards, happy hour and brunch.",
+    "image": "/assets/image/metropolis-interview-1.webp",
+    "date": "2016-02-08",
+    "byline": "Interview by William Lewis — Williams Luxury Homes / Sterling Fine Properties",
+    "paragraphs": [
+      "Metropolis is one of Old Town Scottsdale's last remaining best-kept secrets. William Lewis presents an inside look into the life of entrepreneur, restaurateur and family man, Ryan Rinaldo.",
+      "WL: Thanks for hanging out with us today — the garden courtyard here at Metropolis is one of my personal favorite spots to meet clients. RR: Thanks Will, we're happy to have you here as often as you are!",
+      "WL: Icebreaker question — if you were stranded on an island what artist or musician would you want with you? RR: Hands down, no questions asked... Keith Richards.",
+      "WL: Classic rock legend, great answer and a bit ironic considering the question, didn't he seriously injure himself falling out of a tree in Fiji? RR: Yah, the story goes that a branch jumped out at him coming down from a tree."
+    ],
+    "links": ["https://www.metropolisaz.com"]
+  },
+  {
+    "slug": "the-toasted-cork",
+    "title": "The Toasted Cork: Wine, Cheese & Happy Hour",
+    "description": "Michael Stein's modern American wine bar pairing elevated bites with rotating wines.",
+    "image": "/assets/image/toasted-cork-1.webp",
+    "date": "2016-02-10",
+    "paragraphs": [
+      "As the name suggests, The Toasted Cork takes an entirely unique approach to wine and cheese. The Toasted Cork is a modern American wine bar started by Michael Stein who moved from New York to Scottsdale to open the restaurant.",
+      "Offering a wide selection of wine and cheese, The Toasted Cork is a must visit eatery when in Scottsdale for a relaxed and fun evening with friends or that special someone.",
+      "Wine and cheese go hand in hand for centuries and when paired together, they both enhance the flavor of each other.",
+      "Some of this season's specials that I must recommend are the Gobble, Avocado Taste Bites, Grilled Cheese, and the Dutch Grilled Cheese. Happy Hour offers a $3 discount on favorite wines from 4-7pm daily. Thursday through Saturday feature live music."
+    ],
+    "links": ["https://www.thetoastedcork.com"]
+  },
+  {
+    "slug": "cactus-crossfit",
+    "title": "Cactus CrossFit: Strength & Conditioning Done Right",
+    "description": "Owner Kevin Cherrick on one-on-one training before group classes and the CrossFit philosophy.",
+    "image": "/assets/image/cactus-crossfit-1.webp",
+    "date": "2016-02-11",
+    "paragraphs": [
+      "This is definitely not your typical boot camp or intense yelling in your face type of workout. At Cactus Crossfit you will have the opportunity to ease your way into a new lifestyle.",
+      "You will start out with 5-10 one on one personal training sessions before entering a group class. Finding that pace and rhythm can be a challenge for some people, but at Cactus Crossfit you're in good hands!",
+      "Owner Kevin Cherrick started doing Crossfit and grew a passion for it in 2006. Prior to opening Cactus Crossfit in 2008 Kevin was an athlete with a background playing college football and lacrosse.",
+      "\"Crossfit in general is just a philosophy of strength and conditioning,\" says Kevin. \"It's just to help people get better at what their bodies can do.\""
+    ],
+    "links": ["https://www.cactuscrossfit.com"]
+  },
+  {
+    "slug": "metropolis-giveaway-about-oll",
+    "title": "Metropolis Gift Card Giveaway & About Our Local Life",
+    "description": "Tell us your story next — plus how Our Local Life connects Old Town Scottsdale.",
+    "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2000&auto=format&fit=crop",
+    "date": "2016-02-12",
+    "paragraphs": [
+      "Metropolis Gift Card Giveaway — Our Local Life celebrated its launch with a gift card giveaway in partnership with one of Old Town's favorite courtyards.",
+      "Our Local Life is a community-owned home for local stories and events, built to connect leaders and inspire excellence in mind, body, and soul.",
+      "From salons and startups to mayors, restaurateurs, and wellness founders, we document the people who turn high-vibe concepts into local reality.",
+      "Tell us your story next — whether you're building a business, a practice, or a neighborhood tradition, Our Local Life wants to hear from you."
+    ]
+  }
+]

@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
   <head>
+    <script data-oll-theme-init="true">
+      (function () {
+        try {
+          if (localStorage.getItem("oll-theme") === "dark") {
+            document.documentElement.classList.add("dark");
+            document.documentElement.classList.remove("light");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FOCUS on Peak Performance | Our Local Life</title>
@@ -58,63 +68,246 @@
       id="mobile-nav"
     >
       <div class="flex items-center justify-between px-6 h-16">
-        <a href="index.html">
-          <img
-            src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/5-1.png"
-            alt="OLL Icon"
-            class="h-8 w-auto dark:invert"
-          />
-        </a>
+        <img
+          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/cropped-4.webp"
+          alt="Our Local Life"
+          class="h-7 w-auto dark:invert"
+        />
         <div class="flex items-center gap-4">
           <label class="theme-switch">
-            <input type="checkbox" class="theme-toggle-input" onchange="toggleTheme(this)" />
+            <input
+              type="checkbox"
+              class="theme-toggle-input"
+              onchange="toggleTheme(this)"
+            />
             <span class="slider"></span>
           </label>
           <button id="mobile-toggle" class="p-2 focus:outline-none">
-            <svg id="icon-hamburger" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+            <svg
+              id="icon-hamburger"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
-            <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+            <svg
+              id="icon-close"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
       </div>
       <div
         id="mobile-menu"
-        class="mx-4 mt-2 rounded-2xl shadow-2xl border border-oll-dark/10 dark:border-white/10 absolute left-0 right-0 bg-white dark:bg-oll-dark text-oll-dark dark:text-white"
+        class="bg-white dark:bg-oll-dark mx-4 mt-2 rounded-2xl shadow-2xl border border-oll-dark/10 dark:border-white/10 absolute left-0 right-0 text-oll-dark dark:text-white"
       >
         <div class="flex flex-col space-y-2 p-4">
-          <a href="index.html" class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+          <a
+            href="index.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                />
+              </svg>
+            </div>
             <span class="uppercase tracking-widest text-xs font-medium">Home</span>
           </a>
-          <a href="about.html" class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+          <a
+            href="about.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z"
+                />
+              </svg>
+            </div>
             <span class="uppercase tracking-widest text-xs font-medium">About</span>
           </a>
-          <a href="focus-course.html" class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
-            <span class="uppercase tracking-widest text-xs font-medium">FOCUS Course</span>
+          <a
+            href="curated-stories.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium">Stories</span>
           </a>
-          <a href="featured-entrepreneur.html" class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+          <a
+            href="hub.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+                />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium">Hub</span>
+          </a>
+          <a
+            href="featured-entrepreneur.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="12" cy="12" r="10" stroke-width="1.5" />
+              </svg>
+            </div>
             <span class="uppercase tracking-widest text-xs font-medium">Spotlight</span>
           </a>
-          <a href="contact.html" class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
-            <span class="uppercase tracking-widest text-xs font-medium">Contact</span>
+          <a
+            href="pages/podcast/index.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+                />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium"
+              >Podcast</span
+            >
           </a>
-        </div>
+          <div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
+          <button
+            onclick="toggleSubscribe()"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors w-full text-left"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium"
+              >Join The Movement</span
+            >
+          </button>
+</div>
       </div>
     </nav>
 
     <nav
       id="sidebar"
-      class="hidden md:flex fixed top-4 left-4 bottom-4 w-16 bg-white/90 dark:bg-oll-dark/90 backdrop-blur-md z-50 flex-col shadow-float rounded-2xl overflow-hidden border border-oll-dark/10 dark:border-white/20 text-oll-dark dark:text-white transition-colors duration-300"
+      class="hidden md:flex fixed top-4 left-4 bottom-4 w-16 bg-white/90 dark:bg-oll-dark/90 backdrop-blur-md z-50 flex-col shadow-float rounded-2xl overflow-hidden group border border-oll-dark/10 dark:border-white/20 text-oll-dark dark:text-white transition-colors duration-300"
     >
-      <div class="h-20 flex items-center justify-center border-b border-oll-dark/5 dark:border-white/10 px-2 relative">
-        <button id="menu-toggle" class="p-2 hover:bg-gray-100 dark:hover:bg-white/10 rounded-full transition-colors z-20">
-          <svg id="icon-contracted" class="w-5 h-5 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+      <div
+        class="h-20 flex items-center justify-center border-b border-oll-dark/5 dark:border-white/10 px-2 relative"
+      >
+        <button
+          id="menu-toggle"
+          class="p-2 hover:bg-gray-100 dark:hover:bg-white/10 rounded-full transition-colors z-20"
+        >
+          <svg
+            id="icon-contracted"
+            class="w-5 h-5 block"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
           </svg>
-          <svg id="icon-expanded" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+          <svg
+            id="icon-expanded"
+            class="w-5 h-5 hidden"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
       </div>
@@ -122,58 +315,194 @@
         <img
           id="logo-expanded"
           src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/cropped-4.webp"
-          alt="OLL Logo"
+          alt="OLL Full Logo"
           class="w-32 h-auto absolute opacity-0 pointer-events-none transition-opacity duration-300 transform scale-90 dark:invert"
         />
       </div>
       <div class="flex-1 flex flex-col space-y-3 px-2 mt-2 overflow-y-auto">
-        <a href="index.html" class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item">
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        <a
+          href="index.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              />
             </svg>
           </div>
-          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium">Home</span>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >Home</span
+          >
         </a>
-        <a href="about.html" class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item">
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z" />
+        <a
+          href="about.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z"
+              />
             </svg>
           </div>
-          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium">About</span>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >About</span
+          >
         </a>
-        <a href="focus-course.html" class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item bg-oll-sand/30 dark:bg-white/10">
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        <a
+          href="curated-stories.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+              />
             </svg>
           </div>
-          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium">Course</span>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >Stories</span
+          >
         </a>
-        <a href="featured-entrepreneur.html" class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item">
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <a
+          href="hub.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+              />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >Hub</span
+          >
+        </a>
+        <a
+          href="featured-entrepreneur.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <circle cx="12" cy="12" r="10" stroke-width="1.5" />
             </svg>
           </div>
-          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium">Spotlight</span>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >Spotlight</span
+          >
         </a>
-        <a href="contact.html" class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item">
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        <a
+          href="pages/podcast/index.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+              />
             </svg>
           </div>
-          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium">Contact</span>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >Podcast</span
+          >
         </a>
-      </div>
-      <div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
-      <div class="px-2 flex justify-center pb-4">
-        <label class="theme-switch">
-          <input type="checkbox" class="theme-toggle-input" onchange="toggleTheme(this)" />
-          <span class="slider"></span>
-        </label>
+        <div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
+        <button
+          onclick="toggleSubscribe()"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item w-full"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
+            </svg>
+          </div>
+          <span
+            class="nav-label ml-3 text-xs uppercase tracking-widest font-medium whitespace-nowrap"
+            >Join The Movement</span
+          >
+        </button>
+<div class="w-full h-px bg-oll-dark/10 dark:bg-white/10 my-2"></div>
+        <div class="px-2 flex justify-center pt-2">
+          <label class="theme-switch">
+            <input
+              type="checkbox"
+              class="theme-toggle-input"
+              onchange="toggleTheme(this)"
+            />
+            <span class="slider"></span>
+          </label>
+        </div>
       </div>
     </nav>
 
@@ -394,5 +723,6 @@
       window.closeCourseOptIn = closeCourseOptIn;
       window.submitCourseOptIn = submitCourseOptIn;
     </script>
+      <script type="module" src="assets/js/main.js"></script>
   </body>
 </html>

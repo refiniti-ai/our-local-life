@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
   <head>
+    <script data-oll-theme-init="true">
+      (function () {
+        try {
+          if (localStorage.getItem("oll-theme") === "dark") {
+            document.documentElement.classList.add("dark");
+            document.documentElement.classList.remove("light");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dustin DeFrates: Building People, Building Places, Building Purpose | Curated Story</title>
+    <title>Meet Dustin DeFrates: Builder of People, Places, and Purpose | Curated Story</title>
     <meta
       name="description"
-      content="Dustin DeFrates: Building People, Building Places, Building Purpose, a curated interview, editorial, and transcript."
+      content="Meet Dustin DeFrates: Builder of People, Places, and Purpose, a curated interview, editorial, and transcript."
     />
     <meta name="oll:category" content="mind" />
     <meta name="oll:date" content="2026-01-24" />
@@ -24,7 +34,7 @@
     <meta property="og:site_name" content="Our Local Life" />
     <meta
       property="og:title"
-      content="Dustin DeFrates: Building People, Building Places, Building Purpose | Curated Story"
+      content="Meet Dustin DeFrates: Builder of People, Places, and Purpose | Curated Story"
     />
     <meta
       property="og:description"
@@ -37,12 +47,12 @@
     />
     <meta
       property="og:image"
-      content="assets/image/Building-People-Building-Places-Building-Purpose.webp"
+      content="/assets/image/Building-People-Building-Places-Building-Purpose.webp"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Dustin DeFrates: Building People, Building Places, Building Purpose | Curated Story"
+      content="Meet Dustin DeFrates: Builder of People, Places, and Purpose | Curated Story"
     />
     <meta
       name="twitter:description"
@@ -50,7 +60,7 @@
     />
     <meta
       name="twitter:image"
-      content="assets/image/serene-natural-forest-landscape-our-local-life.webp"
+      content="/assets/image/Building-People-Building-Places-Building-Purpose.webp"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -93,7 +103,8 @@
       };
     </script>
 
-    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <script type="module" crossorigin src="/assets/main-CJuVpVQo.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-DBjioDFf.css">
   </head>
   <body
     class="font-sans antialiased selection:bg-oll-sand selection:text-oll-dark bg-white dark:bg-oll-dark text-oll-dark dark:text-white transition-colors duration-500"
@@ -105,9 +116,9 @@
     >
       <div class="flex items-center justify-between px-6 h-16">
         <img
-          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/5-1.png"
-          alt="OLL Icon"
-          class="h-8 w-auto dark:invert"
+          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/cropped-4.webp"
+          alt="Our Local Life"
+          class="h-7 w-auto dark:invert"
         />
         <div class="flex items-center gap-4">
           <label class="theme-switch">
@@ -219,6 +230,27 @@
             <span class="uppercase tracking-widest text-xs font-medium">Stories</span>
           </a>
           <a
+            href="../../hub.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+                />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium">Hub</span>
+          </a>
+          <a
             href="../../featured-entrepreneur.html"
             class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
           >
@@ -235,7 +267,7 @@
             <span class="uppercase tracking-widest text-xs font-medium">Spotlight</span>
           </a>
           <a
-            href="../podcast/index.html"
+            href="../../pages/podcast/index.html"
             class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
           >
             <div class="w-6 h-6 flex justify-center items-center">
@@ -339,7 +371,9 @@
           href="../../index.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -362,7 +396,9 @@
           href="../../about.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -385,7 +421,9 @@
           href="../../curated-stories.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -405,10 +443,37 @@
           >
         </a>
         <a
+          href="../../hub.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+              />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >Hub</span
+          >
+        </a>
+        <a
           href="../../featured-entrepreneur.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -423,10 +488,12 @@
           >
         </a>
         <a
-          href="../podcast/index.html"
+          href="../../pages/podcast/index.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -450,7 +517,9 @@
           onclick="toggleSubscribe()"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item w-full"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -488,8 +557,8 @@
       <header class="relative min-h-[60vh] bg-oll-dark text-white overflow-hidden">
         <div class="absolute inset-0">
           <img
-            src="../../assets/image/Building-People-Building-Places-Building-Purpose.webp"
-            alt="Dustin DeFrates, Our Local Life"
+            src="/assets/image/Building-People-Building-Places-Building-Purpose.webp"
+            alt="Meet Dustin DeFrates: Builder of People, Places, and Purpose"
             class="w-full h-full object-cover opacity-70"
           />
           <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80"></div>
@@ -499,10 +568,10 @@
             Curated Story
           </span>
           <h1 class="font-serif text-4xl md:text-6xl leading-tight mt-6">
-            Dustin DeFrates: Building People, Building Places, Building Purpose
+            Meet Dustin DeFrates: Builder of People, Places, and Purpose
           </h1>
           <p class="text-lg md:text-xl text-white/80 mt-6">
-            Co-founder of Our Local Life and a lifelong learner devoted to integrating mind, body, and soul.
+            Co-founder of Our Local Life; builder of people, places, and purpose.
           </p>
         </div>
       </header>
@@ -524,152 +593,118 @@
         </div>
       </section>
 
-      <section class="py-24 bg-oll-sand-light dark:bg-[#1a1a1a] text-oll-dark dark:text-white border-b border-oll-dark/10 dark:border-white/10">
-        <div class="max-w-3xl mx-auto px-6">
-          <article
-            class="bg-white dark:bg-oll-dark border border-oll-dark/10 dark:border-white/15 rounded-[28px] shadow-sm overflow-hidden"
-          >
-            <div class="px-8 pt-10 pb-2 md:px-10 md:pt-12 text-center border-b border-oll-dark/10 dark:border-white/10">
-              <p class="text-xs uppercase tracking-[0.3em] opacity-60 mb-4">Editorial</p>
-              <h2 class="font-serif text-3xl md:text-4xl leading-tight text-balance">
-                Meet Dustin DeFrates: The Builder of People, Places, and Purpose
-              </h2>
-              <p class="mt-4 text-sm opacity-70 max-w-xl mx-auto">
-                Building people, places, and purpose at Our Local Life.
-              </p>
-            </div>
-            <div class="px-8 md:px-10 pt-8">
+      <section class="py-24 bg-white dark:bg-oll-dark text-oll-dark dark:text-white border-b border-oll-dark/10 dark:border-white/10">
+        <div class="max-w-6xl mx-auto px-6 space-y-12">
+<div class="max-w-3xl mx-auto mb-12">
               <img
-                src="../../assets/image/dustin-building-people-places-ourlocallife.webp"
-                alt="Dustin DeFrates, Our Local Life lifestyle"
-                class="w-full rounded-2xl border border-oll-dark/10 dark:border-white/10 object-cover"
+                src="/assets/image/dustin-building-people-places-ourlocallife.webp"
+              alt="Dustin DeFrates, Our Local Life"
+              class="w-full rounded-[28px] border border-oll-dark/10 dark:border-white/10 object-cover"
               />
               <p class="text-xs uppercase tracking-widest opacity-60 mt-3 text-center">
                 Dustin DeFrates, Our Local Life
               </p>
             </div>
-            <div class="px-8 py-8 md:px-10 md:pb-10 space-y-4 text-sm leading-relaxed opacity-90">
-              <p>
-                If you’ve spent any time around the Our Local Life community, chances are you’ve
-                felt the presence of Dustin DeFrates, long before he ever introduced himself.
-                There’s something unmistakable about how he shows up. With a spirit rooted in
-                service and a mind sharp with vision, Dustin doesn’t just build companies, he
-                builds culture, coherence, and connection.
-              </p>
-              <p>
-                Raised in the rhythm of church life, Dustin’s early years were spent traveling
-                through Latin America with a touring choir. That structure gave him discipline,
-                but his deeper spiritual awakening came later, through the unraveling and
-                rebuilding of self.
-              </p>
-              <p>
-                “I had to re-find myself through necessity,” he reflects, speaking candidly
-                about the moments of misalignment that prompted change. From relationship
-                ruptures to business betrayals, Dustin’s journey through the mind, body, and
-                soul has been anything but theoretical, it’s been lived.
-              </p>
-              <p>
-                A self-declared lifelong learner, Dustin is now a multi-business entrepreneur,
-                spiritual seeker, father, and co-founder of Our Local Life, a platform designed
-                to give others space to discover their own “superpowers.”
-              </p>
-              <p>
-                “I love building people, companies, and the real estate that houses them.”
-                That mantra drives everything, from his coaching of team members to his vision
-                for curated community spaces that don’t just look good, but feel right. “Whether
-                it’s a business setting or a spiritual setting,” he says, “the space has to
-                match the work.”
-              </p>
-              <p>
-                Inspired by Napoleon Hill’s mental board of advisors, Dustin sees Our Local Life
-                as a place where you don’t just network, you remember who you are. With seven
-                companies and counting, he’s proven that dream-building isn’t abstract, it’s
-                actionable.
-              </p>
-              <p>
-                Whether he’s in a Kundalini yoga flow, a men’s circle, or leading strategy
-                meetings, Dustin lives in full spectrum. He doesn’t compartmentalize his roles, he
-                integrates them. And that’s what makes him magnetic. He’s not interested in
-                perfection, but in presence.
-              </p>
-              <p>
-                “I hope people see that I try to live in truth,” he says. “Even when I fail, I
-                want them to know I meant well.” Leadership, for Dustin, doesn’t have to be
-                loud. It has to be rooted. And when it is, it builds more than business. It
-                builds legacy.
-              </p>
+          
+          <div class="text-center max-w-3xl mx-auto">
+            <p class="text-xs uppercase tracking-[0.3em] opacity-60 mb-4">EDITORIAL</p>
+            <h2 class="font-serif text-3xl md:text-4xl leading-tight text-balance mb-4">
+              Meet Dustin DeFrates: Builder of People, Places, and Purpose
+            </h2>
+            <p class="text-lg md:text-xl opacity-80 max-w-2xl mx-auto font-light leading-relaxed">
+              Building people, places, and purpose at Our Local Life.
+            </p>
+            <div class="mt-8 mb-4">
+              <a
+                href="../practice/dustin-defrates-practice.html"
+                class="inline-block uppercase text-xs font-bold tracking-widest border border-current rounded-full px-6 py-3 hover:bg-oll-dark hover:text-white dark:hover:bg-white dark:hover:text-oll-dark transition-colors"
+              >
+                Work with Dustin
+              </a>
             </div>
-            <div
-              class="mx-8 md:mx-10 h-px bg-gradient-to-r from-transparent via-oll-dark/15 dark:via-white/20 to-transparent"
-              aria-hidden="true"
-            ></div>
-            <div class="px-8 py-8 md:px-10 md:pb-12 space-y-4 text-sm leading-relaxed opacity-90">
-              <p class="font-serif text-lg text-oll-dark dark:text-white opacity-95">
-                Mind, body, and soul in practice
+          </div>
+<div class="max-w-3xl mx-auto">
+            <article class="bg-oll-sand-light dark:bg-[#1a1a1a] rounded-[28px] p-8 md:p-10 space-y-4">
+
+              <p class="text-sm leading-relaxed opacity-80">
+                If you’ve spent any time around the Our Local Life community, chances are
+                you’ve felt the presence of Dustin DeFrates long before he ever introduced
+                himself. There’s something unmistakable about how he shows up. As co-founder of
+                Our Local Life, a collective platform for community, wellness, and
+                entrepreneurial growth, DeFrates doesn’t just build companies, he builds
+                people, cultures, and the spaces that allow both to thrive. With a spirit
+                rooted in service and a rare blend of vulnerability, vigor, and visionary
+                insight, he brings coherence and connection to everything he touches.
               </p>
-              <p>
-                When you meet Dustin DeFrates, it’s clear you’re in the presence of a builder,
-                but not just of structures. Dustin builds people, companies, and the cultures
-                that allow both to thrive. As co-founder of Our Local Life, a collective
-                platform for community, wellness, and entrepreneurial growth, DeFrates brings a
-                rare blend of vulnerability, vigor, and visionary insight.
-              </p>
-              <p>
+              <p class="text-sm leading-relaxed opacity-80">
                 “I love building people, companies, and the real estate that houses them,”
                 DeFrates shares. It’s a mantra that reflects his multidimensional life, from
                 leading multiple businesses to leading by example in emotional growth, health,
                 and spiritual alignment.
               </p>
-              <p>
+              <p class="text-sm leading-relaxed opacity-80">
                 Dustin’s path has been anything but linear. His “Soul” journey began in the
-                pews of a church, touring Latin America in a choir as a child. But the
-                spiritual layers came later, after shedding old identities and confronting the
-                inner dissonance that so many silently carry. “I had to re-find myself through
-                necessity,” he says, recalling the moment he realized his life had drifted
-                from alignment.
+                pews of a church, touring Latin America in a choir as a child. That structure
+                gave him discipline, but the spiritual layers came later, after shedding old
+                identities and confronting the inner dissonance that so many silently carry.
+                “I had to re-find myself through necessity,” he reflects, recalling the moment
+                he realized his life had drifted from alignment.
               </p>
-              <p>
-                His “Mind” has been forged through trial and truth. Betrayals in business,
-                personal loss, and divorce hardened and humbled him. “I’m still fighting that
-                version of me that had to put walls up,” he admits. And yet, his commitment to
-                transparency remains unwavering.
+              <p class="text-sm leading-relaxed opacity-80">
+                His “Mind” has been forged through trial and truth. From relationship ruptures
+                to business betrayals, personal loss, and divorce, his path has been anything
+                but theoretical, it’s been lived. “I’m still fighting that version of me that
+                had to put walls up,” he admits, and yet his commitment to transparency
+                remains unwavering.
               </p>
-              <p>
+              
+              <h3 class="story-section-break text-xs uppercase tracking-[0.3em] opacity-60 pt-8 pb-4 text-center border-t border-oll-dark/10 dark:border-white/10">
+                Mind, body, and soul in practice
+              </h3>
+<p class="text-sm leading-relaxed opacity-80">
                 On the “Body” level, Dustin’s reflections are refreshingly honest. “I took a
                 nap last week,” he laughs, “and I’ve never taken a nap in my life!” Aging
-                gracefully, he’s learning to adapt to a new rhythm, one that honors performance
-                but doesn’t chase youth. It’s about sustainability now. Strength that endures.
+                gracefully, he’s learning to adapt to a new rhythm, one that honors
+                performance but doesn’t chase youth. It’s about sustainability now. Strength
+                that endures.
               </p>
-              <p>
-                As one of the minds behind Our Local Life, DeFrates envisions a community
-                where everyone can tap into their own “superpowers.” Inspired by Napoleon
-                Hill’s concept of a mental board of advisors, Dustin hopes this platform
-                becomes a kind of living boardroom, filled with body, mind, and soul leaders
-                others can learn from.
+              <p class="text-sm leading-relaxed opacity-80">
+                A self-declared lifelong learner, spiritual seeker, and father, Dustin sees
+                Our Local Life as a place where you don’t just network, you remember who you
+                are. Inspired by Napoleon Hill’s concept of a mental board of advisors, he
+                hopes the platform becomes a kind of living boardroom, filled with body, mind,
+                and soul leaders others can learn from, helping members tap into their own
+                “superpowers.”
               </p>
-              <p>
+              <p class="text-sm leading-relaxed opacity-80">
                 DeFrates is not just an entrepreneur, he’s a bridge-builder. He’s active in a
                 secular men’s group focused on emotional intelligence, practices Kundalini
-                Yoga, attends church with his kids, and regularly joins sound baths. He runs
-                seven businesses, yet still carves out time for spiritual grounding. The
-                communities he’s part of reflect the integrated man he’s become.
+                Yoga, attends church with his kids, and regularly joins sound baths. With
+                seven companies and counting, he still carves out time for spiritual
+                grounding. The communities he’s part of reflect the integrated man he’s
+                become.
               </p>
-              <p>
+              <p class="text-sm leading-relaxed opacity-80">
+                That integration also drives his vision for the spaces he creates: curated
+                community environments that don’t just look good, but feel right. “Whether
+                it’s a business setting or a spiritual setting,” he says, “the space has to
+                match the work.” Dustin doesn’t compartmentalize his roles, he integrates
+                them. And that’s what makes him magnetic. He’s not interested in perfection,
+                but in presence.
+              </p>
+              <p class="text-sm leading-relaxed opacity-80">
                 Asked what he hopes people see in him, Dustin replies without hesitation:
                 “Truth and authenticity.” His intensity and perfectionism may come across as
                 sharp edges, but they’re forged from a sincere desire to uplift those around
-                him. “Even when I fail, I hope people know I meant well.” That level of honesty
-                is rare in a world obsessed with performance over presence. DeFrates brings
-                both.
+                him. “Even when I fail, I hope people know I meant well.” Leadership, for
+                Dustin, doesn’t have to be loud. It has to be rooted. And when it is, it
+                builds more than business, it builds legacy. Whether in a boardroom, on a
+                yoga mat, or designing a space that holds community intention, Dustin
+                DeFrates shows up to build something real.
               </p>
-              <p>
-                His signature quote is as clear and potent as his mission: “I love building
-                people, companies, and the real estate that houses them.” Whether in a
-                boardroom, on a yoga mat, or designing a space that holds community intention,
-                Dustin DeFrates shows up to build something real.
-              </p>
-            </div>
+            
           </article>
+          </div>
         </div>
       </section>
 
@@ -790,7 +825,6 @@
                 <li><a href="../../curated-stories.html" class="hover:opacity-100">Stories</a></li>
                 <li><a href="../../featured-entrepreneur.html" class="hover:opacity-100">Spotlight</a></li>
                 <li><a href="../podcast/index.html" class="hover:opacity-100">Podcast</a></li>
-                <li><a href="#" class="hover:opacity-100">Shop</a></li>
               </ul>
             </div>
             <div>
@@ -924,6 +958,5 @@
         </form>
       </div>
     </div>
-    <script type="module" src="../../assets/js/main.js"></script>
 </body>
 </html>

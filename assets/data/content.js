@@ -1,11 +1,11 @@
 export const curatedStories = [
   {
     id: "the-practice-of-presence-inside-atmas-approach-to-healing",
-    title: "The Practice of Presence: Inside Atma’s Approach to Healing",
+    title: "Meet Atma Erice: The Practice of Presence",
     description:
       "For Atma, healing isn’t about fixing something broken.",
     image:
-      "https://images.unsplash.com/photo-1526312426976-f4d754fa9bd6?q=80&w=2000&auto=format&fit=crop",
+      "/assets/image/the-practice-of-presence-atma-erice.webp",
     url: "/pages/stories/the-practice-of-presence-inside-atmas-approach-to-healing.html",
     category: "soul",
     label: "Soul",
@@ -14,9 +14,9 @@ export const curatedStories = [
   },
   {
     id: "dustin-defrates-building-people-places-purpose",
-    title: "Dustin DeFrates: Building People, Building Places, Building Purpose",
+    title: "Meet Dustin DeFrates: Builder of People, Places, and Purpose",
     description: "A curated story and interview transcript with Dustin DeFrates.",
-    image: "/assets/image/serene-natural-forest-landscape-our-local-life.webp",
+    image: "/assets/image/Building-People-Building-Places-Building-Purpose.webp",
     url: "/pages/stories/dustin-defrates-building-people-places-purpose.html",
     category: "mind",
     label: "Mind",
@@ -25,11 +25,9 @@ export const curatedStories = [
   },
   {
     id: "intentional-dating-resumate-lai-lam",
-    title:
-      "Intentional Dating in a Swipe-Driven World: A Conversation with Resumate Founder Lai Lam",
+    title: "Meet Lai Lam: Intentional Dating in a Swipe Driven World",
     description: "A curated story and interview transcript with Lai Lam.",
-    image:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=2000&auto=format&fit=crop",
+    image: "/assets/image/A-Conversation-with-Resumate-Founder-Lai-Lam.webp",
     url: "/pages/stories/intentional-dating-resumate-lai-lam.html",
     category: "community",
     label: "Community",
@@ -38,7 +36,7 @@ export const curatedStories = [
   },
   {
     id: "linking-the-body-demarius-parker",
-    title: "Linking the Body: A Conversation with Demarius Parker",
+    title: "Meet Demarius Parker: Linking the Body",
     description: "A curated story and interview transcript with Demarius Parker.",
     image: "/assets/image/Linking-the-Body-A-Conversation-with-Demarius-Parker.webp",
     url: "/pages/stories/linking-the-body-demarius-parker.html",
@@ -49,11 +47,10 @@ export const curatedStories = [
   },
   {
     id: "restoring-the-soil-with-christina-kat-cat",
-    title: "Restoring the Soil with Christina 'Kat' Cat",
+    title: "Meet Christina 'Kat' Cat: Restoring the Soil",
     description:
       "A curated story and interview transcript with Christina 'Kat' Cat.",
-    image:
-      "/assets/image/b7618599-c5f2-47b9-b999-f6ffedad5c5f.jpeg",
+    image: "/assets/image/Restoring-the-Soil-with-Christina-Kat-Cat.webp",
     url: "/pages/stories/restoring-the-soil-with-christina-kat-cat.html",
     category: "community",
     label: "Community",
@@ -62,10 +59,9 @@ export const curatedStories = [
   },
   {
     id: "meet-chris-wuehr-mind-body-connection",
-    title: "Meet Chris Wuehr: The Mind Behind the Mind-Body Connection",
+    title: "Meet Chris Wuehr: The Mind Behind the Mind Body Connection",
     description: "A curated story and interview transcript with Chris Wuehr.",
-    image:
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2000&auto=format&fit=crop",
+    image: "/assets/image/The-Mind-Behind-the-Mind-Body-Connection.webp",
     url: "/pages/stories/meet-chris-wuehr-mind-body-connection.html",
     category: "mind",
     label: "Mind",
@@ -91,7 +87,7 @@ export const entrepreneurs = [
     pillar: "community",
     archetype: "The Intentional Matchmaker",
     description: "A high-vibe, editorial profile celebrating Lai Lam.",
-    image: "/assets/image/lailam-founder-resumate-our-local-life3.webp",
+    image: "/assets/image/lailam-founder-resumate-our-local-life.webp",
     url: "/pages/spotlight/lai-lam-resumate-intentional-dating.html",
     date: "2026-01-22",
   },
@@ -113,7 +109,7 @@ export const entrepreneurs = [
     archetype: "The Linker",
     description:
       "An editorial spotlight on Demarius Parker, the Body lead in the Mind Body Soul collective.",
-    image: "/assets/image/Demarius-Parker-Body-Savant-Our-local-life.webp",
+    image: "/assets/image/Demarius-Parker-The-Linker-Our-local-life.webp",
     url: "/pages/spotlight/demarius-parker-body-whisperer.html",
     date: "2026-01-19",
   },
@@ -123,7 +119,7 @@ export const entrepreneurs = [
     pillar: "mind",
     archetype: "The Mindful Architect",
     description: "A high-vibe, editorial profile celebrating Chris Wuehr.",
-    image: "/assets/image/chris-wuehr-thought-leader-our-local-life.webp",
+    image: "/assets/image/chris-wuehr-thought-our-local-life.webp",
     url: "/pages/spotlight/chris-wuehr-mind-body-connection.html",
     date: "2026-01-17",
   },
@@ -134,8 +130,7 @@ export const entrepreneurs = [
     archetype: "The Soul Guide",
     description:
       "Kundalini Yoga, meditation, and ancestral healing to bring people back into presence and nervous system balance.",
-    image:
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2000&auto=format&fit=crop",
+    image: "/assets/image/Atma-Approach-to-Healings.webp",
     url: "/pages/spotlight/atma-practice-of-presence.html",
     date: "2026-03-10",
   },
@@ -143,13 +138,65 @@ export const entrepreneurs = [
 
 export const podcasts = [
   {
-    id: "podcast-restoring-soil",
-    title: "Restoring the Soil with Christina “Kat” Cat",
-    description: "Integrity-led business and regenerative soil practices.",
+    id: "podcast-break-the-loop-ep6",
+    title:
+      "Break the Loop — Where Your Energy Is Actually Leaking | Ep. 6 | Mind Body Spirit Podcast",
+    description:
+      "Where your energy escapes and a five-step formula to break addiction, negative loops, and destructive patterns.",
     image:
-      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=2000&auto=format&fit=crop",
-    url: "/pages/podcast/restoring-the-soil-with-kat-cat.html",
-    date: "2026-01-22",
+      "/assets/image/break-the-loop-where-your-energy-is-actually-leaking-ep6.webp",
+    url: "/pages/podcast/break-the-loop-where-your-energy-is-actually-leaking.html",
+    date: "2026-06-10",
+  },
+  {
+    id: "podcast-biblical-wisdom-ep5",
+    title:
+      "Biblical Wisdom Meets Energetic Spirituality | Ep. 5 | Mind Body Spirit Podcast",
+    description:
+      "Biblical wisdom and energetic science — how ancient truths map to your mitochondria, heart, and present moment.",
+    image: "/assets/image/biblical-wisdom-meets-energetic-spirituality-ep5.webp",
+    url: "/pages/podcast/biblical-wisdom-meets-energetic-spirituality.html",
+    date: "2026-06-09",
+  },
+  {
+    id: "podcast-deficient-body-ep4",
+    title:
+      "You Can't Think Your Way Out of a Deficient Body | Ep. 4 | Mind Body Spirit Podcast",
+    description:
+      "Minerals, vitamins, and coherence — why you cannot think your way out of a deficient body.",
+    image: "/assets/image/you-cant-think-your-way-out-of-a-deficient-body-ep4.webp",
+    url: "/pages/podcast/you-cant-think-your-way-out-of-a-deficient-body.html",
+    date: "2026-06-08",
+  },
+  {
+    id: "podcast-resets-ep3",
+    title:
+      "You Don't Need More Control — You Need Better Resets | Ep. 3 | Mind Body Spirit Podcast",
+    description:
+      "Practical reset tools for mind, body, and spirit when life gets hard — and the cellular science behind why they work.",
+    image: "/assets/image/you-dont-need-more-control-you-need-better-resets-ep3.webp",
+    url: "/pages/podcast/you-dont-need-more-control-you-need-better-resets.html",
+    date: "2026-06-07",
+  },
+  {
+    id: "podcast-alignment-ep2",
+    title:
+      "You're Not Thinking Wrong — You're Out of Alignment | Ep. 2 | Mind Body Spirit Podcast",
+    description:
+      "How mitochondria listen to every thought, word, and action — and how mind-body-spirit alignment unlocks unlimited energy and better health.",
+    image: "/assets/image/youre-not-thinking-wrong-youre-out-of-alignment-ep2.webp",
+    url: "/pages/podcast/youre-not-thinking-wrong-youre-out-of-alignment.html",
+    date: "2026-06-07",
+  },
+  {
+    id: "podcast-energy-leak-ep1",
+    title:
+      "You're Not Tired — You're Leaking Energy | Ep. 1 | Mind Body Spirit Podcast",
+    description:
+      "Why millions feel drained and stuck — and what is happening inside your cells. Energy leaks, mitochondria, and the seven pillars of vitality.",
+    image: "/assets/image/youre-not-tired-your-energy-is-leaking-ep1.webp",
+    url: "/pages/podcast/youre-not-tired-your-energy-is-leaking.html",
+    date: "2026-04-23",
   },
   {
     id: "podcast-placeholder-1",
@@ -174,6 +221,17 @@ export const podcasts = [
 ];
 
 export const magazineIssues = [
+  {
+    id: "issue-apr-2026",
+    title: "April Issue",
+    subtitle: "Rooted Regeneration",
+    description:
+      "A complete issue featuring curated stories, entrepreneurs, and lifestyle rituals.",
+    image:
+      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=2000&auto=format&fit=crop",
+    url: "pages/magazine/april-issue.html",
+    date: "2026-04-12",
+  },
   {
     id: "issue-jan-2026",
     title: "January Issue",
@@ -217,6 +275,13 @@ export const sitePages = [
     type: "Page",
   },
   {
+    id: "blog",
+    title: "Blog",
+    description: "Editorial blog articles and deep dives.",
+    url: "pages/blog/index.html",
+    type: "Page",
+  },
+  {
     id: "podcast",
     title: "Podcast",
     description: "All podcast episodes and guest invitations.",
@@ -227,7 +292,7 @@ export const sitePages = [
     id: "magazine",
     title: "Magazine Issue",
     description: "Current magazine issue and highlights.",
-    url: "pages/magazine/january-issue.html",
+    url: "pages/magazine/april-issue.html",
     type: "Page",
   },
   {

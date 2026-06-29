@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
   <head>
+    <script data-oll-theme-init="true">
+      (function () {
+        try {
+          if (localStorage.getItem("oll-theme") === "dark") {
+            document.documentElement.classList.add("dark");
+            document.documentElement.classList.remove("light");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restoring the Soil with Christina "Kat" Cat | Curated Story</title>
+    <title>Meet Christina "Kat" Cat: Restoring the Soil | Curated Story</title>
     <meta
       name="description"
-      content="Restoring the Soil with Christina 'Kat' Cat, a curated interview and editorial with Sapropel Organics USA."
+      content="Meet Christina 'Kat' Cat: Restoring the Soil, a curated interview and editorial with Sapropel Organics USA."
     />
     <meta name="oll:category" content="community" />
     <meta name="oll:date" content="2026-01-21" />
@@ -24,7 +34,7 @@
     <meta property="og:site_name" content="Our Local Life" />
     <meta
       property="og:title"
-      content="Restoring the Soil with Christina 'Kat' Cat | Curated Story"
+      content="Meet Christina 'Kat' Cat: Restoring the Soil | Curated Story"
     />
     <meta
       property="og:description"
@@ -42,7 +52,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Restoring the Soil with Christina 'Kat' Cat | Curated Story"
+      content="Meet Christina 'Kat' Cat: Restoring the Soil | Curated Story"
     />
     <meta
       name="twitter:description"
@@ -50,7 +60,7 @@
     />
     <meta
       name="twitter:image"
-      content="/assets/image/b7618599-c5f2-47b9-b999-f6ffedad5c5f.jpeg"
+      content="https://ourlocallife.com/assets/image/Restoring-the-Soil-with-Christina-Kat-Cat.webp"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -93,7 +103,8 @@
       };
     </script>
 
-    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <script type="module" crossorigin src="/assets/main-CJuVpVQo.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-DBjioDFf.css">
   </head>
   <body
     class="font-sans antialiased selection:bg-oll-sand selection:text-oll-dark bg-white dark:bg-oll-dark text-oll-dark dark:text-white transition-colors duration-500"
@@ -105,9 +116,9 @@
     >
       <div class="flex items-center justify-between px-6 h-16">
         <img
-          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/5-1.png"
-          alt="OLL Icon"
-          class="h-8 w-auto dark:invert"
+          src="https://zyq.has.mybluehost.me/website_ee8080dc/wp-content/uploads/2025/11/cropped-4.webp"
+          alt="Our Local Life"
+          class="h-7 w-auto dark:invert"
         />
         <div class="flex items-center gap-4">
           <label class="theme-switch">
@@ -219,6 +230,27 @@
             <span class="uppercase tracking-widest text-xs font-medium">Stories</span>
           </a>
           <a
+            href="../../hub.html"
+            class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+          >
+            <div class="w-6 h-6 flex justify-center items-center">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+                />
+              </svg>
+            </div>
+            <span class="uppercase tracking-widest text-xs font-medium">Hub</span>
+          </a>
+          <a
             href="../../featured-entrepreneur.html"
             class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
           >
@@ -235,7 +267,7 @@
             <span class="uppercase tracking-widest text-xs font-medium">Spotlight</span>
           </a>
           <a
-            href="../podcast/index.html"
+            href="../../pages/podcast/index.html"
             class="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
           >
             <div class="w-6 h-6 flex justify-center items-center">
@@ -339,7 +371,9 @@
           href="../../index.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -362,7 +396,9 @@
           href="../../about.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -385,7 +421,9 @@
           href="../../curated-stories.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -405,10 +443,37 @@
           >
         </a>
         <a
+          href="../../hub.html"
+          class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
+        >
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 110-8 4 4 0 010 8zm8 0a4 4 0 100-8 4 4 0 000 8z"
+              />
+            </svg>
+          </div>
+          <span class="nav-label ml-3 text-xs uppercase tracking-widest font-medium"
+            >Hub</span
+          >
+        </a>
+        <a
           href="../../featured-entrepreneur.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -423,10 +488,12 @@
           >
         </a>
         <a
-          href="../podcast/index.html"
+          href="../../pages/podcast/index.html"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -450,7 +517,9 @@
           onclick="toggleSubscribe()"
           class="nav-item flex items-center h-10 px-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 transition-all group/item w-full"
         >
-          <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <div
+            class="w-8 h-8 flex items-center justify-center flex-shrink-0"
+          >
             <svg
               class="w-5 h-5"
               fill="none"
@@ -488,8 +557,8 @@
       <header class="relative min-h-[60vh] bg-oll-dark text-white overflow-hidden">
         <div class="absolute inset-0">
           <img
-            src="/assets/image/Restoring-the-Soil-with-Christina-Kat-Cat.webp"
-            alt="Restoring the Soil with Christina 'Kat' Cat"
+            src="/assets/Restoring-the-Soil-with-Christina-Kat-Cat-C4Ofp2hp.webp"
+            alt="Meet Christina 'Kat' Cat: Restoring the Soil"
             class="w-full h-full object-cover opacity-70"
           />
           <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80"></div>
@@ -499,7 +568,7 @@
             Curated Story
           </span>
           <h1 class="font-serif text-4xl md:text-6xl leading-tight mt-6">
-            Restoring the Soil with Christina "Kat" Cat
+            Meet Christina "Kat" Cat: Restoring the Soil
           </h1>
           <p class="text-lg md:text-xl text-white/80 mt-6">
             Founder of Sapropel Organics USA and creator of the HumusOn soil regeneration line.
@@ -527,102 +596,97 @@
 
       <section class="py-24 bg-white dark:bg-oll-dark text-oll-dark dark:text-white border-b border-oll-dark/10 dark:border-white/10">
         <div class="max-w-6xl mx-auto px-6 space-y-12">
-          <div class="text-center">
-            <p class="text-xs uppercase tracking-[0.3em] opacity-60 mb-4">First Article</p>
-            <h2 class="font-serif text-4xl md:text-5xl">
-              Christina “Kat” Cat: Restoring the Soil, Reclaiming Our Health
-            </h2>
-          </div>
-          <div class="max-w-3xl mx-auto mb-12">
+<div class="max-w-3xl mx-auto mb-12">
             <img
-              src="../../assets/image/Kristina-cat-humuson-soil-regeneration1.webp"
+              src="/assets/Kristina-cat-humuson-soil-regeneration1-D0tbvxyO.webp"
               alt="Christina Kat Cat, creator of HumusOn soil regeneration line"
               class="w-full rounded-[28px] border border-oll-dark/10 dark:border-white/10 object-cover"
             />
             <p class="text-xs uppercase tracking-widest opacity-60 mt-3 text-center">Christina Kat Cat, Sapropel Organics USA</p>
           </div>
-          <div class="grid lg:grid-cols-2 gap-10">
-            <article class="bg-oll-sand-light dark:bg-[#1a1a1a] rounded-[28px] p-8 space-y-4">
-              <h3 class="font-serif text-2xl">
-                Meet Christina “Kat” Cat: The Soil Advocate with a Legal Mind and a Heart for Regeneration
+          
+          <div class="text-center max-w-3xl mx-auto">
+            <p class="text-xs uppercase tracking-[0.3em] opacity-60 mb-4">EDITORIAL</p>
+            <h2 class="font-serif text-3xl md:text-4xl leading-tight text-balance mb-4">
+              Meet Christina "Kat" Cat: Restoring the Soil
+            </h2>
+            <p class="text-lg md:text-xl opacity-80 max-w-2xl mx-auto font-light leading-relaxed">
+              Regenerative soil, legal mind, and heart for community health.
+            </p>
+          </div>
+<div class="max-w-3xl mx-auto">
+            <article class="bg-oll-sand-light dark:bg-[#1a1a1a] rounded-[28px] p-8 md:p-10 space-y-4">
+              <p class="text-sm leading-relaxed opacity-80">
+                Christina “Kat” Cat is not your typical entrepreneur. Attorney, realtor, actor,
+                and founder of Sapropel Organics USA, Kat brings a rare blend of intellect, heart,
+                and earth-based wisdom to everything she touches, a living testament to what
+                happens when purpose meets action, and when integrity becomes more than a word.
+              </p>
+              <p class="text-sm leading-relaxed opacity-80">
+                At first glance, you might see a high-performing professional with a law degree
+                and a love for the arts. But dig a little deeper (pun intended), and you’ll
+                uncover her truest passion: restoring the soil, and by extension, the health of
+                our food, our communities, and our planet.
+              </p>
+              <p class="text-sm leading-relaxed opacity-80">
+                “Integrity means aligning your thoughts and feelings with your actions and words,”
+                she says. “It’s not just about selling a product. It’s about building real
+                relationships and offering real value.”
+              </p>
+              <p class="text-sm leading-relaxed opacity-80">
+                Kat’s latest venture, HumusOn, is a regenerative organic fertilizer made from
+                sapropel, a nutrient-dense sediment mined from the bottoms of long-dead,
+                oxygen-deprived lakes. Originally discovered by her family’s international team in
+                Lithuania, sapropel revitalizes soil with up to 15 times the nutrients of
+                conventional options, and the act of extracting it restores oxygen to the lakes
+                it’s removed from, reviving entire aquatic ecosystems.
+              </p>
+              <p class="text-sm leading-relaxed opacity-80">
+                The benefits don’t stop at the soil. “Humic acids,” the main ingredient in
+                HumusOn, are the same compounds found in leading gut health supplements. Better
+                soil equals more nutrient-dense food, which directly fuels the microbiome and
+                immune system.
+              </p>
+              
+              <h3 class="story-section-break text-xs uppercase tracking-[0.3em] opacity-60 pt-8 pb-4 text-center border-t border-oll-dark/10 dark:border-white/10">
+                Mind, body, and soul in practice
               </h3>
-              <p class="text-sm leading-relaxed opacity-80">
-                Christina “Kat” Cat is not your typical entrepreneur. Attorney, realtor, actress, and
-                now founder of Sapropel Organics USA, Kat’s journey is a living testament to what happens
-                when purpose meets action, and when integrity becomes more than a word.
+<p class="text-sm leading-relaxed opacity-80">
+                “It was meaningful for me to bring a part of my soil to this soil,” she says.
+                “I’m helping regenerate life, both in the ground and in our bodies.”
               </p>
               <p class="text-sm leading-relaxed opacity-80">
-                At first glance, you might see a high-performing professional with a law degree and a love
-                for the arts. But dig a little deeper (pun intended), and you’ll uncover her truest passion:
-                restoring the soil to restore the planet.
+                Her mission? To replace chemically dependent farming methods with natural
+                solutions that are both affordable and effective. Unlike most organic fertilizers
+                that come with a premium price, HumusOn competes with conventional pricing,
+                making it accessible to farmers and home gardeners alike.
               </p>
               <p class="text-sm leading-relaxed opacity-80">
-                Kat’s latest venture, HumusOn, is a regenerative organic fertilizer made from sapropel,
-                a nutrient-dense sediment mined from the bottoms of long-dead lakes. Originally discovered
-                by her family’s international team in Lithuania, sapropel not only revitalizes soil with up to
-                15x the nutrients of traditional options, it also restores oxygen to the lakes it’s removed from,
-                reviving entire ecosystems.
+                One of Kat’s pivotal business lessons came from a trial gone wrong with a
+                watermelon grower. After a highly successful first round with a 40% yield
+                increase, the follow-up seemed to underperform, until she discovered the field
+                had never been fully harvested due to market conditions.
               </p>
               <p class="text-sm leading-relaxed opacity-80">
-                “It was meaningful for me to bring a part of my soil to this soil,” she says. “I’m helping
-                regenerate life, both in the ground and in our bodies.”
+                Whether she’s walking fields in Yuma, attending neighborhood tree-planting events
+                in Phoenix, or mentoring her team with compassion and clarity, Kat brings a rare
+                authenticity to everything she does. “I don’t make promises I can’t keep,” she
+                says. “I under-promise and over-deliver, and I build relationships, not just
+                sales.”
               </p>
               <p class="text-sm leading-relaxed opacity-80">
-                Her mission? To replace chemically dependent farming methods with natural solutions that are both
-                affordable and effective. Unlike most organic fertilizers that come with a premium price, HumusOn
-                competes with conventional pricing, making it accessible to farmers and home gardeners alike.
+                When challenges arise, Kat grounds herself with vision boards, journaling, and
+                community support. Her guiding mantra? “Every day, and in every way, I’m getting
+                better and better.”
               </p>
               <p class="text-sm leading-relaxed opacity-80">
-                Whether she’s walking fields in Yuma, attending neighborhood tree-planting events in Phoenix, or
-                mentoring her team with compassion and clarity, Kat brings a rare authenticity to everything she does.
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                “I don’t make promises I can’t keep,” she says. “I under-promise and over-deliver, and I build
-                relationships, not just sales.”
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                When challenges arise, Kat grounds herself with vision boards, journaling, and community support.
-                Her guiding mantra? “Every day, and in every way, I’m getting better and better.”
-              </p>
-            </article>
-            <article class="bg-white dark:bg-oll-dark border border-oll-dark/10 dark:border-white/10 rounded-[28px] p-8 space-y-4">
-              <h3 class="font-serif text-2xl">
-                Christina “Kat” Cat: Restoring the Soil, Reclaiming Our Health
-              </h3>
-              <p class="text-sm leading-relaxed opacity-80">
-                When most people hear “attorney,” they don’t picture a regenerative soil entrepreneur trekking to
-                farmland in Yuma or experimenting with organic fertilizers pulled from the bottom of ancient lakes.
-                But Christina “Kat” Cat is not most people. A real estate professional, legal advisor, actor, and founder
-                of Sapropel Organics USA, Kat brings a rare blend of intellect, heart, and earth-based wisdom to everything she touches.
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                At the core of her mission? Restoring the soil, and by extension, the health of our food, our communities, and our planet.
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                “Integrity means aligning your thoughts and feelings with your actions and words,” she says. “It’s not
-                just about selling a product. It’s about building real relationships and offering real value.”
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                The product’s base material, sapropel, is a nutrient-dense sediment harvested from the bottom of oxygen-deprived lakes.
-                The act of extracting it actually revives the aquatic ecosystem while providing farmers with an organic fertilizer that’s
-                15 times more nutritious than conventional options.
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                “Humic acids,” the main ingredient in HumusOn, are the same compounds found in leading gut health supplements.
-                Better soil equals more nutrient-dense food, which directly fuels the microbiome and immune system.
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                One of Kat’s pivotal business lessons came from a trial gone wrong with a watermelon grower. After a highly successful
-                first round with a 40% yield increase, the follow-up seemed to underperform, until she discovered the field had never been
-                fully harvested due to market conditions.
-              </p>
-              <p class="text-sm leading-relaxed opacity-80">
-                With a mission to “restore the soils,” Kat’s sights are set on national growth, mainstream retail presence, and wider public
-                education on the link between food quality and soil integrity.
+                With a mission to “restore the soils,” Kat’s sights are set on national growth,
+                mainstream retail presence, and wider public education on the link between food
+                quality and soil integrity.
               </p>
             </article>
           </div>
-        </div>
+</div>
       </section>
 
       <section class="py-24 bg-oll-sand-light dark:bg-[#1a1a1a] text-oll-dark dark:text-white border-b border-oll-dark/10 dark:border-white/10">
@@ -764,7 +828,6 @@
                 <li><a href="../../curated-stories.html" class="hover:opacity-100">Stories</a></li>
                 <li><a href="../../featured-entrepreneur.html" class="hover:opacity-100">Spotlight</a></li>
                 <li><a href="../podcast/index.html" class="hover:opacity-100">Podcast</a></li>
-                <li><a href="#" class="hover:opacity-100">Shop</a></li>
               </ul>
             </div>
             <div>
@@ -898,6 +961,5 @@
         </form>
       </div>
     </div>
-    <script type="module" src="../../assets/js/main.js"></script>
 </body>
 </html>
